@@ -52,13 +52,9 @@
 
 * [SpringMVC核心组件](springserial/springmvc-core.md)
 
-## 6.中间件 <a id="middleware"></a>
-
 ## 7.源码解读 <a id="sourcecode"></a>
 
 * [HashMap](sourcecode/hashmap-yi.md)
-
-## 8.设计模式 <a id="designpatterns"></a>
 
 ## 9.开源项目 <a id="opensource"></a>
 
