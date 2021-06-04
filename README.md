@@ -5,6 +5,7 @@ description: 理想主义青年、自律、热爱生活。
 # yuncrush
 
 　　 非著名攻城狮:   yuncrush。
+   　Blog: https://www.yuncrush.com
 
 　　学习、思考、深度思考，这是我们应当具备的，也是我们正缺乏的。　
 
