@@ -86,3 +86,25 @@ if(map.containsKey(key){
 
 　　线程池参数：核心线程（corePoolSize），核心线程满后放入工作队列（workQueue），线程工厂创建新线程（ThreadFactory），工作队列满后创建线程至最大线程数量（maxPoolSize），无任务时空闲线程存活时间（KeepAliveTime+时间单位），达到最大线程数量并且工作队列满后的拒绝策略（Handler）。
 
+　　线程池的4中拒绝策略：
+
+![&#x7EBF;&#x7A0B;&#x6C60;4&#x79CD;&#x62D2;&#x7EDD;&#x7B56;&#x7565;](../.gitbook/assets/image%20%284%29.png)
+
+　　DiscardPolicy：提交的新任务直接拒绝，可能造成数据丢失；  DiscardOldestPolicy: 拒绝工作队列中存活时间最长的任务。
+
+　　CallerRunsPolicy：拒绝后给提交任务的线程执行，执行任务需要时间，提交任务的线程被占用，减缓了任务提交的节奏，并且新提交的任务不会丢失。
+
+　　AbortPolicy：直接抛出运行时异常，RejectedExecutionException。
+
+### 线程池常用的阻塞队列？
+
+　　线程池的内部结构：线程池管理器（管理线程池的创建销毁等），工作线程（执行任务），任务队列（作为一种缓冲机制，多线程安全要求较高，采用BlockingQueue），任务（任务要求实现统一的接口，以便工作线程可以处理和执行）。
+
+![&#x5E38;&#x89C1;&#x963B;&#x585E;&#x961F;&#x5217;](../.gitbook/assets/image%20%2828%29.png)
+
+　　FixedThreadPool线程池，固定大小，所以需要一个无线容量的阻塞队列；singleThreadExecutor同理，只有一个线程，如果线程发生异常，也会重新创建一个线程来执行任务。
+
+　　CachedThreadPool线程池，无限扩增线程，所以阻塞队列只需要同步任务即可。
+
+　　ScheduledThreadPool与SingleThreadScheduledExecutor线程池都是定时的，所以采用延时工作队列作为阻塞队列，延时工作队列采用的是堆结构，按照延迟的时间长短进行排序。
+
