@@ -16,15 +16,15 @@ description: 10分钟，从0到实现es的集群部署，这里es的版本为7.2
 
 答：方法１更改elasticsearch文件夹的属主。
 
-```text
+```
 chown -R elasticsearch:elasticsearch elasticsearch
 ```
 
 　　如果修改之后依旧启动报错不能以root用户登录，方法2更改/etc/passwd。
 
-![/etc/passwd](../.gitbook/assets/image%20%2829%29.png)
+![/etc/passwd](<../.gitbook/assets/image (10).png>)
 
-```text
+```
 # 修改为
 elasticsearch:x:995:991:elasticsearch user:/nonexistent:/bin/bash
 ```
@@ -33,7 +33,7 @@ elasticsearch:x:995:991:elasticsearch user:/nonexistent:/bin/bash
 
 　　上传RPM包进行安装
 
-```text
+```
 # 安装指令
 rpm -ivh elasticsearch&.rpm
 
@@ -46,7 +46,7 @@ rpm -e elasticsearch
 
 ## 2.修改配置
 
-```text
+```
 # 修改elasticsearch.yml配置文件 节点名字分别配置为node-1,node-2,node-3
 node.name: node-1
 
@@ -69,7 +69,7 @@ cluster.initial_master_nodes: ["node-1","node-2","node-3"]
 
 ## 3.重启ES
 
-```text
+```
 # 确保防火墙关闭，或者放行9200,9300端口
 # 查看状态
 systemctl status elasticsearch
@@ -83,11 +83,10 @@ systemctl stop elasticsearch
 
 ## 4.验证节点
 
-```text
+```
 # 查看当前节点数
 curl -XGET http://localhost:9200/_cat/nodes?v
 
 # 查看集群状态
 
 ```
-

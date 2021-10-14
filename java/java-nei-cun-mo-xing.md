@@ -4,13 +4,13 @@ description: JVM 内存结构和 Java 虚拟机的运行时区域有关，Java �
 
 # Java内存模型
 
-  JMM\(Java Memory Model\)是和多线程相关的**一组规范**，需要各个 JVM 的实现来遵守 JMM 规范，以便于开发者可以利用这些规范，更方便地开发多线程程序。这样一来，即便同一个程序在不同的虚拟机上运行，得到的程序结果也是一致的。JMM中最重要的三部分：重排序，原子性，内存可见性。
+  JMM(Java Memory Model)是和多线程相关的**一组规范**，需要各个 JVM 的实现来遵守 JMM 规范，以便于开发者可以利用这些规范，更方便地开发多线程程序。这样一来，即便同一个程序在不同的虚拟机上运行，得到的程序结果也是一致的。JMM中最重要的三部分：重排序，原子性，内存可见性。
 
 ## 1.重排序
 
  编译器、JVM 或者 CPU 都有可能出于优化等目的，对于实际指令执行的顺序进行调整，这就是**重排序。**但是重排序并不意味着乱排序
 
-```text
+```
 // 重排序前
 a = 1;
 b = 2;
@@ -50,7 +50,7 @@ Java中的原子操作：
 
 **保证可见性的措施：**Synchronized（既保证可见性，又保证原子性）、Lock、volatile关键字。
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](<../.gitbook/assets/image (30).png>)
 
 每个线程只能够直接接触到工作内存，工作内存独立不共享，主内存由多个线程共享，线程无法直接操作主内存，而工作内存中所保存的正是主内存的共享变量的副本，主内存和工作内存之间的通信是由 JMM 控制的。
 
@@ -60,11 +60,10 @@ Java中的原子操作：
 
 满足Happens-before规则：
 
-**1.单线程规则；2.锁操作规则**（ **synchronized 和 Lock 接口等**）：如果操作 A 是解锁，而操作 B 是对同一个锁的加锁，那么 hb\(A, B\) **；** **3.volatile 变量规则；4.线程启动规则：**Thread 对象的 start 方法 happen-before 此线程 run 方法中的每一个操作。**5.线程join规则：**
+**1.单线程规则；2.锁操作规则**（ **synchronized 和 Lock 接口等**）：如果操作 A 是解锁，而操作 B 是对同一个锁的加锁，那么 hb(A, B) **；** **3.volatile 变量规则；4.线程启动规则：**Thread 对象的 start 方法 happen-before 此线程 run 方法中的每一个操作。**5.线程join规则：**
 
-![&#x7EBF;&#x7A0B;join&#x89C4;&#x5219;](../.gitbook/assets/image%20%2810%29.png)
+![线程join规则](<../.gitbook/assets/image (31).png>)
 
 **6.中断规则:**一个线程被其它线程Interrupt时，检测中断时，一定能够检测此次中断的发生 。
 
 **7.** **并发工具类的规则**: 线程安全的并发容器（HashTable）,存入操作Happens-before读取操作；信号量（Semaphore）释放许可证的操作 happens-before 获取许可证的操作；Future 任务中的所有操作 happens-before Future 的 get 操作；线程池，提交任务的操作 happens-before 任务的执行。
-

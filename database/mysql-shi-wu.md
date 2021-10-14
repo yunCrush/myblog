@@ -38,26 +38,28 @@ InnoDB有4种隔离级别，隔离效果依次增加：
 
 MySQL InnoDB默认的隔离级别是：RR
 
-查看隔离级别：select @@tx\_isolation        手动提交事务：start transaction       commit
+查看隔离级别：select @@tx_isolation        手动提交事务：start transaction       commit
 
 ## 4.当前读与快照读
 
 MySQL InnoDB存储引擎，实现的是基于多版本的并发控制协议——MVCC，其好处就是读不加锁，读写不冲突。MVCC中读操作可以分为当前读与快照读。
 
-当前读：读取的是最新版本, 并且对读取的记录加锁, 阻塞其他事务同时改动相同记录，避免出现安全问题。select...lock in share mode \(共享读锁\) select...for update ，update、,delete 、 insert
+当前读：读取的是最新版本, 并且对读取的记录加锁, 阻塞其他事务同时改动相同记录，避免出现安全问题。select...lock in share mode (共享读锁) select...for update ，update、,delete 、 insert
 
 快照读：简单的select读，非阻塞读，不加锁
 
-间隙锁：只有在Read Repeatable、Serializable隔离级别才有，就是锁定那些范围空间内的数据。对主键或唯一索引，如果select查询时where条件全部精确命中\(=或者in\)，这种场景本身就不会出现幻读，所以只会加行记录锁。
+间隙锁：只有在Read Repeatable、Serializable隔离级别才有，就是锁定那些范围空间内的数据。对主键或唯一索引，如果select查询时where条件全部精确命中(=或者in)，这种场景本身就不会出现幻读，所以只会加行记录锁。
 
 ## 5.提问
 
-　　**1.InnoDB可重复读隔离级别下如何避免幻读？**
+**　　1.InnoDB可重复读隔离级别下如何避免幻读？**
 
-* 表象：快照读（非阻塞读）伪MVCC 表象避免幻读，是RR下查找数据，第一次读取创建快照，后面读取都是读取本次快照，不论别的事务是否提交相关更改，我们都不知道，掩耳盗铃。
-*   内在：next-key锁（行锁+gap锁）上了锁，其它事务无法修改锁定区间，不会出现幻读。
+* 表象：快照读（非阻塞读）伪MVCC\
+  表象避免幻读，是RR下查找数据，第一次读取创建快照，后面读取都是读取本次快照，不论别的事务是否提交相关更改，我们都不知道，掩耳盗铃。
+*
 
-　　**2.RC RR 级别下的InnoDB的非阻塞读如何实现？**
+    内在：next-key锁（行锁+gap锁）上了锁，其它事务无法修改锁定区间，不会出现幻读。
 
-　　**3.如何避免长事务对业务的影响？**
+**　　2.RC RR 级别下的InnoDB的非阻塞读如何实现？**
 
+**　　3.如何避免长事务对业务的影响？**

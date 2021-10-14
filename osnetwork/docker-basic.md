@@ -6,7 +6,7 @@ description: docker的安装与常用命令介绍
 
 ## 1.安装、启动docker
 
-```text
+```
 # 安装docker
 sudo yum -y update
 
@@ -22,7 +22,7 @@ docker  version
 
 ## 2.docker的常用命令
 
-```text
+```
 # 查看docker运行的容器
 docker ps
                  
@@ -51,7 +51,7 @@ docker rm <container-id>
 
 ## 3.docker启动容器
 
-```text
+```
 # docker search centos 查看相关镜像
 # 拉取centos:7镜像
 docker pull centos:7
@@ -84,4 +84,3 @@ docker top <container-id>
 ```
 
 这里只是简单的介绍下命令，后续部署es集群将能更好的进行实践。
-

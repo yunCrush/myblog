@@ -6,7 +6,7 @@ description: 最快的速度在linux上面安装jdk8。
 
 ## 1.拉取资源包
 
-```text
+```
 # 选择jdk8的安装位置文件
 cd  /usr/local/
 
@@ -23,7 +23,7 @@ mv jdk-8u141-linux-x64  java8
 
 ## 2.修改配置文件
 
-```text
+```
 # 修改配置文件
 vim /etc/profile
 
@@ -37,6 +37,4 @@ source /etc/profile
 
 # 验证javac
 ```
-
-
 

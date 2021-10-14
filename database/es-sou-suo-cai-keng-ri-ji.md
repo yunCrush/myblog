@@ -6,7 +6,7 @@ description: 记录在使用ES java API开发过程中遇见的坑，以及解�
 
 ES Java API开发大体思路：
 
-```text
+```
 # 构建以下请求对象
 SearchRequest request = new SearchRequest(indexName);
 SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
@@ -35,7 +35,7 @@ for(SearchHit hit : searchHits){
 
 ## 问题1：分页问题，聚合后不能使用分页
 
-```text
+```
 # 每页size,当前第current页
 searchSourceBuilder.from((current-1)*size);
 searchSourceBuilder.size(size)
@@ -47,7 +47,7 @@ A.常见的命中所有文档数量超过1W，默认只返回1W。
 
 B.简单查询，默认只返回10条数据
 
-```text
+```
 # 将所有命中数据文档全部返回，解决问题A
 searchSourceBuilder.trackTotalHits(true);
 
@@ -58,7 +58,7 @@ searchSourceBuilder.size(size);
 
 ## 问题3：数据不及时同步更新
 
-```text
+```
 # 通过JAVA API删除数据后，通过API查询数据仍然存在，表示删除的数据没有及时的刷新
 # 这里根据业务需要设置刷新的参数
 UpdateRequest request;
@@ -67,20 +67,20 @@ request.setRefreshPolicy(IMMEDIATE)
 
 ## 问题4：注意数据的格式问题
 
-```text
+```
 # 数据格式问题不对，注意数据字段是keyword，还是text下的keyword，会导致解析"_source"时报错
 ```
 
 ## 问题5：根据某个字段进行排序
 
-```text
+```
 # String fieldName 根据fieldName升序ASC 降序DESC
 searchSourceBuilder.sort(new FieldSortBuilder(fieldName)).order(Sortder.ASC));
 ```
 
 ## 问题6：模糊查询与全匹配
 
-```text
+```
 # must即"与 &&"操作
 BoolQueryBuilder boolQueryBuilder  = new BoolQueryBuilder();
 
@@ -93,7 +93,7 @@ boolQueryBuilder.must(QueryBuilders.wildcardQuery("name", "*"+name+"*"));
 
 ## 问题7：返回文档中的某个字段的所有值
 
-```text
+```
 # 插入数据
 PUT items/1
 { "language" : 10 }
@@ -128,11 +128,11 @@ GET items/_search
 }
 ```
 
-参考来源 👉 [ here](https://stackoverflow.com/questions/25465215/elasticsearch-return-unique-values)
+参考来源 :point_right: [ here](https://stackoverflow.com/questions/25465215/elasticsearch-return-unique-values)
 
 **JAVA API**
 
-```text
+```
 # 传入的idList：1，2，3， includes 查询的字段， excludes不包括的字段
 List<String> list = new ArrayList<>();
 MultiGetRequest multiGetRequest = new MultiGetRequest();
@@ -165,14 +165,14 @@ return list;
 
 ## 问题8：curl命令
 
-```text
+```
 # 初始化mapping
 curl -XPUT 'http://localhost:9200/index-name' -d @file-path/index-name.json --header "Content-Type:application/json"
 ```
 
 ## 问题9：返回数据"\_source"下某个字段去重
 
-```text
+```
 # 使用collapse进行去重,此方法仅仅对keyword类型与number有效
 GET my_index/_search
 {
@@ -189,7 +189,7 @@ GET my_index/_search
 
 ## 问题10：聚合操作
 
-```text
+```
 # 背景：两个字段soure_name表示来源名字，check_time表示检查时间
 # 需要通过来源名字进行聚合，然后筛选出check_time是最新时间的一条数据
 # group_aggs time_aggs 表示分组后桶的名字
@@ -218,6 +218,4 @@ if(Objects.nonNull(groupAggs)){
 
 }
 ```
-
-
 

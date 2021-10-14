@@ -6,7 +6,7 @@ description: 使用synchronized与notify实现交替打印，使用位运算使�
 
 ## 1.Synchronized
 
-```text
+```
 // 使用synchronized通信
 public class PrintOddEvenSync{
     private static int count;
@@ -43,7 +43,7 @@ public class PrintOddEvenSync{
 
 ## 2.Wait
 
-```text
+```
 // 使用notify实现
 public class WaitNotifyPrintOddEveWait {
 
@@ -81,4 +81,3 @@ public class WaitNotifyPrintOddEveWait {
     }
 }
 ```
-

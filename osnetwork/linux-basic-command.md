@@ -8,7 +8,7 @@ description: 常用命令，后序有待补充。
 
 ### 1.linux常识性指令
 
-```text
+```
 # 显示帮助
 uname --help
 # 输出内核版本信息
@@ -36,40 +36,40 @@ chown .crushgroup temp
 
 **windows本地安装git bash使用**
 
-_1.从远处\(服务器\)复制文件到本地目录_
+_1.从远处(服务器)复制文件到本地目录_
 
-```text
+```
 $ scp root@192.168.45.129:/usr/local/tmp/test.md ./
 ```
 
-_2.从远处\(服务器\)复制目录到本地目录_
+_2.从远处(服务器)复制目录到本地目录_
 
-```text
+```
 $ scp -r root@192.168.45.129:/usr/local/tmp ./
 ```
 
 _3.上传本地文件到服务器指定目录_
 
-```text
+```
 $ scp -r /opt/test.tar root@192.168.45.129:/usr/local
 ```
 
 _4.上传本地目录到服务器指定目录_
 
-```text
+```
 $ scp -r /opt/soft/text root@192.168.45.12:/usr/local
 ```
 
 _5.windows文件传输到服务器_
 
-```text
+```
 yum install lrzsz
 直接将文件拖入到命令行窗口即可
 ```
 
 ### 3.查看端口与进程
 
-```text
+```
 # 查看es端口9200是否存在
 netstat -lnp | grep 9200
 
@@ -80,7 +80,7 @@ netstat -a
 ps -ef | grep elasticsearch
 ```
 
-```text
+```
 # xargs指令从标准数据流中构造并执行一行行的指令,-I是查找替换，echo查看指令是否有误
 ls | xargs -I GG echo "mv GG prefix_GG"
 ls | xargs -I GG mv GG prefix_GG
@@ -88,7 +88,7 @@ ls | xargs -I GG mv GG prefix_GG
 # | 匿名管道  mkfifo指令可以创建一个命名管道
 ```
 
-```text
+```
 #远程登录的 ssh 指令；
 
 #查看网络接口的 ifconfig 指令；
@@ -103,4 +103,3 @@ telnet Ip port
 host -t AAAA www.yuncrush.com
 dig www.yuncrush.com
 ```
-

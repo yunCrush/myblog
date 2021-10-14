@@ -1,8 +1,8 @@
 # Untitled
 
-1.链表翻转：1-&gt;2-&gt;3-&gt;4-&gt;5  ===&gt;  5-&gt;4-&gt;3-&gt;2-&gt;1
+1.链表翻转：1->2->3->4->5  ===>  5->4->3->2->1
 
-```text
+```
 # 需要一个pre节点，记录当前节点的前一个节点，记录下一个节点的next节点，记录当前节点的cur,翻转
 # 链表的关键在于时cur.next指向pre，随后移动pre与cur
 ListNode cur=head;
@@ -19,7 +19,7 @@ return pre;
 
 2.判断链表有环
 
-```text
+```
 # 快慢指针
 while(fast && fast.next && fast.next.next){
     fast = fast.next.next;
@@ -29,7 +29,7 @@ while(fast && fast.next && fast.next.next){
 
 3.约瑟夫环问题
 
-```text
+```
 # 循环链表来解决，将取出的数放入队列尾部，如果出队列次数i，刚好等于M,则不再进入队列
 while (q.size() > 0) {
         element = q.poll();
@@ -45,7 +45,7 @@ while (q.size() > 0) {
 
 4.快排
 
-```text
+```
  private static void help(int[] arr, int low, int high) {
 
         if(low >= high){
@@ -75,7 +75,7 @@ while (q.size() > 0) {
     }
 ```
 
-```text
+```
 # 冒泡、选择、插入、快排、归并、堆排序、桶排序
 # 数学技巧
 n & (n-1) == 0  判断是否是2的幂
@@ -87,6 +87,4 @@ while(n>0){
 
 }
 ```
-
-
 

@@ -8,13 +8,13 @@ description: 介绍关于多线程中的常见问题
 
 ### 如何正确的停止一个线程？
 
-　　1.正确停止线程的方法： thread.interrupt\(\)，通知线程中断； 
+　　1.正确停止线程的方法： thread.interrupt()，通知线程中断； 
 
-　　2.线程内逻辑需配合响应中断：1）正常执行循环中使用 Thread.currentThread\(\).isInterrupted\(\)判断中断标识; 2\)若含有sleep\(\)等Waiting操作,会唤醒线程，抛出interruptedException，抛出后中断标识会重置。对于中断异常，要么正确处理，重新设置中断标识；要么在方法上声明抛出异常以便调用方处理。
+　　2.线程内逻辑需配合响应中断：1）正常执行循环中使用 Thread.currentThread().isInterrupted()判断中断标识; 2)若含有sleep()等Waiting操作,会唤醒线程，抛出interruptedException，抛出后中断标识会重置。对于中断异常，要么正确处理，重新设置中断标识；要么在方法上声明抛出异常以便调用方处理。
 
 　　3.为什么用 volatile 标记位的停止方法是错误的例如 生产-消费模式，含有阻塞put操作时，volatile 标记变量改变也无法唤醒阻塞中的生产者线程。
 
-　　4.stop\(\)、suspend\(\) 和 resume\(\)是已过期方法，有很大安全风险，它们强行停止线程，有可能造成线程持有的锁或资源没有释放
+　　4.stop()、suspend() 和 resume()是已过期方法，有很大安全风险，它们强行停止线程，有可能造成线程持有的锁或资源没有释放
 
 ### wait/notify 和 sleep 方法的异同？
 
@@ -40,7 +40,7 @@ description: 介绍关于多线程中的常见问题
 
 不同点：
 
-　　1.synchronized可以用在同步代码块与方法，无需指定对象，而Lock接口必须显示加锁和解锁，lock\(\)与unlock\(\)解锁。
+　　1.synchronized可以用在同步代码块与方法，无需指定对象，而Lock接口必须显示加锁和解锁，lock()与unlock()解锁。
 
 　　2.Lock的加锁与解锁不用有序，而synchronized的解锁顺序必须按照加锁的逆序进行解锁。
 
@@ -52,7 +52,7 @@ description: 介绍关于多线程中的常见问题
 
 ### 实现生产者消费者模式有几种方式？
 
-　　据我目前掌握的知识而言，3中，BlockingQueue阻塞队列，Condition，以及Wait,notify实现，本质都是阻塞队列的思想。相关代码参考 👉 [https://github.com/yunCrush/thread/tree/main/src/basic\_thread](https://github.com/yunCrush/thread/tree/main/src/basic_thread)
+　　据我目前掌握的知识而言，3中，BlockingQueue阻塞队列，Condition，以及Wait,notify实现，本质都是阻塞队列的思想。相关代码参考 :point_right: [https://github.com/yunCrush/thread/tree/main/src/basic_thread](https://github.com/yunCrush/thread/tree/main/src/basic_thread)
 
 ## 线程安全问题
 
@@ -64,9 +64,9 @@ description: 介绍关于多线程中的常见问题
 
 ### 哪些场景需要注意线程安全？
 
-　　主要从"原子性"，"可见性"，"有序性"三个方面思考，常见的“共享变量与资源的访问”，“i++”问题；时序操作，如下: 两个线程分别判断包含了key，两个都会执行remove\(\),因为时序问题，只有一个执行成功，导致线程安全问题；ArrayList不适合用于多线程的读写。
+　　主要从"原子性"，"可见性"，"有序性"三个方面思考，常见的“共享变量与资源的访问”，“i++”问题；时序操作，如下: 两个线程分别判断包含了key，两个都会执行remove(),因为时序问题，只有一个执行成功，导致线程安全问题；ArrayList不适合用于多线程的读写。
 
-```text
+```
 if(map.containsKey(key){
     map.remove(obj)
 }
@@ -88,7 +88,7 @@ if(map.containsKey(key){
 
 　　线程池的4中拒绝策略：
 
-![&#x7EBF;&#x7A0B;&#x6C60;4&#x79CD;&#x62D2;&#x7EDD;&#x7B56;&#x7565;](../.gitbook/assets/image%20%284%29.png)
+![线程池4种拒绝策略](<../.gitbook/assets/image (32).png>)
 
 　　DiscardPolicy：提交的新任务直接拒绝，可能造成数据丢失；  DiscardOldestPolicy: 拒绝工作队列中存活时间最长的任务。
 
@@ -100,7 +100,7 @@ if(map.containsKey(key){
 
 　　线程池的内部结构：线程池管理器（管理线程池的创建销毁等），工作线程（执行任务），任务队列（作为一种缓冲机制，多线程安全要求较高，采用BlockingQueue），任务（任务要求实现统一的接口，以便工作线程可以处理和执行）。
 
-![&#x5E38;&#x89C1;&#x963B;&#x585E;&#x961F;&#x5217;](../.gitbook/assets/image%20%2828%29.png)
+![常见阻塞队列](<../.gitbook/assets/image (33).png>)
 
 　　FixedThreadPool线程池，固定大小，所以需要一个无线容量的阻塞队列；singleThreadExecutor同理，只有一个线程，如果线程发生异常，也会重新创建一个线程来执行任务。
 
@@ -110,36 +110,35 @@ if(map.containsKey(key){
 
 ### 为什么为什么不应该自动创建线程池？
 
-　　从两方面考虑，一是使用Executors.new...ThreadPool（）方式创建的线程池，我们通过查看源码发现，有的是采用了一个无界阻塞队列，如果大量的任务堆积到队列中，耗用大量内存，最终会导致OOM；令一方面，在设置最大线程数量时，默认设置的是Integer.MAX\_VALUE，当任务数量很多的时候，会创建很多的线程，最终超过了操作系统的上限，无法创建新线程，或者导致内存不足。
+　　从两方面考虑，一是使用Executors.new...ThreadPool（）方式创建的线程池，我们通过查看源码发现，有的是采用了一个无界阻塞队列，如果大量的任务堆积到队列中，耗用大量内存，最终会导致OOM；令一方面，在设置最大线程数量时，默认设置的是Integer.MAX_VALUE，当任务数量很多的时候，会创建很多的线程，最终超过了操作系统的上限，无法创建新线程，或者导致内存不足。
 
 ### 合适的线程数量，线程数与CPU核心数的关系？
 
 　　首先，我们应当明白我们设置合适的线程数是为了最大程度上的利用CPU与内存等资源。合适的贤臣数量指的是corePoolSize。对于CPU密集型任务，我们应当根据服务器目前有哪些程序占用CPU，再进行设置，这里涉及到服务器自身的程序会和线程争抢CPU，线程切换导致性能下降，对于IO密集型任务，我们可以将线程的数量设置大一点，在等待IO（文件IO，网络IO等）阻塞时，可以切换到其它线程执行任务，提高资源的利用率。
 
-```text
+```
 # Java并发编程实战》的作者 Brain Goetz 推荐的计算方法：
   线程数 = CPU 核心数 *（1+平均等待时间/平均工作时间）
 ```
 
 ### 如何正确关闭线程池？shutdown 和 shutdownNow 的区别?
 
-　　shutdown\(\)：拒绝新提交的任务，等到线程池中的任务和队列中等待的任务被执行完毕后关闭线程池。
+　　shutdown()：拒绝新提交的任务，等到线程池中的任务和队列中等待的任务被执行完毕后关闭线程池。
 
-　　isShutdown\(\)：返回true与false来判断是否开始了线程池的关闭，并没有关闭，只是开始了关闭的流程。
+　　isShutdown()：返回true与false来判断是否开始了线程池的关闭，并没有关闭，只是开始了关闭的流程。
 
-　　isTerminated\(\)：真正检测线程池是否关闭，返回true表示线程池内任务全部执行完，包括工作队列中。
+　　isTerminated()：真正检测线程池是否关闭，返回true表示线程池内任务全部执行完，包括工作队列中。
 
-　　shutdownNow\(\)：立即关闭线程池的意思，首先给线程发送Interrupt中断信号，尝试中断任务的执行，然后将没有执行完的任务放入List，并返回，进行相关的补救。
+　　shutdownNow()：立即关闭线程池的意思，首先给线程发送Interrupt中断信号，尝试中断任务的执行，然后将没有执行完的任务放入List，并返回，进行相关的补救。
 
 ## 锁
 
-　　锁的分裂参考 👉 [各种各样的“锁”](ge-zhong-ge-yang-de-suo.md)
+　　锁的分裂参考 :point_right: [各种各样的“锁”](ge-zhong-ge-yang-de-suo.md)
 
 ### Lock常用的方法？
 
-　　lock\(\)：最基础的获取锁，如果得不到锁的话，会阻塞，需要显示释放锁unlock\(\)；
+　　lock()：最基础的获取锁，如果得不到锁的话，会阻塞，需要显示释放锁unlock()；
 
-　　tryLock\(\)：获取锁成功就返回true，失败就返回false，该方法会立即返回，不会阻塞等待，没有获取到锁，可以尝试等待，或者跳过这个任务，可以用来解决死锁。
+　　tryLock()：获取锁成功就返回true，失败就返回false，该方法会立即返回，不会阻塞等待，没有获取到锁，可以尝试等待，或者跳过这个任务，可以用来解决死锁。
 
-　　lockInterruptibly\(\)：是可以响应中断的，相比于不能响应中断的 synchronized 锁，lockInterruptibly\(\) 可以让程序更灵活，可以在获取锁的同时，保持对中断的响应，并且不会超时。
-
+　　lockInterruptibly()：是可以响应中断的，相比于不能响应中断的 synchronized 锁，lockInterruptibly() 可以让程序更灵活，可以在获取锁的同时，保持对中断的响应，并且不会超时。

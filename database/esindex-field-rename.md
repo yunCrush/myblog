@@ -6,7 +6,7 @@ description: 这里介绍关于ES的字段名称的修改。
 
 ## 0.需求介绍
 
-```text
+```
 # 拥有的索引名称与字段
 {
     "_index": "testindex",
@@ -20,7 +20,7 @@ description: 这里介绍关于ES的字段名称的修改。
 }
 ```
 
-```text
+```
 # 需要更改后的名称与字段，将field2更改为Request.field3
 {
     "_index": "testindex",
@@ -38,7 +38,7 @@ description: 这里介绍关于ES的字段名称的修改。
 
 ## 1.备份索引
 
-```text
+```
 # 将testindex备份为testindex1，这里的testindex1于临时变量，中间桥梁
 POST _reindex
 {
@@ -53,13 +53,13 @@ POST _reindex
 
 ## 2.删除原索引
 
-```text
+```
 DELETE testindex
 ```
 
 ## 3.修改名称并恢复索引
 
-```text
+```
 # 这里的Request字段需要创建，否则会报错
 POST _reindex
 {
@@ -77,6 +77,4 @@ POST _reindex
 # 删除临时索引testindex1
 DELETE testindex1
 ```
-
-
 
