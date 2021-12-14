@@ -2,7 +2,7 @@
 
 * [yuncrush](README.md)
 
-## 1.系统与网络 <a id="osnetwork"></a>
+## 1.系统与网络 <a href="#osnetwork" id="osnetwork"></a>
 
 * [前置计算机组成知识](osnetwork/qian-zhi-ji-suan-ji-zu-cheng-zhi-shi.md)
 * [计算机网络读书感悟](osnetwork/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
@@ -20,47 +20,46 @@
 * [JDK安装](osnetwork/jdk-install.md)
 * [Docker安装使用](osnetwork/docker-basic.md)
 
-## 2.JAVA <a id="java"></a>
+## 2.JAVA <a href="#java" id="java"></a>
 
 * [Java内存模型](java/java-nei-cun-mo-xing.md)
 * [JVM内存结构与类加载](java/jvm-memory-classloader.md)
 * [核心技术之反射](java/core-reflect.md)
 
-## 3.数据库 <a id="database"></a>
+## 3.数据库 <a href="#database" id="database"></a>
 
 * [MySQL事务](database/mysql-shi-wu.md)
 * [MySQL查询优化](database/mysql-cha-xun-you-hua.md)
 * [MySQL存储引擎](database/innodb-cun-chu-yin-qing.md)
 * [MySQL三大范式](database/shu-ju-ku-san-da-fan-shi.md)
-* [MySQL日志模块\(一）](database/shu-ju-ku-ri-zhi-mo-kuai.md)
+* [MySQL日志模块(一）](database/shu-ju-ku-ri-zhi-mo-kuai.md)
 * [MySQL索引（一）](database/shu-ju-ku-suo-yin-yi.md)
-* [ES搜索踩坑日记](database/es-sou-suo-cai-keng-ri-ji.md)
+* [ES搜索开发日记](database/es-sou-suo-cai-keng-ri-ji.md)
 * [ES集群部署](database/es-ji-qun-bu-shu.md)
 * [ES属性处理之时间转换](database/es-shu-xing-chu-li-zhi-shi-jian-zhuan-huan.md)
 * [ES属性处理之字段重命名](database/esindex-field-rename.md)
 * [ES数据处理之跨版本迁移](database/es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)
 * [ES数据处理之集群备份](database/es-cluster-backup.md)
 
-## 4.并发编程 <a id="concurrency"></a>
+## 4.并发编程 <a href="#concurrency" id="concurrency"></a>
 
 * [线程常见问题](concurrency/xian-cheng-chang-jian-wen-ti.md)
 * [交替打印0-100数字](concurrency/jiao-ti-da-yin-0100-shu-zi.md)
 * [各种各样的“锁”](concurrency/ge-zhong-ge-yang-de-suo.md)
 * [多线程核心知识](concurrency/duo-xian-cheng-he-xin-zhi-shi.md)
 
-## 5.Spring系列 <a id="springserial"></a>
+## 5.Spring系列 <a href="#springserial" id="springserial"></a>
 
 * [SpringMVC核心组件](springserial/springmvc-core.md)
 
-## 7.源码解读 <a id="sourcecode"></a>
+## 7.源码解读 <a href="#sourcecode" id="sourcecode"></a>
 
 * [HashMap](sourcecode/hashmap-yi.md)
 
-## 9.开源项目 <a id="opensource"></a>
+## 9.开源项目 <a href="#opensource" id="opensource"></a>
 
 * [个人项目](opensource/ge-ren-xiang-mu.md)
 
-## 10.感悟随笔 <a id="gan-wu-sui-bi"></a>
+## 10.感悟随笔 <a href="#gan-wu-sui-bi" id="gan-wu-sui-bi"></a>
 
 * [Untitled](gan-wu-sui-bi/untitled.md)
-

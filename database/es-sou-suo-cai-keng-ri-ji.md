@@ -1,8 +1,8 @@
 ---
-description: 记录在使用ES java API开发过程中遇见的坑，以及解决方案。
+description: 记录在使用ES java API开发过程中遇见的问题，以及解决方案。
 ---
 
-# ES搜索踩坑日记
+# ES搜索开发日记
 
 ES Java API开发大体思路：
 
@@ -128,7 +128,7 @@ GET items/_search
 }
 ```
 
-参考来源 :point_right: [ here](https://stackoverflow.com/questions/25465215/elasticsearch-return-unique-values)
+参考来源 :point\_right: [ here](https://stackoverflow.com/questions/25465215/elasticsearch-return-unique-values)
 
 **JAVA API**
 
