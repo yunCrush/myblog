@@ -16,7 +16,6 @@
 * [Linux常用命令](osnetwork/linux-basic-command.md)
 * [Centos防火墙](osnetwork/centos-fang-huo-qiang.md)
 * [NFS文件挂载](osnetwork/nfs-wen-jian-gua-zai.md)
-* [JDK安装](osnetwork/jdk-install.md)
 * [Docker安装使用](osnetwork/docker-basic.md)
 
 ## 2.JAVA <a href="#java" id="java"></a>
@@ -61,6 +60,23 @@
 
 ## 数据库
 
-* [Page 2](shu-ju-ku/page-2.md)
+* [MySQL](shu-ju-ku/mysql.md)
 * [ElasticSearch](shu-ju-ku/elasticsearch/README.md)
   * [Page 1](shu-ju-ku/elasticsearch/page-1.md)
+
+## 框架
+
+* [Spring系列](kuang-jia/spring-xi-lie.md)
+
+## 环境搭建
+
+* [Page 2](huan-jing-da-jian/page-2.md)
+* [JDK安装](huan-jing-da-jian/jdk-install.md)
+
+## 问题技巧
+
+* [Page 3](wen-ti-ji-qiao/page-3.md)
+
+## 源码解读
+
+* [Page 4](yuan-ma-jie-du/page-4.md)
