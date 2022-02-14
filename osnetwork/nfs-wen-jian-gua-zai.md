@@ -12,7 +12,7 @@ description: 利用docker容器，NFS（network file system）实现文件挂载
 
 ## 1.  服务端配置
 
- ** 下载启动服务**
+&#x20;**下载启动服务**
 
 ```
 # 安装nfs-utils rpcbind服务
@@ -45,7 +45,7 @@ mount -t nfs server_ip:/home/crush/esback  /home/crush/esback
 mount -t nfs 192.168.110.136:/home/crush/esback /home/crush/esback
 ```
 
-**  编辑配置文件**
+&#x20; **编辑配置文件**
 
 ```
 # 编辑/etc/exports文件
@@ -57,7 +57,7 @@ vim /etc/exports
 
 ![/etc/exports配置文件](<../.gitbook/assets/image (2).png>)
 
-  **刷新配置文件：`exportfs -a`**
+&#x20; **刷新配置文件：`exportfs -a`**
 
 **查看共享目录**
 
@@ -67,7 +67,7 @@ showmount -e Server-ip
 
 ## 2.客户端配置
 
-**  客户端同上需要进行基本服务安装与创建挂载点，完成这两步后再进行目录挂载。**
+&#x20; **客户端同上需要进行基本服务安装与创建挂载点，完成这两步后再进行目录挂载。**
 
 客户端这里配置挂载的目录，同样为/home/crush/esback,三个Client都需要创建，这里同样**关闭防火墙**。
 

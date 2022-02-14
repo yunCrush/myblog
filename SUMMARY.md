@@ -12,7 +12,6 @@
 * [OS文件管理（四）](osnetwork/os-wen-jian-guan-li-si.md)
 * [OS网络安全（五）](osnetwork/os-wang-luo-an-quan-wu.md)
 * [OS虚拟化（六）](osnetwork/os-xu-ni-hua-liu.md)
-* [shell脚本之持续集成](osnetwork/shell-jiao-ben-zhi-chi-xu-ji-cheng.md)
 * [文本编辑指令](osnetwork/vim-basic.md)
 * [Linux常用命令](osnetwork/linux-basic-command.md)
 * [Centos防火墙](osnetwork/centos-fang-huo-qiang.md)
@@ -60,6 +59,6 @@
 
 * [个人项目](opensource/ge-ren-xiang-mu.md)
 
-## 10.感悟随笔 <a href="#gan-wu-sui-bi" id="gan-wu-sui-bi"></a>
+## Group 1
 
-* [Untitled](gan-wu-sui-bi/untitled.md)
+* [ElasticSearch](group-1/elasticsearch.md)

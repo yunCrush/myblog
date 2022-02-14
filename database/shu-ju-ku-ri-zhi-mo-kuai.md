@@ -16,13 +16,13 @@ description: 这里主要介绍数据库的redo log与binlog日志。
 
 　　write pos日志的写入点，check point日志的檫除点，数据檫除前，需要将数据写入到数据文档中，两者中间部分表示还剩余的空间可以用来写日志。如果write pos追上check point，不能执行新的更新，需要停下来顺时针檫除。
 
-　　innodb_flush_log_at_trx_commit 这个参数设置成 1 的时候，表示每次事务的 redo log 都直接持久化到磁盘。
+　　innodb\_flush\_log\_at\_trx\_commit 这个参数设置成 1 的时候，表示每次事务的 redo log 都直接持久化到磁盘。
 
 ## Binlog（归档日志）
 
 　　**Binlog日志是Server层实现的，所有引擎都可以使用，Binlog是逻辑日志，**采用的是**追加写**的模式**Binlog有两种模式，statement 格式的话是记sql语句， row格式会记录行的内容，记两条，更新前和更新后都有。**
 
-**　　**sync_binlog 这个参数设置成 1 的时候，表示每次事务的 binlog 都持久化到磁盘。这个参 数我也建议你设置成 1，这样可以保证 MySQL 异常重启之后 binlog 不丢失。
+　　****　　sync\_binlog 这个参数设置成 1 的时候，表示每次事务的 binlog 都持久化到磁盘。这个参 数我也建议你设置成 1，这样可以保证 MySQL 异常重启之后 binlog 不丢失。
 
 ## 两阶段提交
 
@@ -36,7 +36,7 @@ update T set c=c+1 where ID=2;
 
 　　redolog拆分为两部分，prepare和commit即**“两阶段提交"，两阶段提交是为了保证两份日志的逻辑一致。d**h
 
-**　　update**的内部执行流程：
+　　**update**的内部执行流程：
 
 　　首先执行器找到引擎查找ID=2这一行，ID是主键，直接通过树搜索进行查找，如果这一行的数据页在内存中就，直接返回给执行器；否则需要先从磁盘进行读入内存，然后返回给执行器。
 

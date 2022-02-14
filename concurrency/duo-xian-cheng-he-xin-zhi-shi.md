@@ -58,7 +58,7 @@ private void throwInMethod() throws InterruptedException {
 
 由于run方法内无法抛出checked Exception(只能用 try catch)，顶层方法必须处理该异常，避免了漏掉或者被吞掉的情况，增强了代码的健壮性。
 
-    2**. 恢复中断**
+&#x20;   2**. 恢复中断**
 
 ```
 // 在catch子语句中调用Thread.currentThread().interrupt()来恢复设置中断状态
