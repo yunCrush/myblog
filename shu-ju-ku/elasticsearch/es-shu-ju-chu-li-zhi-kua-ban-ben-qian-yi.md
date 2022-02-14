@@ -4,7 +4,7 @@ description: ES不同版本之间备份的数据是不能进行使用快照还�
 
 # ES数据处理之跨版本迁移
 
-　本文中由7.4.0迁移到7.4.2。使用到的是 :point_right: [elasticdump](https://github.com/elasticsearch-dump/elasticsearch-dump)插件。适用场景：适合数据量不大，迁移索引个数不多的场景，这里测试的数据是在每个索引大约15W的数据量。
+　本文中由7.4.0迁移到7.4.2。使用到的是 :point\_right: [elasticdump](https://github.com/elasticsearch-dump/elasticsearch-dump)插件。适用场景：适合数据量不大，迁移索引个数不多的场景，这里测试的数据是在每个索引大约15W的数据量。
 
 ## 1 . 安装elasticsearch-dump
 
