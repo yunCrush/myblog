@@ -49,7 +49,7 @@
 
 ## 问题技巧
 
-* [开发技巧](wen-ti-ji-qiao/kai-fa-ji-qiao.md)
+* [编程技巧](wen-ti-ji-qiao/kai-fa-ji-qiao.md)
 * [开发问题](wen-ti-ji-qiao/kai-fa-wen-ti.md)
 * [常用命令](wen-ti-ji-qiao/chang-yong-ming-ling/README.md)
   * [文本编辑指令](wen-ti-ji-qiao/chang-yong-ming-ling/vim-basic.md)
