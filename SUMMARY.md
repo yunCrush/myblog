@@ -52,31 +52,29 @@
 
 ## 7.源码解读 <a href="#sourcecode" id="sourcecode"></a>
 
-* [HashMap](sourcecode/hashmap-yi.md)
-
-## 9.开源项目 <a href="#opensource" id="opensource"></a>
-
-* [个人项目](opensource/ge-ren-xiang-mu.md)
-
 ## 数据库
 
 * [MySQL](shu-ju-ku/mysql.md)
 * [ElasticSearch](shu-ju-ku/elasticsearch/README.md)
   * [Page 1](shu-ju-ku/elasticsearch/page-1.md)
+  * [es ji qun bu shu](shu-ju-ku/elasticsearch/es-ji-qun-bu-shu.md)
 
 ## 框架
 
 * [Spring系列](kuang-jia/spring-xi-lie.md)
 
-## 环境搭建
+## 中间件
 
-* [Page 2](huan-jing-da-jian/page-2.md)
-* [JDK安装](huan-jing-da-jian/jdk-install.md)
+* [Redis](zhong-jian-jian/redis.md)
+* [开发技巧](zhong-jian-jian/kai-fa-ji-qiao.md)
+* [开发问题](zhong-jian-jian/kai-fa-wen-ti.md)
+* [环境部署](zhong-jian-jian/huan-jing-bu-shu/README.md)
+  * [Page 8](zhong-jian-jian/huan-jing-bu-shu/page-8.md)
+* [Untitled](zhong-jian-jian/untitled.md)
 
-## 问题技巧
+## 源码解析
 
-* [Page 3](wen-ti-ji-qiao/page-3.md)
-
-## 源码解读
-
-* [Page 4](yuan-ma-jie-du/page-4.md)
+* [集合容器](yuan-ma-jie-xi/ji-he-rong-qi/README.md)
+  * [HashMap](yuan-ma-jie-xi/ji-he-rong-qi/hashmap-yi.md)
+* [Page 2](yuan-ma-jie-xi/page-2.md)
+* [Page 3](yuan-ma-jie-xi/page-3.md)

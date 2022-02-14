@@ -4,7 +4,7 @@ description: 10分钟，从0到实现es的集群部署，这里es的版本为7.2
 
 # ES集群部署
 
-[JDK安装部分](../huan-jing-da-jian/jdk-install.md)
+[JDK安装部分](broken-reference)
 
 先 看一下集群部署可能会遇见的问题：
 
