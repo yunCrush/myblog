@@ -26,6 +26,7 @@
 ## 框架
 
 * [Spring系列](kuang-jia/spring-xi-lie/README.md)
+  * [Spring常见问题](kuang-jia/spring-xi-lie/spring-chang-jian-wen-ti.md)
   * [SpringMVC核心组件](kuang-jia/spring-xi-lie/springmvc-core.md)
 
 ## JAVA
@@ -48,11 +49,12 @@
 
 ## 问题技巧
 
-* [开发技巧](wen-ti-ji-qiao/kai-fa-ji-qiao/README.md)
-  * [Centos防火墙](wen-ti-ji-qiao/kai-fa-ji-qiao/centos-fang-huo-qiang.md)
-  * [Linux常用命令](wen-ti-ji-qiao/kai-fa-ji-qiao/linux-basic-command.md)
-  * [文本编辑指令](wen-ti-ji-qiao/kai-fa-ji-qiao/vim-basic.md)
+* [开发技巧](wen-ti-ji-qiao/kai-fa-ji-qiao.md)
 * [开发问题](wen-ti-ji-qiao/kai-fa-wen-ti.md)
+* [常用命令](wen-ti-ji-qiao/chang-yong-ming-ling/README.md)
+  * [文本编辑指令](wen-ti-ji-qiao/chang-yong-ming-ling/vim-basic.md)
+  * [Centos防火墙](wen-ti-ji-qiao/chang-yong-ming-ling/centos-fang-huo-qiang.md)
+  * [Linux常用命令](wen-ti-ji-qiao/chang-yong-ming-ling/linux-basic-command.md)
 
 ## 环境部署
 
@@ -62,6 +64,11 @@
 
 ## 基础知识
 
+* [算法](ji-chu-zhi-shi/suan-fa/README.md)
+  * [常见排序](ji-chu-zhi-shi/suan-fa/chang-jian-pai-xu.md)
+  * [回溯](ji-chu-zhi-shi/suan-fa/hui-su.md)
+  * [递归](ji-chu-zhi-shi/suan-fa/di-gui.md)
+  * [深度优先DFS](ji-chu-zhi-shi/suan-fa/shen-du-you-xian-dfs.md)
 * [计算机网络](ji-chu-zhi-shi/ji-suan-ji-wang-luo/README.md)
   * [计算机网络读书感悟](ji-chu-zhi-shi/ji-suan-ji-wang-luo/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
 * [操作系统](ji-chu-zhi-shi/cao-zuo-xi-tong/README.md)
