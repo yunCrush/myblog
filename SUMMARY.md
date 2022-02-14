@@ -61,6 +61,7 @@
 * [环境搭建](huan-jing-bu-shu/huan-jing-da-jian/README.md)
   * [Docker安装使用](huan-jing-bu-shu/huan-jing-da-jian/docker-basic.md)
   * [NFS文件挂载](huan-jing-bu-shu/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
+  * [Redis安装](huan-jing-bu-shu/huan-jing-da-jian/redis-an-zhuang.md)
 
 ## 基础知识
 
