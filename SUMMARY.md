@@ -62,6 +62,8 @@
   * [Docker安装使用](huan-jing-bu-shu/huan-jing-da-jian/docker-basic.md)
   * [NFS文件挂载](huan-jing-bu-shu/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
   * [Redis安装](huan-jing-bu-shu/huan-jing-da-jian/redis-an-zhuang.md)
+  * [MySQL安装](huan-jing-bu-shu/huan-jing-da-jian/mysql-an-zhuang.md)
+  * [配置163yum源](huan-jing-bu-shu/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
 
 ## 基础知识
 
