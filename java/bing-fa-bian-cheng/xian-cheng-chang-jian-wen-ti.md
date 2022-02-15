@@ -142,3 +142,5 @@ if(map.containsKey(key){
 　　tryLock()：获取锁成功就返回true，失败就返回false，该方法会立即返回，不会阻塞等待，没有获取到锁，可以尝试等待，或者跳过这个任务，可以用来解决死锁。
 
 　　lockInterruptibly()：是可以响应中断的，相比于不能响应中断的 synchronized 锁，lockInterruptibly() 可以让程序更灵活，可以在获取锁的同时，保持对中断的响应，并且不会超时。
+
+### Synchronized和lock的性能相差？

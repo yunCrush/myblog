@@ -21,7 +21,7 @@
 
 ## 中间件
 
-* [Redis](zhong-jian-jian/redis/README.md)
+* [Redis](zhong-jian-jian/redis.md)
   * [Redis常见问题](zhong-jian-jian/redis/redis-chang-jian-wen-ti.md)
 
 ## 框架
