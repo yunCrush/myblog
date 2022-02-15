@@ -27,6 +27,25 @@ jps
 
 ### 集群部署
 
+```
+#编辑配置文件
+vim zoo.cfg
+dataDir=/data/soft/apache-zookeeper-3.5.8-bin/data
+server.0=bigdata01:2888:3888
+server.1=bigdata02:2888:3888
+server.2=bigdata03:2888:3888
+
+
+创建目录保存myid文件，并且向myid文件中写入内容
+myid中的值其实是和zoo.cfg中server后面指定的编号是一一对应的
+编号0对应的是bigdata01这台机器，所以在这里指定0
+
+cd /data/soft/apache-zookeeper-3.5.7-bin/data
+echo 0 > myid
+
+# 修改bigdata02,bigdata03的配置文件 myid分别为1,2。
+```
+
 ### 常用操作
 
 ```

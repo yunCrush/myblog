@@ -32,3 +32,8 @@ ntpdate -u ntp.sjtu.edu.cn
 vi /etc/crontab
 * * * * * root /usr/sbin/ntpdate -u ntp.sjtu.edu.cn
 ```
+
+### PIP源配置
+
+vim \~/.pip/pip.conf
+

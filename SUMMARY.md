@@ -21,7 +21,8 @@
 
 ## 中间件
 
-* [Redis](zhong-jian-jian/redis.md)
+* [Redis](zhong-jian-jian/redis/README.md)
+  * [Redis常见问题](zhong-jian-jian/redis/redis-chang-jian-wen-ti.md)
 
 ## 框架
 
@@ -67,6 +68,8 @@
   * [配置163yum源](huan-jing-bu-shu/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
   * [ZooKeeper安装](huan-jing-bu-shu/huan-jing-da-jian/zookeeper-an-zhuang.md)
   * [linux配置](huan-jing-bu-shu/huan-jing-da-jian/linux-pei-zhi.md)
+  * [Kafka安装](huan-jing-bu-shu/huan-jing-da-jian/kafka-an-zhuang.md)
+  * [RBD-tools安装](huan-jing-bu-shu/huan-jing-da-jian/rbdtools-an-zhuang.md)
 
 ## 基础知识
 
