@@ -34,7 +34,7 @@ update T set c=c+1 where ID=2;
 
 ![update执行流程](<../../.gitbook/assets/image (13).png>)
 
-　　redolog拆分为两部分，prepare和commit即**“两阶段提交"，两阶段提交是为了保证两份日志的逻辑一致。d**h
+　　redolog拆分为两部分，prepare和commit即**“两阶段提交"，两阶段提交是为了保证两份日志的逻辑一致。**
 
 　　**update**的内部执行流程：
 
