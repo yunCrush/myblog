@@ -10,7 +10,7 @@ description: 这里主要介绍数据库的redo log与binlog日志。
 
 ![MySQL逻辑架构图](<../../.gitbook/assets/image (11).png>)
 
-　　**redo log是InnoDB引擎所特有的，是物理日志，记录的是“在某个数据页上面做了什么改动”，采用的是WAL技术（Write-Ahead logging)，先写进日志，再写到磁盘，一般是在空闲时写入磁盘，空间固定会写完，如果写完时，需要暂停，进行檫除之前日志**。redo日志的概念图是环状的，循环写入的，如下图所示，有了redo日志，即使数据库发生异常重启，也不会导致之前的提交记录的丢失，这种能力叫**crash-safe**。
+　　**redo log是InnoDB引擎所特有的，是物理日志，记录的是“在某个数据页上面做了什么改动”，采用的是WAL技术（Write-Ahead logging)，先写进日志，再写到磁盘，一般是在空闲时写入磁盘，空间固定会写完，如果写完时，需要暂停，进行檫除之前日志**。redo日志的概念图是环状的，循环写入的，如下图所示，有了redo日志，redo不能记录历史的日志，不能做归档，所以不可以单靠redo日志来进行数据的恢复，即使数据库发生异常重启，也不会导致之前的提交记录的丢失，这种能力叫**crash-safe**。
 
 ![](<../../.gitbook/assets/image (12).png>)
 
@@ -55,4 +55,8 @@ update T set c=c+1 where ID=2;
 　　如果碰到既有 prepare、又有 commit 的 redo log，就直接提交；
 
 　　如果碰到只有 parepare、而没有 commit 的 redo log，就拿着 XID 去 binlog 找对应 的事务。
+
+2\. 如何知道binlog是完整的？
+
+&#x20;  binlog有两种格式，statement格式：最后有COMMIT，row格式：最后有XID EVENT。
 
