@@ -24,6 +24,12 @@
 * [Redis](zhong-jian-jian/redis.md)
   * [Redis常见问题](zhong-jian-jian/redis/redis-chang-jian-wen-ti.md)
 
+## 服务器
+
+* [Tomcat](fu-wu-qi/tomcat.md)
+* [Nginx](fu-wu-qi/nginx/README.md)
+  * [Nginx安装及基本配置](fu-wu-qi/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
+
 ## 框架
 
 * [Spring系列](kuang-jia/spring-xi-lie/README.md)
