@@ -140,3 +140,24 @@ org.apache.catalina.Executor接⼝
 url1: http://www.abc.om:8080/
 
 url2: http://www.def.com:8080/
+
+## 6.Context配置特定资源
+
+```
+# 访问：http://www.abc.om/web3 寻找docBase下的相关文件
+# 对于不同的相关文件可以通过不同的context进行配置
+<Host name="www.abc.com" appBase="webapps" unpackWARs="true" autoDeploy="true">
+<!--
+ docBase：Web应⽤⽬录或者War包的部署路径。可以是绝对路径，也可以是相对于 Host appBase的
+相对路径。
+ path：Web应⽤的Context 路径。如果我们Host名为localhost， 则该web应⽤访问的根路径为：
+ http://localhost:8080/web3。
+-->
+ <Context docBase="/Users/yingdian/web_demo" path="/web3"></Context>
+
+# 日志相关
+ <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+ prefix="localhost_access_log" suffix=".txt"
+ pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+</Host>
+```
