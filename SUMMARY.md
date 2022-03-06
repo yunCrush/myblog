@@ -1,6 +1,6 @@
 # Table of contents
 
-* [yuncrush](README.md)
+* [yunCrush](README.md)
 
 ## 数据库
 
@@ -24,11 +24,12 @@
 * [Redis](zhong-jian-jian/redis.md)
   * [Redis常见问题](zhong-jian-jian/redis/redis-chang-jian-wen-ti.md)
 
-## 服务器
+## 服务器/协议
 
-* [Tomcat](fu-wu-qi/tomcat.md)
-* [Nginx](fu-wu-qi/nginx/README.md)
-  * [Nginx安装及基本配置](fu-wu-qi/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
+* [Tomcat](fu-wu-qi-xie-yi/tomcat/README.md)
+  * [Tomcat基本组件](fu-wu-qi-xie-yi/tomcat/tomcat-ji-ben-zu-jian.md)
+* [Nginx](fu-wu-qi-xie-yi/nginx/README.md)
+  * [Nginx安装及基本配置](fu-wu-qi-xie-yi/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
 
 ## 框架
 
