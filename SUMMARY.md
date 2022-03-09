@@ -1,6 +1,6 @@
 # Table of contents
 
-* [yunCrush](README.md)
+* [🇨🇳 yunCrush](README.md)
 
 ## 数据库
 
@@ -12,6 +12,8 @@
   * [MySQL查询优化](shu-ju-ku/mysql/mysql-cha-xun-you-hua.md)
   * [MySQL事务](shu-ju-ku/mysql/mysql-shi-wu.md)
 * [ElasticSearch](shu-ju-ku/elasticsearch/README.md)
+  * [ElasticSearch概念](shu-ju-ku/elasticsearch/elasticsearch-gai-nian.md)
+  * [ElasticSearch写入原理](shu-ju-ku/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
   * [ES搜索开发日记](shu-ju-ku/elasticsearch/es-sou-suo-cai-keng-ri-ji.md)
   * [ES集群部署](shu-ju-ku/elasticsearch/es-ji-qun-bu-shu.md)
   * [ES数据处理之集群备份](shu-ju-ku/elasticsearch/es-cluster-backup.md)
