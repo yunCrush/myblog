@@ -11,6 +11,7 @@
   * [MySQL存储引擎](shu-ju-ku/mysql/innodb-cun-chu-yin-qing.md)
   * [MySQL查询优化](shu-ju-ku/mysql/mysql-cha-xun-you-hua.md)
   * [MySQL事务](shu-ju-ku/mysql/mysql-shi-wu.md)
+  * [MySQL常见命令](shu-ju-ku/mysql/mysql-chang-jian-ming-ling.md)
 * [ElasticSearch](shu-ju-ku/elasticsearch/README.md)
   * [ElasticSearch概念](shu-ju-ku/elasticsearch/elasticsearch-gai-nian.md)
   * [ElasticSearch写入原理](shu-ju-ku/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
