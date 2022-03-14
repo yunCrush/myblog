@@ -103,3 +103,20 @@ telnet Ip port
 host -t AAAA www.yuncrush.com
 dig www.yuncrush.com
 ```
+
+## &#x20; 4.git代理
+
+```
+# 解除ssl验证
+git config --global http.sslVerify "false"
+
+# 添加代理
+git config --global http.proxy http://127.0.0.1:1080
+ 
+git config --global https.proxy http://127.0.0.1:1080
+#取消全局代理：
+git config --global --unset http.proxy
+ 
+git config --global --unset https.proxy
+```
+
