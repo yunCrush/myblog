@@ -48,7 +48,7 @@ cd nginx-1.17.8
 
 3.3 http块：http块是配置最频繁的部分，虚拟主机的配置，监听端⼝的配置，请求转发、反向代理、负载均衡 等，一个http下的server有多个localtion。
 
-![](<../../.gitbook/assets/image (40) (1).png>)
+![](<../../.gitbook/assets/image (40) (1) (1).png>)
 
 ![](<../../.gitbook/assets/image (36) (1).png>)
 

@@ -4,7 +4,7 @@
 
 &#x20;　　tomcat的两个核心组件：连接器Connector（http服务器功能，与socket进行通信),Container容器（负责处理内部的请求，加载和管理servlet，以及处理具体的Request).tomcat默认支持http 1.1。自8.5以后支持http 2.0协议。传输层支持I/O模型：NIO/NIO2/APR。其中APR模型：Tomcat将以JNI的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取或网络传输操作。
 
-![tomcat component](<../../.gitbook/assets/image (42).png>)
+![tomcat component](<../../.gitbook/assets/image (42) (1).png>)
 
 ![connector and container](<../../.gitbook/assets/image (38).png>)
 
@@ -14,7 +14,7 @@
 
 coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Processor(实现Http协议，是对应用层的抽象), Adapter(用于将上图中的request请求封装成ServletRequest，以及ServletResponse-> Reponse,**适配器的经典使用**)。
 
-![connector](<../../.gitbook/assets/image (40).png>)
+![connector](<../../.gitbook/assets/image (40) (1).png>)
 
 ## 3.核心组件Catalina
 
