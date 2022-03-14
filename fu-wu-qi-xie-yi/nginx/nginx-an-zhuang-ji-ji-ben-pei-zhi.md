@@ -44,7 +44,7 @@ cd nginx-1.17.8
 
 3.2 events块：events块主要影响nginx服务器与⽤户的⽹络连接，⽐如worker\_connections 1024，标识每个 workderprocess⽀持的最⼤连接数为1024。
 
-![events块](<../../.gitbook/assets/image (37).png>)
+![events块](<../../.gitbook/assets/image (37) (1).png>)
 
 3.3 http块：http块是配置最频繁的部分，虚拟主机的配置，监听端⼝的配置，请求转发、反向代理、负载均衡 等，一个http下的server有多个localtion。
 

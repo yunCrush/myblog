@@ -6,7 +6,7 @@
 
 　响应报文：状态行（HTTP/1.0 403 ForBidden）--响应首部（↑）--**换行符**--响应体
 
-![Http VS Https](<../../.gitbook/assets/image (39).png>)
+![Http vs Https](<../../.gitbook/assets/image (37).png>)
 
 ## 2. 三次握手
 
