@@ -54,6 +54,7 @@
   * [各种各样的“锁”](java/bing-fa-bian-cheng/ge-zhong-ge-yang-de-suo.md)
   * [多线程核心知识](java/bing-fa-bian-cheng/duo-xian-cheng-he-xin-zhi-shi.md)
   * [Java内存模型](java/bing-fa-bian-cheng/java-nei-cun-mo-xing.md)
+  * [ThreadLocal](java/bing-fa-bian-cheng/threadlocal.md)
 * [JavaSe](java/javase/README.md)
   * [核心技术之反射](java/javase/core-reflect.md)
 
