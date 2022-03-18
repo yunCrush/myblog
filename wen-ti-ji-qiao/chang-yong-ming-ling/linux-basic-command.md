@@ -124,7 +124,7 @@ git config --global --unset https.proxy
 
 ```
 # 将tempdir目录下的文件打包成多个小包 -P password带密码,小包的前缀名字myfile.xx
-zip -P password -r -s myfile.zip tempdir/
+zip -P password -r -s 1024m myfile.zip tempdir/
 #将获得的多个压缩包合并成一个
 zip -F myfiles.zip --out single-archive.zip
 #得到single-archive.zip包，对其进行解压即可。
