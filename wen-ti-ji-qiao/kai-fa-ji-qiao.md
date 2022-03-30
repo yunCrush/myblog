@@ -42,3 +42,65 @@ public static void main(String[] args) {
     
 }
 ```
+
+### 2.格式转换
+
+```
+public String obj2Json(PersonEntity person) {
+	String json = JSONObject.toJSONString(person);
+	log.info("Object=====1=====Json: {}", json);
+	return json;
+}
+```
+
+```
+public void json2Obj(String json) {
+	PersonEntity personEntity = JSON.parseObject(json, PersonEntity.class);
+	log.info("Json=====2=====Person: {}", personEntity.toString());
+}
+```
+
+```
+public JSONArray list2Arr(List<String> list) {
+	log.info(JSON.toJSONString(list));
+	log.info("List====3=====Array: {}", JSONArray.parseArray(JSON.toJSONString(list)));
+	return JSONArray.parseArray(JSON.toJSONString(list));
+}
+```
+
+```
+public List<String> jsonArr2List(String jsonArray) {
+	List<String> list = JSON.parseArray(jsonArray,String.class);
+	log.info("遍历list:");
+	list.forEach((str) -> log.info("{}",str));
+	return list;
+	}
+```
+
+测试方法
+
+```
+public static void main(String[] args) {
+        JSONTest test = new JSONTest();
+        
+        List<String> list = new ArrayList();
+        list.add("北京");
+        list.add("南京");
+        PersonEntity person = new PersonEntity("yuncrush", 24, list);
+        String json = test.obj2Json(person);
+        
+        test.json2Obj(json);
+        String jsonArr = test.list2Arr(list).toJSONString();
+        test.jsonArr2List(jsonArr);
+
+}
+
+@Data
+@ToString
+@AllArgsConstructor
+public class PersonEntity {
+	String name;
+	int age;
+	List<String> address;
+}
+```
