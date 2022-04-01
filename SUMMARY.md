@@ -93,6 +93,7 @@
   * [回溯](ji-chu-zhi-shi/suan-fa/hui-su.md)
   * [递归](ji-chu-zhi-shi/suan-fa/di-gui.md)
   * [深度优先DFS](ji-chu-zhi-shi/suan-fa/shen-du-you-xian-dfs.md)
+  * [贪心](ji-chu-zhi-shi/suan-fa/tan-xin.md)
 * [计算机网络](ji-chu-zhi-shi/ji-suan-ji-wang-luo/README.md)
   * [计算机网络读书感悟](ji-chu-zhi-shi/ji-suan-ji-wang-luo/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
 * [操作系统](ji-chu-zhi-shi/cao-zuo-xi-tong/README.md)
