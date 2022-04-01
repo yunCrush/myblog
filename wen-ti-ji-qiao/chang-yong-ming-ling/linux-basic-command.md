@@ -131,3 +131,14 @@ zip -F myfiles.zip --out single-archive.zip
 unzip -P password singl-archive.zip -d ./
 
 ```
+
+### 6.启动java项目
+
+```
+nohup java -jar test.jar >/dev/null 2>&1 &
+nohup 后台运行， & 不锁定窗口，但是关闭窗口，程序结束
+>/dev/null 2>&1 &
+标准输出： > 代码为1 >>累加不覆盖
+标准错误输出： 2> 代码为2 2>>累加不覆盖
+>/dev/null 2>&1 标准输出与错误输出都输出到/dev/null &1即等价于代码1的输出位置
+```
