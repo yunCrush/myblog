@@ -86,3 +86,30 @@ POST http://地址:9200/_snapshot/my_backup/snapshot_20210407/_restore
 POST _snapshot/my_backup/snapshot_20210407/_restore
 
 ```
+
+## 方案二：使用\_reindex进行迁移
+
+场景：从A服务器迁移索引index1到B服务器
+
+1. 在B服务器ES配置中添加以下配置，并重启服务器
+
+```
+reindex.remote.whitelist: A_ip
+```
+
+&#x20;2\. 在B服务器端执行迁移命令,前提是在服务器B的es中需要创建好index1索引的Mapping.
+
+```
+POST _reindex
+{
+    "source": {
+        "remote": {
+            "host": "http://A_ip:9200"
+            },
+        "index": "index1"
+    },
+    "dest": {
+        "index": "index1"
+    }
+}
+```
