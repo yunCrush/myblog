@@ -133,7 +133,7 @@ org.apache.catalina.Executor接⼝
 
 ![webapps2/ROOT/index.jsp](<../../.gitbook/assets/image (43).png>)
 
-![server.xml](<../../.gitbook/assets/image (41).png>)
+![server.xml](<../../.gitbook/assets/image (41) (1).png>)
 
 通过访问不同的url即可得到不同的响应页面
 

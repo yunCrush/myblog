@@ -87,4 +87,4 @@ listenfd读事件，在读事件⾥调⽤accept接受该连接，然后解析、
 
 nginx最大并发连接：work_process \* work\_connections。如果用作反向代理则需要除以4._
 
-![](<../../.gitbook/assets/image (41) (1).png>)
+![](<../../.gitbook/assets/image (41) (1) (1).png>)

@@ -1,6 +1,6 @@
 # 布隆过滤器
 
-## 1.Rebloom
+## 1.Rebloom(编译安装)
 
 ```
  
@@ -28,4 +28,30 @@ redis-server redis.conf
 redis-cli -a 密码
 # 进入可以使用BF.ADD命令算成功
 
+```
+
+## 2.Rebloom(docker版)
+
+```
+docker run -p 6379:6379 --name=redis6379bloom -d redislabs/rebloom
+```
+
+```
+docker exec -it redis6379bloom /bin/bash
+```
+
+```
+redis-cli
+```
+
+![rebloom operation](<../../.gitbook/assets/image (41).png>)
+
+```
+bf.reserve key error_rate的值 initial_size 的值 
+默认的error_rate是 0.01，
+默认的initial_size是 100。
+bf.add key 值
+bf.exists key 值
+bf.madd 一次添加多个元素    
+bf.mexists 一次查询多个元素是否存在
 ```
