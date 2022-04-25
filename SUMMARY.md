@@ -75,6 +75,7 @@
 ## 环境部署
 
 * [环境搭建](huan-jing-bu-shu/huan-jing-da-jian/README.md)
+  * [布隆过滤器](huan-jing-bu-shu/huan-jing-da-jian/bu-long-guo-lv-qi.md)
   * [JDK安装](huan-jing-bu-shu/huan-jing-da-jian/jdk-an-zhuang.md)
   * [Docker安装使用](huan-jing-bu-shu/huan-jing-da-jian/docker-basic.md)
   * [NFS文件挂载](huan-jing-bu-shu/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
