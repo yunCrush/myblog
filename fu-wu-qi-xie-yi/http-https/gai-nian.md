@@ -10,7 +10,7 @@
 
 ## 2. 三次握手
 
-![三次握手](<../../.gitbook/assets/image (42).png>)
+![三次握手](<../../.gitbook/assets/image (40).png>)
 
 1. 为什么TCP客户端最后还要发送一次确认呢？
 
@@ -28,7 +28,7 @@
 
 ## 3. 四次挥手
 
-![四次挥手](<../../.gitbook/assets/image (49).png>)
+![四次挥手](<../../.gitbook/assets/image (42).png>)
 
 **为什么客户端最后还要等待2MSL？**
 
