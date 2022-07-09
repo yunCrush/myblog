@@ -1,10 +1,9 @@
 ---
 description: 理想主义青年、自律、热爱生活。
+layout: editorial
 ---
 
 # 🌦 江畔何人初见月
-
-&#x20;      &#x20;
 
 ![](https://img.shields.io/badge/build-gitbook-black.svg)
 
