@@ -2,11 +2,11 @@
 
 ## 1.基础理论
 
-&#x20;　　tomcat的两个核心组件：连接器Connector（http服务器功能，与socket进行通信),Container容器（负责处理内部的请求，加载和管理servlet，以及处理具体的Request).tomcat默认支持http 1.1。自8.5以后支持http 2.0协议。传输层支持I/O模型：NIO/NIO2/APR。其中APR模型：Tomcat将以JNI的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取或网络传输操作。
+　　tomcat的两个核心组件：连接器Connector（http服务器功能，与socket进行通信),Container容器（负责处理内部的请求，加载和管理servlet，以及处理具体的Request).tomcat默认支持http 1.1。自8.5以后支持http 2.0协议。传输层支持I/O模型：NIO/NIO2/APR。其中APR模型：Tomcat将以JNI的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取或网络传输操作。
 
-![tomcat component](<../../.gitbook/assets/image (42) (1).png>)
+![tomcat component](<../../.gitbook/assets/image (50).png>)
 
-![connector and container](<../../.gitbook/assets/image (38).png>)
+![connector and container](<../../.gitbook/assets/image (40).png>)
 
 ## 2.核心组件Coyote
 
@@ -14,7 +14,7 @@
 
 coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Processor(实现Http协议，是对应用层的抽象), Adapter(用于将上图中的request请求封装成ServletRequest，以及ServletResponse-> Reponse,**适配器的经典使用**)。
 
-![connector](<../../.gitbook/assets/image (40) (1).png>)
+![connector](<../../.gitbook/assets/image (45).png>)
 
 ## 3.核心组件Catalina
 
@@ -24,17 +24,17 @@ coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Proc
 
 ![tomcat 实例](<../../.gitbook/assets/image (36).png>)
 
-1. Catalina 负责解析Tomcat的配置⽂件（server.xml） , 以此来创建服务器Server组件并进⾏管理&#x20;
-2. Server 服务器表示整个Catalina Servlet容器以及其它组件，负责组装并启动Servlaet引擎,Tomcat连接 器。Server通过实现Lifecycle接⼝，提供了⼀种优雅的启动和关闭整个系统的⽅式&#x20;
+1. Catalina 负责解析Tomcat的配置⽂件（server.xml） , 以此来创建服务器Server组件并进⾏管理
+2. Server 服务器表示整个Catalina Servlet容器以及其它组件，负责组装并启动Servlaet引擎,Tomcat连接 器。Server通过实现Lifecycle接⼝，提供了⼀种优雅的启动和关闭整个系统的⽅式
 3. Service 服务是Server内部的组件，⼀个Server包含多个Service。它将若⼲个Connector组件绑定到⼀个 Container
-4. &#x20;Container 容器，负责处理⽤户的servlet请求，并返回对象给web⽤户的模块
+4. Container 容器，负责处理⽤户的servlet请求，并返回对象给web⽤户的模块
 
 **container具体结构**：
 
-1. Engine 表示整个Catalina的Servlet引擎，⽤来管理多个虚拟站点，⼀个Service最多只能有⼀个Engine， 但是⼀个引擎可包含多个Host&#x20;
+1. Engine 表示整个Catalina的Servlet引擎，⽤来管理多个虚拟站点，⼀个Service最多只能有⼀个Engine， 但是⼀个引擎可包含多个Host
 2. Host 代表⼀个虚拟主机，或者说⼀个站点，可以给Tomcat配置多个虚拟主机地址，⽽⼀个虚拟主机下 可包含多个Context,比如监听的8080端口，可以在server.xml下配置多个host, localhost:8080/a和localhost:8080/b
-3. &#x20;Context 表示⼀个Web应⽤程序， ⼀个Web应⽤可包含多个Wrapper
-4. &#x20;Wrapper 表示⼀个Servlet，Wrapper 作为容器中的最底层，不能包含⼦容器
+3. Context 表示⼀个Web应⽤程序， ⼀个Web应⽤可包含多个Wrapper
+4. Wrapper 表示⼀个Servlet，Wrapper 作为容器中的最底层，不能包含⼦容器
 
 ## 4.核心配置文件server.xml
 
@@ -78,7 +78,7 @@ coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Proc
 <Engine name="Catalina" defaultHost="localhost">
 ```
 
-&#x20;**3. host标签**
+**3. host标签**
 
 ```
 #  Host标签  
@@ -131,9 +131,9 @@ org.apache.catalina.Executor接⼝
 #修改server.xml与 webapps2/ROOT/index.jsp
 ```
 
-![webapps2/ROOT/index.jsp](<../../.gitbook/assets/image (43).png>)
+![webapps2/ROOT/index.jsp](<../../.gitbook/assets/image (52).png>)
 
-![server.xml](<../../.gitbook/assets/image (41) (1).png>)
+![server.xml](<../../.gitbook/assets/image (47).png>)
 
 通过访问不同的url即可得到不同的响应页面
 

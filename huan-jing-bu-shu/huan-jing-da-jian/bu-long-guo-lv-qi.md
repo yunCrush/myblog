@@ -27,7 +27,6 @@ redis-server redis.conf
 # 连接容器中的 redis 服务 若是无密码 redis-cli即可
 redis-cli -a 密码
 # 进入可以使用BF.ADD命令算成功
-
 ```
 
 ## 2.Rebloom(docker版)
@@ -44,7 +43,7 @@ docker exec -it redis6379bloom /bin/bash
 redis-cli
 ```
 
-![rebloom operation](<../../.gitbook/assets/image (41).png>)
+![rebloom operation](<../../.gitbook/assets/image (46).png>)
 
 ```
 bf.reserve key error_rate的值 initial_size 的值 
