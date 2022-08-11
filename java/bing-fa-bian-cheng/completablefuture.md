@@ -7,6 +7,7 @@
 public V get() 
 // 过时不候
 public V get(long timeout, TimeUnit unit)
+
 // 任务是否完成
 public boolean isDone() 
 ```
@@ -35,6 +36,7 @@ public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier, Executo
 public T get() 
 // 超时则不再等待 
 public T get(long timeout, TimeUnit unit)
+
 // 是否完成，未完成则返回false,get()得到默认值value
 public boolean complete(T value) 
 ```
@@ -44,6 +46,7 @@ public boolean complete(T value)
 ```
 //当一个线程依赖另一个线程时，使用thenApply串行化两个线程。如果出现Exception则停止向下运行
 public <U> CompletableFuture<U> thenApply(Function<? super T,? extends U> fn) 
+
 //当一个线程依赖另一个线程时，使用handle串行化两个线程。出现Exception,带着exception继续运行
 public <U> CompletableFuture<U> handle(BiFunction<? super T, Throwable, ? extends U> fn) 
 ```
@@ -79,6 +82,7 @@ public <U,V> CompletableFuture<V> thenCombine(CompletionStage<? extends U> other
 
 // 执行完上一个任务A后，再执行B, B不需要A作参数
 public CompletableFuture<Void> thenRun(Runnable action)
+
 // 接收一个参数，执行任务完后，无返回值
 public CompletableFuture<Void> thenAccept(Consumer<? super T> action) 
 ```
