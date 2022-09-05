@@ -73,6 +73,7 @@ static class ThreadLocalMap {
 
 为什么ThreadLocal能保证每个线程持有一份隔离的对象信息？
 
+{% code title="ThreadLocal.java" %}
 ```java
 // ThreadLocal.java:
 // 可以看到每个线程一个threadlocalmap,且是将当前对象this作为Key，
@@ -94,6 +95,7 @@ void createMap(Thread t, T firstValue) {
             setThreshold(INITIAL_CAPACITY);
         }
 ```
+{% endcode %}
 
 ### 主要方法
 
