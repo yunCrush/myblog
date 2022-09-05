@@ -2,47 +2,47 @@
 
 * [🌦 江畔何人初见月](README.md)
 
-## 数据库
+## 数据库 <a href="#database" id="database"></a>
 
-* [MySQL](shu-ju-ku/mysql/README.md)
-  * [MySQL索引（一）](shu-ju-ku/mysql/shu-ju-ku-suo-yin-yi.md)
-  * [MySQL日志模块(一）](shu-ju-ku/mysql/shu-ju-ku-ri-zhi-mo-kuai.md)
-  * [MySQL三大范式](shu-ju-ku/mysql/shu-ju-ku-san-da-fan-shi.md)
-  * [MySQL存储引擎](shu-ju-ku/mysql/innodb-cun-chu-yin-qing.md)
-  * [MySQL查询优化](shu-ju-ku/mysql/mysql-cha-xun-you-hua.md)
-  * [MySQL事务](shu-ju-ku/mysql/mysql-shi-wu.md)
-  * [MySQL常见命令](shu-ju-ku/mysql/mysql-chang-jian-ming-ling.md)
-* [ElasticSearch](shu-ju-ku/elasticsearch/README.md)
-  * [ElasticSearch概念](shu-ju-ku/elasticsearch/elasticsearch-gai-nian.md)
-  * [ElasticSearch写入原理](shu-ju-ku/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
-  * [ES搜索开发日记](shu-ju-ku/elasticsearch/es-sou-suo-cai-keng-ri-ji.md)
-  * [ES集群部署](shu-ju-ku/elasticsearch/es-ji-qun-bu-shu.md)
-  * [ES数据处理之集群备份](shu-ju-ku/elasticsearch/es-cluster-backup.md)
-  * [ES数据处理之跨版本迁移](shu-ju-ku/elasticsearch/es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)
-  * [ES属性处理之字段重命名](shu-ju-ku/elasticsearch/esindex-field-rename.md)
-  * [ES属性处理之时间转换](shu-ju-ku/elasticsearch/es-shu-xing-chu-li-zhi-shi-jian-zhuan-huan.md)
+* [MySQL](database/mysql/README.md)
+  * [MySQL索引（一）](database/mysql/shu-ju-ku-suo-yin-yi.md)
+  * [MySQL日志模块(一）](database/mysql/shu-ju-ku-ri-zhi-mo-kuai.md)
+  * [MySQL三大范式](database/mysql/shu-ju-ku-san-da-fan-shi.md)
+  * [MySQL存储引擎](database/mysql/innodb-cun-chu-yin-qing.md)
+  * [MySQL查询优化](database/mysql/mysql-cha-xun-you-hua.md)
+  * [MySQL事务](database/mysql/mysql-shi-wu.md)
+  * [MySQL常见命令](database/mysql/mysql-chang-jian-ming-ling.md)
+* [ElasticSearch](database/elasticsearch/README.md)
+  * [ElasticSearch概念](database/elasticsearch/elasticsearch-gai-nian.md)
+  * [ElasticSearch写入原理](database/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
+  * [ES搜索开发日记](database/elasticsearch/es-sou-suo-cai-keng-ri-ji.md)
+  * [ES集群部署](database/elasticsearch/es-ji-qun-bu-shu.md)
+  * [ES数据处理之集群备份](database/elasticsearch/es-cluster-backup.md)
+  * [ES数据处理之跨版本迁移](database/elasticsearch/es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)
+  * [ES属性处理之字段重命名](database/elasticsearch/esindex-field-rename.md)
+  * [ES属性处理之时间转换](database/elasticsearch/es-shu-xing-chu-li-zhi-shi-jian-zhuan-huan.md)
 
-## 中间件
+## 中间件 <a href="#middle-ware" id="middle-ware"></a>
 
-* [Redis](zhong-jian-jian/redis.md)
-  * [Redis常见问题](zhong-jian-jian/redis/redis-chang-jian-wen-ti.md)
+* [Redis](middle-ware/redis/README.md)
+  * [Redis常见问题](middle-ware/redis/redis-chang-jian-wen-ti.md)
 
-## 服务器/协议
+## 服务器/协议 <a href="#server-protocol" id="server-protocol"></a>
 
-* [Tomcat](fu-wu-qi-xie-yi/tomcat/README.md)
-  * [Tomcat基本组件](fu-wu-qi-xie-yi/tomcat/tomcat-ji-ben-zu-jian.md)
-  * [手写minicat](fu-wu-qi-xie-yi/tomcat/shou-xie-minicat.md)
-  * [tomcat源码调试](fu-wu-qi-xie-yi/tomcat/tomcat-yuan-ma-tiao-shi.md)
-* [Nginx](fu-wu-qi-xie-yi/nginx/README.md)
-  * [Nginx安装及基本配置](fu-wu-qi-xie-yi/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
-* [Http/Https](fu-wu-qi-xie-yi/http-https/README.md)
-  * [概念](fu-wu-qi-xie-yi/http-https/gai-nian.md)
+* [Tomcat](server-protocol/tomcat/README.md)
+  * [Tomcat基本组件](server-protocol/tomcat/tomcat-ji-ben-zu-jian.md)
+  * [手写minicat](server-protocol/tomcat/shou-xie-minicat.md)
+  * [tomcat源码调试](server-protocol/tomcat/tomcat-yuan-ma-tiao-shi.md)
+* [Nginx](server-protocol/nginx/README.md)
+  * [Nginx安装及基本配置](server-protocol/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
+* [Http/Https](server-protocol/http-https/README.md)
+  * [概念](server-protocol/http-https/gai-nian.md)
 
-## 框架
+## 框架 <a href="#framework" id="framework"></a>
 
-* [Spring系列](kuang-jia/spring-xi-lie/README.md)
-  * [Spring常见问题](kuang-jia/spring-xi-lie/spring-chang-jian-wen-ti.md)
-  * [SpringMVC核心组件](kuang-jia/spring-xi-lie/springmvc-core.md)
+* [Spring系列](framework/spring-xi-lie/README.md)
+  * [Spring常见问题](framework/spring-xi-lie/spring-chang-jian-wen-ti.md)
+  * [SpringMVC核心组件](framework/spring-xi-lie/springmvc-core.md)
 
 ## JAVA
 
@@ -56,22 +56,18 @@
   * [Java内存模型](java/bing-fa-bian-cheng/java-nei-cun-mo-xing.md)
   * [ThreadLocal的简单使用与原理](java/bing-fa-bian-cheng/threadlocal.md)
   * [CompletableFuture](java/bing-fa-bian-cheng/completablefuture.md)
-* [JavaSe](java/javase/README.md)
+* [JavaCore](java/javase/README.md)
   * [核心技术之反射](java/javase/core-reflect.md)
+  * [HashMap](java/javase/hashmap-yi.md)
 
-## 源码解析
+## 开发与实践 <a href="#Develop&Summary" id="Develop&Summary"></a>
 
-* [集合容器](yuan-ma-jie-xi/ji-he-rong-qi/README.md)
-  * [HashMap](yuan-ma-jie-xi/ji-he-rong-qi/hashmap-yi.md)
-
-## 问题技巧
-
-* [编程技巧](wen-ti-ji-qiao/kai-fa-ji-qiao.md)
-* [开发问题](wen-ti-ji-qiao/kai-fa-wen-ti.md)
-* [常用命令](wen-ti-ji-qiao/chang-yong-ming-ling/README.md)
-  * [文本编辑指令](wen-ti-ji-qiao/chang-yong-ming-ling/vim-basic.md)
-  * [Centos防火墙](wen-ti-ji-qiao/chang-yong-ming-ling/centos-fang-huo-qiang.md)
-  * [Linux常用命令](wen-ti-ji-qiao/chang-yong-ming-ling/linux-basic-command.md)
+* [编程技巧](Develop\&Summary/kai-fa-ji-qiao.md)
+* [开发问题](Develop\&Summary/kai-fa-wen-ti.md)
+* [常用命令](Develop\&Summary/chang-yong-ming-ling/README.md)
+  * [文本编辑指令](Develop\&Summary/chang-yong-ming-ling/vim-basic.md)
+  * [Centos防火墙](Develop\&Summary/chang-yong-ming-ling/centos-fang-huo-qiang.md)
+  * [Linux常用命令](Develop\&Summary/chang-yong-ming-ling/linux-basic-command.md)
 
 ## 环境部署
 
@@ -88,22 +84,22 @@
   * [Kafka安装](huan-jing-bu-shu/huan-jing-da-jian/kafka-an-zhuang.md)
   * [RBD-tools安装](huan-jing-bu-shu/huan-jing-da-jian/rbdtools-an-zhuang.md)
 
-## 基础知识
+## 基础知识 <a href="#basic-core" id="basic-core"></a>
 
-* [算法](ji-chu-zhi-shi/suan-fa/README.md)
-  * [常见排序](ji-chu-zhi-shi/suan-fa/chang-jian-pai-xu.md)
-  * [回溯](ji-chu-zhi-shi/suan-fa/hui-su.md)
-  * [递归](ji-chu-zhi-shi/suan-fa/di-gui.md)
-  * [深度优先DFS](ji-chu-zhi-shi/suan-fa/shen-du-you-xian-dfs.md)
-  * [贪心](ji-chu-zhi-shi/suan-fa/tan-xin.md)
-* [计算机网络](ji-chu-zhi-shi/ji-suan-ji-wang-luo/README.md)
-  * [计算机网络读书感悟](ji-chu-zhi-shi/ji-suan-ji-wang-luo/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
-* [操作系统](ji-chu-zhi-shi/cao-zuo-xi-tong/README.md)
-  * [OS概述（一）](ji-chu-zhi-shi/cao-zuo-xi-tong/os-gai-shu-yi.md)
-  * [OS线程与进程（二）](ji-chu-zhi-shi/cao-zuo-xi-tong/os-xian-cheng-yu-jin-cheng-er.md)
-  * [OS内存管理（三）](ji-chu-zhi-shi/cao-zuo-xi-tong/os-nei-cun-guan-li-san.md)
-  * [OS文件管理（四）](ji-chu-zhi-shi/cao-zuo-xi-tong/os-wen-jian-guan-li-si.md)
-  * [OS网络安全（五）](ji-chu-zhi-shi/cao-zuo-xi-tong/os-wang-luo-an-quan-wu.md)
-  * [OS虚拟化（六）](ji-chu-zhi-shi/cao-zuo-xi-tong/os-xu-ni-hua-liu.md)
-* [计算机组成原理](ji-chu-zhi-shi/ji-suan-ji-zu-cheng-yuan-li/README.md)
-  * [前置计算机组成知识](ji-chu-zhi-shi/ji-suan-ji-zu-cheng-yuan-li/qian-zhi-ji-suan-ji-zu-cheng-zhi-shi.md)
+* [算法](basic-core/suan-fa/README.md)
+  * [常见排序](basic-core/suan-fa/chang-jian-pai-xu.md)
+  * [回溯](basic-core/suan-fa/hui-su.md)
+  * [递归](basic-core/suan-fa/di-gui.md)
+  * [深度优先DFS](basic-core/suan-fa/shen-du-you-xian-dfs.md)
+  * [贪心](basic-core/suan-fa/tan-xin.md)
+* [计算机网络](basic-core/ji-suan-ji-wang-luo/README.md)
+  * [计算机网络读书感悟](basic-core/ji-suan-ji-wang-luo/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
+* [操作系统](basic-core/cao-zuo-xi-tong/README.md)
+  * [OS概述（一）](basic-core/cao-zuo-xi-tong/os-gai-shu-yi.md)
+  * [OS线程与进程（二）](basic-core/cao-zuo-xi-tong/os-xian-cheng-yu-jin-cheng-er.md)
+  * [OS内存管理（三）](basic-core/cao-zuo-xi-tong/os-nei-cun-guan-li-san.md)
+  * [OS文件管理（四）](basic-core/cao-zuo-xi-tong/os-wen-jian-guan-li-si.md)
+  * [OS网络安全（五）](basic-core/cao-zuo-xi-tong/os-wang-luo-an-quan-wu.md)
+  * [OS虚拟化（六）](basic-core/cao-zuo-xi-tong/os-xu-ni-hua-liu.md)
+* [计算机组成原理](basic-core/ji-suan-ji-zu-cheng-yuan-li/README.md)
+  * [前置计算机组成知识](basic-core/ji-suan-ji-zu-cheng-yuan-li/qian-zhi-ji-suan-ji-zu-cheng-zhi-shi.md)

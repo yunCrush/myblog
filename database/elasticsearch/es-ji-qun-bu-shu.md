@@ -4,7 +4,7 @@ description: 10分钟，从0到实现es的集群部署，这里es的版本为7.2
 
 # ES集群部署
 
-[JDK安装部分](broken-reference)
+[JDK安装部分](../../shu-ju-ku/elasticsearch/broken-reference/)
 
 先 看一下集群部署可能会遇见的问题：
 
@@ -88,5 +88,4 @@ systemctl stop elasticsearch
 curl -XGET http://localhost:9200/_cat/nodes?v
 
 # 查看集群状态
-
 ```

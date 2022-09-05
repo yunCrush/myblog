@@ -77,14 +77,13 @@ GET _snapshot/snapshotName/_status
 
 集群备份，需要进行 :point\_right:[ NFS文件挂载](../../huan-jing-bu-shu/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)，单节点可直接进行以下恢复操作。
 
-将备份的原始数据打包，可通过[scp文件传输命令](../../wen-ti-ji-qiao/chang-yong-ming-ling/linux-basic-command.md#2-wen-jian-de-chuan-shu)传送到，需要恢复的服务器，然后进行数据恢复。
+将备份的原始数据打包，可通过[scp文件传输命令](../../Develop\&Summary/chang-yong-ming-ling/linux-basic-command.md#2-wen-jian-de-chuan-shu)传送到，需要恢复的服务器，然后进行数据恢复。
 
 ```
 POST http://地址:9200/_snapshot/my_backup/snapshot_20210407/_restore
 
 # kibana命令恢复
 POST _snapshot/my_backup/snapshot_20210407/_restore
-
 ```
 
 ## 方案二：使用\_reindex进行迁移
@@ -97,7 +96,7 @@ POST _snapshot/my_backup/snapshot_20210407/_restore
 reindex.remote.whitelist: A_ip
 ```
 
-&#x20;2\. 在B服务器端执行迁移命令,前提是在服务器B的es中需要创建好index1索引的Mapping.
+2\. 在B服务器端执行迁移命令,前提是在服务器B的es中需要创建好index1索引的Mapping.
 
 ```
 POST _reindex
