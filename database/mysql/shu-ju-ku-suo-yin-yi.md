@@ -17,8 +17,6 @@ B-树的节点，满足左子树比右子树小，且中间的非叶子节点也
 
 <figure><img src="../../.gitbook/assets/b-tree.jpg" alt=""><figcaption><p>b-树</p></figcaption></figure>
 
-
-
 ```
 B+树的节点与B-树，差不多，只是Data数据只存在于叶子节点。多了一些相关的优化，
 如在叶子节点增加指针，优化范围查询
@@ -95,3 +93,7 @@ select ID from T where k between 3 and 5
 索引建立的越多越好吗？
 
 答：并不是，\*\*a.\*\*创建索引需要更多的空间，\*\*b.\*\*数据量小的表并不需要建立索引，\*\*c.\*\*增加额外的开销，数据的变更需要维护索引。
+
+{% content-ref url="../../java/javase/hashmap-yi.md" %}
+[hashmap-yi.md](../../java/javase/hashmap-yi.md)
+{% endcontent-ref %}
