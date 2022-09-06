@@ -8,9 +8,9 @@ description: 介绍关于多线程的核心知识，以及解决一些具有争�
 
 　　官方文档说明只有两种方法：1.通过继承Thread，重写run方法，2.实现Runnable接口，重写run方法。对于线程池等，都逃不过本质区别，也是实现Runnable接口。
 
-![](<../../.gitbook/assets/image (36).png>)
+![](<../../.gitbook/assets/image (24).png>)
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (23).png>)
 
 　　准确而言，就是构造Thread类，并将Runnable实例传入，以实现创建一个线程，并且 都是调用start()方法来启动一个线程（线程真正的运行是执行run方法，因为调用了start()方法后，线程其实并没有真正的执行，而是处于new状态，在等待CPU时间片）。通过查看Thread源代码得知，Thread也是实现Runnable接口，实现了Runnable接口的run方法。
 

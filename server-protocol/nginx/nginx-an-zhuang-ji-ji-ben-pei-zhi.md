@@ -40,17 +40,17 @@ cd nginx-1.17.8
 
 3.1 全局块：从配置⽂件开始到events块之间的内容，此处的配置影响nginx服务器整体的运⾏，⽐如worker进 程的数量、错误⽇志的位置等。
 
-![全局块](<../../.gitbook/assets/image (44).png>)
+![全局块](<../../.gitbook/assets/image (38) (1).png>)
 
 3.2 events块：events块主要影响nginx服务器与⽤户的⽹络连接，⽐如worker\_connections 1024，标识每个 workderprocess⽀持的最⼤连接数为1024。
 
-![events块](<../../.gitbook/assets/image (14).png>)
+![events块](<../../.gitbook/assets/image (37) (1).png>)
 
 3.3 http块：http块是配置最频繁的部分，虚拟主机的配置，监听端⼝的配置，请求转发、反向代理、负载均衡 等，一个http下的server有多个localtion。
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (40) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (36) (1).png>)
 
 例子：反向代理-负载均衡：localhost:9003/abc -->跳转到8080或者8082端口。
 
@@ -87,4 +87,4 @@ listenfd读事件，在读事件⾥调⽤accept接受该连接，然后解析、
 
 nginx最大并发连接：work\_process \* work\_connections。如果用作反向代理则需要除以4.\_
 
-![](<../../.gitbook/assets/image (41).png>)
+![](<../../.gitbook/assets/image (41) (1) (1).png>)

@@ -22,7 +22,7 @@ chown -R elasticsearch:elasticsearch elasticsearch
 
 　　如果修改之后依旧启动报错不能以root用户登录，方法2更改/etc/passwd。
 
-![/etc/passwd](<../../.gitbook/assets/image (39).png>)
+![/etc/passwd](<../../.gitbook/assets/image (10).png>)
 
 ```
 # 修改为

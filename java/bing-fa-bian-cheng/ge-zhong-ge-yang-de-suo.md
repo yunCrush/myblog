@@ -6,7 +6,7 @@ description: 介绍并发编程中的各种样式的锁。
 
 ## 1.锁分类
 
-![锁分类](<../../.gitbook/assets/image (25).png>)
+![锁分类](<../../.gitbook/assets/image (29).png>)
 
 ## 2.悲观锁与乐观锁
 

@@ -88,7 +88,7 @@ if(map.containsKey(key){
 
 　　线程池的4中拒绝策略：
 
-![线程池4种拒绝策略](<../../.gitbook/assets/image (16).png>)
+![线程池4种拒绝策略](<../../.gitbook/assets/image (32).png>)
 
 　　DiscardPolicy：提交的新任务直接拒绝，可能造成数据丢失； DiscardOldestPolicy: 拒绝工作队列中存活时间最长的任务。
 
@@ -100,7 +100,7 @@ if(map.containsKey(key){
 
 　　线程池的内部结构：线程池管理器（管理线程池的创建销毁等），工作线程（执行任务），任务队列（作为一种缓冲机制，多线程安全要求较高，采用BlockingQueue），任务（任务要求实现统一的接口，以便工作线程可以处理和执行）。
 
-![常见阻塞队列](<../../.gitbook/assets/image (50).png>)
+![常见阻塞队列](<../../.gitbook/assets/image (33).png>)
 
 　　FixedThreadPool线程池，固定大小，所以需要一个无线容量的阻塞队列；singleThreadExecutor同理，只有一个线程，如果线程发生异常，也会重新创建一个线程来执行任务。
 

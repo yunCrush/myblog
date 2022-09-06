@@ -62,27 +62,27 @@
 
 ## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
 
-* [编程技巧](develop-and-summary/kai-fa-ji-qiao.md)
-* [开发问题](develop-and-summary/kai-fa-wen-ti.md)
-* [常用命令](develop-and-summary/chang-yong-ming-ling/README.md)
-  * [文本编辑指令](develop-and-summary/chang-yong-ming-ling/vim-basic.md)
-  * [Centos防火墙](develop-and-summary/chang-yong-ming-ling/centos-fang-huo-qiang.md)
-  * [Linux常用命令](develop-and-summary/chang-yong-ming-ling/linux-basic-command.md)
+* [编程技巧](Develop\&Summary/kai-fa-ji-qiao.md)
+* [开发问题](Develop\&Summary/kai-fa-wen-ti.md)
+* [常用命令](Develop\&Summary/chang-yong-ming-ling/README.md)
+  * [文本编辑指令](Develop\&Summary/chang-yong-ming-ling/vim-basic.md)
+  * [Centos防火墙](Develop\&Summary/chang-yong-ming-ling/centos-fang-huo-qiang.md)
+  * [Linux常用命令](Develop\&Summary/chang-yong-ming-ling/linux-basic-command.md)
 
-## 环境部署
+## 环境部署 <a href="#env-deploy" id="env-deploy"></a>
 
-* [环境搭建](huan-jing-bu-shu/huan-jing-da-jian/README.md)
-  * [布隆过滤器](huan-jing-bu-shu/huan-jing-da-jian/bu-long-guo-lv-qi.md)
-  * [JDK安装](huan-jing-bu-shu/huan-jing-da-jian/jdk-an-zhuang.md)
-  * [Docker安装使用](huan-jing-bu-shu/huan-jing-da-jian/docker-basic.md)
-  * [NFS文件挂载](huan-jing-bu-shu/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
-  * [Redis安装](huan-jing-bu-shu/huan-jing-da-jian/redis-an-zhuang.md)
-  * [MySQL安装](huan-jing-bu-shu/huan-jing-da-jian/mysql-an-zhuang.md)
-  * [配置163yum源](huan-jing-bu-shu/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
-  * [ZooKeeper安装](huan-jing-bu-shu/huan-jing-da-jian/zookeeper-an-zhuang.md)
-  * [linux配置](huan-jing-bu-shu/huan-jing-da-jian/linux-pei-zhi.md)
-  * [Kafka安装](huan-jing-bu-shu/huan-jing-da-jian/kafka-an-zhuang.md)
-  * [RBD-tools安装](huan-jing-bu-shu/huan-jing-da-jian/rbdtools-an-zhuang.md)
+* [环境搭建](env-deploy/huan-jing-da-jian/README.md)
+  * [布隆过滤器](env-deploy/huan-jing-da-jian/bu-long-guo-lv-qi.md)
+  * [JDK安装](env-deploy/huan-jing-da-jian/jdk-an-zhuang.md)
+  * [Docker安装使用](env-deploy/huan-jing-da-jian/docker-basic.md)
+  * [NFS文件挂载](env-deploy/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
+  * [Redis安装](env-deploy/huan-jing-da-jian/redis-an-zhuang.md)
+  * [MySQL安装](env-deploy/huan-jing-da-jian/mysql-an-zhuang.md)
+  * [配置163yum源](env-deploy/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
+  * [ZooKeeper安装](env-deploy/huan-jing-da-jian/zookeeper-an-zhuang.md)
+  * [linux配置](env-deploy/huan-jing-da-jian/linux-pei-zhi.md)
+  * [Kafka安装](env-deploy/huan-jing-da-jian/kafka-an-zhuang.md)
+  * [RBD-tools安装](env-deploy/huan-jing-da-jian/rbdtools-an-zhuang.md)
 
 ## 基础知识 <a href="#basic-core" id="basic-core"></a>
 

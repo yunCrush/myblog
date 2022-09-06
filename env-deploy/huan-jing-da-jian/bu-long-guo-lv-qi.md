@@ -43,7 +43,7 @@ docker exec -it redis6379bloom /bin/bash
 redis-cli
 ```
 
-![rebloom operation](<../../.gitbook/assets/image (38).png>)
+![rebloom operation](<../../.gitbook/assets/image (41).png>)
 
 ```
 bf.reserve key error_rate的值 initial_size 的值 

@@ -49,7 +49,7 @@ Java中的原子操作：
 
 \*\*保证可见性的措施：\*\*Synchronized（既保证可见性，又保证原子性）、Lock、volatile关键字。
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (30).png>)
 
 每个线程只能够直接接触到工作内存，工作内存独立不共享，主内存由多个线程共享，线程无法直接操作主内存，而工作内存中所保存的正是主内存的共享变量的副本，主内存和工作内存之间的通信是由 JMM 控制的。
 
@@ -61,7 +61,7 @@ Java中的原子操作：
 
 **1.单线程规则；2.锁操作规则**（ **synchronized 和 Lock 接口等**）：如果操作 A 是解锁，而操作 B 是对同一个锁的加锁，那么 hb(A, B) **；** \*\*3.volatile 变量规则；4.线程启动规则：\*\*Thread 对象的 start 方法 happen-before 此线程 run 方法中的每一个操作。**5.线程join规则：**
 
-![线程join规则](<../../.gitbook/assets/image (40).png>)
+![线程join规则](<../../.gitbook/assets/image (31).png>)
 
 \*\*6.中断规则:\*\*一个线程被其它线程Interrupt时，检测中断时，一定能够检测此次中断的发生 。
 

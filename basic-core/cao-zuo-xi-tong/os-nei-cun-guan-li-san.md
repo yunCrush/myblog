@@ -14,7 +14,7 @@ description: 操作系统内存管理部分
 
 转置检测缓冲区（TLB）：存在于MMU内部，缓存的设计，通常是一张表，所以 TLB 也称作快表。TLB 中最主要的信息就是 Page Number到 Frame Number 的映射关系。每一行称为缓存行，或者缓存条目。
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (18).png>)
 
 TLB失效：Page Number在TLB没有找到，分为软失效与硬失效。
 
