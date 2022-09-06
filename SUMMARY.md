@@ -63,7 +63,7 @@
 
 ## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
 
-* [编程技巧](Develop\&Summary/kai-fa-ji-qiao.md)
+* [常用工具](Develop\&Summary/kai-fa-ji-qiao.md)
 * [开发问题](Develop\&Summary/kai-fa-wen-ti.md)
 * [常用命令](Develop\&Summary/chang-yong-ming-ling/README.md)
   * [文本编辑指令](Develop\&Summary/chang-yong-ming-ling/vim-basic.md)
