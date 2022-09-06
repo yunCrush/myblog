@@ -6,6 +6,28 @@ description: 第一部分主要介绍关于索引的概念。
 
 　　索引时为了提高查询效率，比如书的目录一样，常见的数据结构，哈希表、有序数组和搜索树。
 
+简单说一下索引的原理，这里不谈B-树，B+树的定义，我反正也记不住，直接聊一下相关的使用原理。
+
+b-树大概就涨这样，
+
+```
+B-树的节点，满足左子树比右子树小，且中间的非叶子节点也存储数据Data
+
+```
+
+!\[img]\([https://github.com/yunCrush/picture/blob/main/mysql/b-tree.jpg](https://github.com/yunCrush/picture/blob/main/mysql/b-tree.jpg)?raw=true)
+
+
+
+```
+B+树的节点与B-树，差不多，只是Data数据只存在于叶子节点。多了一些相关的优化，
+如在叶子节点增加指针，优化范围查询
+```
+
+!\[img]\([https://github.com/yunCrush/picture/blob/main/mysql/b+tree.jpg](https://github.com/yunCrush/picture/blob/main/mysql/b-tree.jpg)?raw=true)
+
+
+
 ## 1.聚簇索引
 
 　　在InnoDB里，索引类型分为主键索引与非主键索引。主键索引的叶子节点存储的是一整行数据，主键索引也被成为聚簇索引，非主键索引的叶子节点存储的是主键的值，非主键索引也被称为二级索引。
@@ -25,6 +47,8 @@ index(k))engine=innodb;
 　　　图中表示的是表T的索引组织结构，表中 R1\~R5 的 (ID,k) 值分别为 (100,1)、(200,2)、(300,3)、(500,5) 和 (600,6)。
 
 **提问**　　基于主键索引与非主键索引查询有什么区别？
+
+主键索引的挂载的数据直接就是数据内容，非主键索引挂载的是主键ID，需要再走一遍主键索引树。
 
 ```
 # 主键索引查询
