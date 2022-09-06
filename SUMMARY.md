@@ -25,7 +25,8 @@
 ## 中间件 <a href="#middle-ware" id="middle-ware"></a>
 
 * [Redis](middle-ware/redis/README.md)
-  * [Redis常见问题](middle-ware/redis/redis-chang-jian-wen-ti.md)
+  * [Redis常见问题](middle-ware/redis/redis-chang-jian-wen-ti/README.md)
+    * [Redis常见使用](https://github.com/yunCrush/Redis/blob/main/README.md)
 
 ## 服务器/协议 <a href="#server-protocol" id="server-protocol"></a>
 
