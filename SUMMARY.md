@@ -60,14 +60,14 @@
   * [核心技术之反射](java/javase/core-reflect.md)
   * [HashMap](java/javase/hashmap-yi.md)
 
-## 开发与实践 <a href="#Develop&Summary" id="Develop&Summary"></a>
+## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
 
-* [编程技巧](Develop\&Summary/kai-fa-ji-qiao.md)
-* [开发问题](Develop\&Summary/kai-fa-wen-ti.md)
-* [常用命令](Develop\&Summary/chang-yong-ming-ling/README.md)
-  * [文本编辑指令](Develop\&Summary/chang-yong-ming-ling/vim-basic.md)
-  * [Centos防火墙](Develop\&Summary/chang-yong-ming-ling/centos-fang-huo-qiang.md)
-  * [Linux常用命令](Develop\&Summary/chang-yong-ming-ling/linux-basic-command.md)
+* [编程技巧](develop-and-summary/kai-fa-ji-qiao.md)
+* [开发问题](develop-and-summary/kai-fa-wen-ti.md)
+* [常用命令](develop-and-summary/chang-yong-ming-ling/README.md)
+  * [文本编辑指令](develop-and-summary/chang-yong-ming-ling/vim-basic.md)
+  * [Centos防火墙](develop-and-summary/chang-yong-ming-ling/centos-fang-huo-qiang.md)
+  * [Linux常用命令](develop-and-summary/chang-yong-ming-ling/linux-basic-command.md)
 
 ## 环境部署
 

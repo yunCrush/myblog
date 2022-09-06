@@ -8,7 +8,7 @@ description: 介绍关于多线程中的常见问题
 
 ### 如何正确的停止一个线程？
 
-　　1.正确停止线程的方法： thread.interrupt()，通知线程中断；&#x20;
+　　1.正确停止线程的方法： thread.interrupt()，通知线程中断；
 
 　　2.线程内逻辑需配合响应中断：1）正常执行循环中使用 Thread.currentThread().isInterrupted()判断中断标识; 2)若含有sleep()等Waiting操作,会唤醒线程，抛出interruptedException，抛出后中断标识会重置。对于中断异常，要么正确处理，重新设置中断标识；要么在方法上声明抛出异常以便调用方处理。
 
@@ -24,11 +24,11 @@ description: 介绍关于多线程中的常见问题
 
 不同点：
 
-　　1. wait 方法必须在 synchronized 保护的代码中使用，而 sleep 方法并没有这个要求。&#x20;
+　　1. wait 方法必须在 synchronized 保护的代码中使用，而 sleep 方法并没有这个要求。
 
-　　2.在同步代码中执行 sleep 方法时，并不会释放 monitor 锁，但执行 wait 方法时会主动释放 monitor 锁。&#x20;
+　　2.在同步代码中执行 sleep 方法时，并不会释放 monitor 锁，但执行 wait 方法时会主动释放 monitor 锁。
 
-　　3.sleep 方法中会要求必须定义一个时间，时间到期后会主动恢复，而对于没有参数的 wait 方法而言，意味着永久等待，直到被中断或被唤醒才能恢复，它并不会主动恢复。&#x20;
+　　3.sleep 方法中会要求必须定义一个时间，时间到期后会主动恢复，而对于没有参数的 wait 方法而言，意味着永久等待，直到被中断或被唤醒才能恢复，它并不会主动恢复。
 
 　　4.wait/notify 是 Object 类的方法，而 sleep 是 Thread 类的方法。
 
@@ -88,9 +88,9 @@ if(map.containsKey(key){
 
 　　线程池的4中拒绝策略：
 
-![线程池4种拒绝策略](<../../.gitbook/assets/image (32).png>)
+![线程池4种拒绝策略](<../../.gitbook/assets/image (16).png>)
 
-　　DiscardPolicy：提交的新任务直接拒绝，可能造成数据丢失；  DiscardOldestPolicy: 拒绝工作队列中存活时间最长的任务。
+　　DiscardPolicy：提交的新任务直接拒绝，可能造成数据丢失； DiscardOldestPolicy: 拒绝工作队列中存活时间最长的任务。
 
 　　CallerRunsPolicy：拒绝后给提交任务的线程执行，执行任务需要时间，提交任务的线程被占用，减缓了任务提交的节奏，并且新提交的任务不会丢失。
 
@@ -100,7 +100,7 @@ if(map.containsKey(key){
 
 　　线程池的内部结构：线程池管理器（管理线程池的创建销毁等），工作线程（执行任务），任务队列（作为一种缓冲机制，多线程安全要求较高，采用BlockingQueue），任务（任务要求实现统一的接口，以便工作线程可以处理和执行）。
 
-![常见阻塞队列](<../../.gitbook/assets/image (33).png>)
+![常见阻塞队列](<../../.gitbook/assets/image (50).png>)
 
 　　FixedThreadPool线程池，固定大小，所以需要一个无线容量的阻塞队列；singleThreadExecutor同理，只有一个线程，如果线程发生异常，也会重新创建一个线程来执行任务。
 

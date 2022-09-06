@@ -6,7 +6,7 @@ description: 介绍并发编程中的各种样式的锁。
 
 ## 1.锁分类
 
-![锁分类](<../../.gitbook/assets/image (29).png>)
+![锁分类](<../../.gitbook/assets/image (25).png>)
 
 ## 2.悲观锁与乐观锁
 
@@ -19,24 +19,24 @@ synchronized关键字的实现原理，利用monitor锁实现，获得monitor锁
 所以这里会有两处释放锁的指令。
 
 ```
-public class SynTest {
+public class SynTest {
 // synchronized修饰方法
-public synchronized void method() {
-    method body
+public synchronized void method() {
+    method body
 }
 
 // 等价于下面方法    intrinsicLock就是monitor锁
-public void method() {
+public void method() {
 
-    this.intrinsicLock.lock();
+    this.intrinsicLock.lock();
 
-    try{
-        method body
-    }
-    finally {
+    try{
+        method body
+    }
+    finally {
 
-        this.intrinsicLock.unlock();
-    }
+        this.intrinsicLock.unlock();
+    }
  }
 }
 ```
@@ -46,12 +46,12 @@ public void method() {
 synchronized修饰代码块与修饰方法不同：
 
 ```
-public class SynTest {
-    public void synBlock() {
-        synchronized (this) {
-            System.out.println("yuncrush");
-       }
-    }
+public class SynTest {
+    public void synBlock() {
+        synchronized (this) {
+            System.out.println("yuncrush");
+       }
+    }
 }
 ```
 
@@ -66,8 +66,3 @@ CAS缺点：1.高并发场景长时间自旋消耗CPU；2.“ABA问题”；3.�
 作用范围不能灵活控制解决方案：引入一个新类，将多个变量进行整合到类中，然后再利用 atomic 包中的 AtomicReference 来把这个新对象整体进行 CAS 操作，这样就可以保证线程安全。
 
 ## 3.
-
-
-
-
-

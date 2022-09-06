@@ -7,10 +7,10 @@
 1. 首先在bigdata01上执行 ssh-keygen -t rsa
 2. 执行这个命令以后，需要连续按 4 次回车键回到 linux 命令行才表示这个操作执行 结束，在按回车的时候不需要输入任何内容。
 3. 执行以后会在\~/.ssh目录下生产对应的公钥和私钥文件
-4. ![](<../../.gitbook/assets/image (35).png>)
+4. ![](<../../.gitbook/assets/image (24).png>)
 5. 把公钥拷贝到需要免密码登录的机器上面
-6. scp /.ssh/authorized\_keys  bigdata02:\~/
-7. `bigdata02:   cat ~/a`uthorized\_keys  `>> ~/.ssh/authorized_keys`
+6. scp /.ssh/authorized\_keys bigdata02:\~/
+7. `bigdata02: cat ~/a`uthorized\_keys `>> ~/.ssh/authorized_keys`
 8. `ssh bigdata02`
 
 ### `配置别名`
@@ -36,4 +36,3 @@ vi /etc/crontab
 ### PIP源配置
 
 vim \~/.pip/pip.conf
-

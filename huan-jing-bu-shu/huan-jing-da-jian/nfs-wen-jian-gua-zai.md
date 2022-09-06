@@ -8,11 +8,11 @@ description: 利用docker容器，NFS（network file system）实现文件挂载
 
 　Server ip: 192.168.110.136
 
-　Client ip: 192.168.110.135,  192.168.110.134,  192.168.110.133
+　Client ip: 192.168.110.135, 192.168.110.134, 192.168.110.133
 
-## 1.  服务端配置
+## 1. 服务端配置
 
-&#x20;**下载启动服务**
+**下载启动服务**
 
 ```
 # 安装nfs-utils rpcbind服务
@@ -45,7 +45,7 @@ mount -t nfs server_ip:/home/crush/esback  /home/crush/esback
 mount -t nfs 192.168.110.136:/home/crush/esback /home/crush/esback
 ```
 
-&#x20; **编辑配置文件**
+**编辑配置文件**
 
 ```
 # 编辑/etc/exports文件
@@ -55,9 +55,9 @@ vim /etc/exports
 /home/crush/esback client_ip(rw,sync,no_root_squash,no_all_squash)
 ```
 
-![/etc/exports配置文件](<../../.gitbook/assets/image (2).png>)
+![/etc/exports配置文件](<../../.gitbook/assets/image (20).png>)
 
-&#x20; **刷新配置文件：`exportfs -a`**
+**刷新配置文件：`exportfs -a`**
 
 **查看共享目录**
 
@@ -67,7 +67,7 @@ showmount -e Server-ip
 
 ## 2.客户端配置
 
-&#x20; **客户端同上需要进行基本服务安装与创建挂载点，完成这两步后再进行目录挂载。**
+**客户端同上需要进行基本服务安装与创建挂载点，完成这两步后再进行目录挂载。**
 
 客户端这里配置挂载的目录，同样为/home/crush/esback,三个Client都需要创建，这里同样**关闭防火墙**。
 
@@ -92,6 +92,6 @@ mount -t nfs 192.168.110.136:/home/crush/esback /home/crush/esback
 df -h
 ```
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (19).png>)
 
 测试：在Server端创建文件，会共享到3个Client端，在ES集群数据迁移会有使用到。

@@ -4,9 +4,9 @@
 
 　　tomcat的两个核心组件：连接器Connector（http服务器功能，与socket进行通信),Container容器（负责处理内部的请求，加载和管理servlet，以及处理具体的Request).tomcat默认支持http 1.1。自8.5以后支持http 2.0协议。传输层支持I/O模型：NIO/NIO2/APR。其中APR模型：Tomcat将以JNI的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取或网络传输操作。
 
-![tomcat component](<../../.gitbook/assets/image (42) (1).png>)
+![tomcat component](<../../.gitbook/assets/image (5).png>)
 
-![connector and container](<../../.gitbook/assets/image (38).png>)
+![connector and container](<../../.gitbook/assets/image (37).png>)
 
 ## 2.核心组件Coyote
 
@@ -14,7 +14,7 @@
 
 coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Processor(实现Http协议，是对应用层的抽象), Adapter(用于将上图中的request请求封装成ServletRequest，以及ServletResponse-> Reponse,**适配器的经典使用**)。
 
-![connector](<../../.gitbook/assets/image (40) (1).png>)
+![connector](<../../.gitbook/assets/image (35).png>)
 
 ## 3.核心组件Catalina
 
@@ -22,7 +22,7 @@ coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Proc
 
 下图一个Server对应多个service,但是一般都是一个，对应多个connector连接器，多个connector对应一个container容器。
 
-![tomcat 实例](<../../.gitbook/assets/image (36).png>)
+![tomcat 实例](<../../.gitbook/assets/image (8).png>)
 
 1. Catalina 负责解析Tomcat的配置⽂件（server.xml） , 以此来创建服务器Server组件并进⾏管理
 2. Server 服务器表示整个Catalina Servlet容器以及其它组件，负责组装并启动Servlaet引擎,Tomcat连接 器。Server通过实现Lifecycle接⼝，提供了⼀种优雅的启动和关闭整个系统的⽅式
@@ -131,9 +131,9 @@ org.apache.catalina.Executor接⼝
 #修改server.xml与 webapps2/ROOT/index.jsp
 ```
 
-![webapps2/ROOT/index.jsp](<../../.gitbook/assets/image (43).png>)
+![webapps2/ROOT/index.jsp](<../../.gitbook/assets/image (51).png>)
 
-![server.xml](<../../.gitbook/assets/image (41) (1).png>)
+![server.xml](<../../.gitbook/assets/image (47).png>)
 
 通过访问不同的url即可得到不同的响应页面
 
