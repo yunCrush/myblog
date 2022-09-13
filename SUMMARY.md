@@ -25,6 +25,7 @@
 ## 中间件 <a href="#middle-ware" id="middle-ware"></a>
 
 * [Redis](middle-ware/redis/README.md)
+  * [Redis双写一致性](middle-ware/redis/redis-shuang-xie-yi-zhi-xing.md)
   * [Redis常见问题](middle-ware/redis/redis-chang-jian-wen-ti.md)
     * [yunCrush/Redis](middle-ware/redis/redis-chang-jian-wen-ti/yuncrush-redis.md)
 
@@ -73,6 +74,7 @@
 ## 环境部署 <a href="#env-deploy" id="env-deploy"></a>
 
 * [环境搭建](env-deploy/huan-jing-da-jian/README.md)
+  * [Jmeter使用](env-deploy/huan-jing-da-jian/jmeter-shi-yong.md)
   * [布隆过滤器](env-deploy/huan-jing-da-jian/bu-long-guo-lv-qi.md)
   * [JDK安装](env-deploy/huan-jing-da-jian/jdk-an-zhuang.md)
   * [Docker安装使用](env-deploy/huan-jing-da-jian/docker-basic.md)
