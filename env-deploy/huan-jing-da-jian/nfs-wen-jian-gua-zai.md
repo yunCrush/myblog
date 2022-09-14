@@ -92,6 +92,6 @@ mount -t nfs 192.168.110.136:/home/crush/esback /home/crush/esback
 df -h
 ```
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 测试：在Server端创建文件，会共享到3个Client端，在ES集群数据迁移会有使用到。

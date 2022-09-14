@@ -8,7 +8,7 @@ description: 这里主要介绍数据库的redo log与binlog日志。
 
 　　这里先引用原文中的MySQL逻辑架构图。查询流程与更新流程不同，更新流程涉及到redo log与binlog日志模块。在执行语句前，会进行数据库的连接这是连接器的工作。更新一个表时，查询缓存会全部失效。
 
-![MySQL逻辑架构图](<../../.gitbook/assets/image (11).png>)
+![MySQL逻辑架构图](<../../.gitbook/assets/image (11) (1).png>)
 
 　　**redo log是InnoDB引擎所特有的，是物理日志，记录的是“在某个数据页上面做了什么改动”，采用的是WAL技术（Write-Ahead logging)，先写进日志，再写到磁盘，一般是在空闲时写入磁盘，空间固定会写完，如果写完时，需要暂停，进行檫除之前日志**。redo日志的概念图是环状的，循环写入的，如下图所示，有了redo日志，redo不能记录历史的日志，不能做归档，所以不可以单靠redo日志来进行数据的恢复，即使数据库发生异常重启，也不会导致之前的提交记录的丢失，这种能力叫**crash-safe**。
 
@@ -32,7 +32,7 @@ update T set c=c+1 where ID=2;
 
 　　关于与update的执行流程如下图所示：
 
-![update执行流程](<../../.gitbook/assets/image (13) (1).png>)
+![update执行流程](<../../.gitbook/assets/image (13).png>)
 
 　　redolog拆分为两部分，prepare和commit即\*\*“两阶段提交"，两阶段提交是为了保证两份日志的逻辑一致。\*\*
 
