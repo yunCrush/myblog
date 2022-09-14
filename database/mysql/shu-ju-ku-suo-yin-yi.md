@@ -40,7 +40,7 @@ name varchar(16),
 index(k))engine=innodb;
 ```
 
-![InnoDB索引组织结构](<../../.gitbook/assets/image (14).png>)
+![InnoDB索引组织结构](<../../.gitbook/assets/image (14) (1).png>)
 
 　　　图中表示的是表T的索引组织结构，表中 R1\~R5 的 (ID,k) 值分别为 (100,1)、(200,2)、(300,3)、(500,5) 和 (600,6)。
 

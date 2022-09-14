@@ -12,6 +12,7 @@
   * [MySQL查询优化](database/mysql/mysql-cha-xun-you-hua.md)
   * [MySQL事务](database/mysql/mysql-shi-wu.md)
   * [MySQL常见命令](database/mysql/mysql-chang-jian-ming-ling.md)
+  * [MySQL-Canal同步](database/mysql/mysqlcanal-tong-bu.md)
 * [ElasticSearch](database/elasticsearch/README.md)
   * [ElasticSearch概念](database/elasticsearch/elasticsearch-gai-nian.md)
   * [ElasticSearch写入原理](database/elasticsearch/elasticsearch-xie-ru-yuan-li.md)

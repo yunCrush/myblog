@@ -55,7 +55,7 @@ vim /etc/exports
 /home/crush/esback client_ip(rw,sync,no_root_squash,no_all_squash)
 ```
 
-![/etc/exports配置文件](<../../.gitbook/assets/image (2).png>)
+![/etc/exports配置文件](<../../.gitbook/assets/image (2) (1).png>)
 
 **刷新配置文件：`exportfs -a`**
 

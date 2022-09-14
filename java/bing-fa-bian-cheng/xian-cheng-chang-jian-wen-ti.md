@@ -88,7 +88,7 @@ if(map.containsKey(key){
 
 　　线程池的4中拒绝策略：
 
-![线程池4种拒绝策略](<../../.gitbook/assets/image (32).png>)
+![线程池4种拒绝策略](<../../.gitbook/assets/image (32) (1).png>)
 
 　　DiscardPolicy：提交的新任务直接拒绝，可能造成数据丢失； DiscardOldestPolicy: 拒绝工作队列中存活时间最长的任务。
 

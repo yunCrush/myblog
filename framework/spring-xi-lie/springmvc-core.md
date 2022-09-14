@@ -36,6 +36,6 @@ description: 这里介绍SpringMVC的核心组件，以及SpringMVC的请求流�
 
 流程如图所示：
 
-![springmvc流程图](<../../.gitbook/assets/image (6).png>)
+![springmvc流程图](<../../.gitbook/assets/image (6) (1).png>)
 
 　　流程：DispatcherServlet前置控制器收到来自客户端的请求，通过HandlerMapping根据请求的url，找到@RequestMapping上的相对应的url，找到具体的处理器，生成处理器执行链(Handler+处理器拦截器)返回给DispatcherServlet，此时容器中的controller并不知道如何解析请求，此时需要借助HandlerAdapter对容器中的controller赋予处理请求与响应的能力，利用httpMessageConverter对请求，响应进行处理,，这里涉及到将url中的参数绑定到@PathVariable的变量上，，执行处理器适配器的一系列操作(数据格式转换，参数封装)，执行处理器Handler执行完后返回ModelAndView模型数据给DispatcherServlet，DispatcherServlet将模型数据选择ViewResolver视图解析器进行解析，将解析后的具体的view返回给DispatcherServlet，由DispatcherServlet进行模型的填充与渲染，最后响应给客户端。
