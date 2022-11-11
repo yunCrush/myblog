@@ -1,4 +1,31 @@
-# Tomcat基本组件
+---
+description: tomcat是一个Http服务器，也是一个Servlet容器
+---
+
+# Tomcat安装与简单入门
+
+## 安装部署
+
+```shell
+/data/soft/apache-tomcat-8.5.50.tar
+tar tar -xvf apache-tomcat-8.5.50.tar
+cd /data/soft/apache-tomcat-8.5.50/
+
+conf/
+# 日志相关
+logging.properties 
+# 8080端口的指定等
+server.xml
+# 跳转到index.html就是配置在web.xml中的
+web.xml
+
+# 项目发布相关
+webapps/
+
+# JSP 编译运行会产生过程文件
+work/
+
+```
 
 ## 1.基础理论
 
@@ -15,6 +42,8 @@
 coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Processor(实现Http协议，是对应用层的抽象), Adapter(用于将上图中的request请求封装成ServletRequest，以及ServletResponse-> Reponse,**适配器的经典使用**)。
 
 ![connector](<../../.gitbook/assets/image (40) (1).png>)
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>protocol</p></figcaption></figure>
 
 ## 3.核心组件Catalina
 
@@ -36,6 +65,8 @@ coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Proc
 3. Context 表示⼀个Web应⽤程序， ⼀个Web应⽤可包含多个Wrapper
 4. Wrapper 表示⼀个Servlet，Wrapper 作为容器中的最底层，不能包含⼦容器
 
+具体配置都体现在server.xml中
+
 ## 4.核心配置文件server.xml
 
 　　核心配置文件server.xml存在conf/server.xml
@@ -52,7 +83,12 @@ coyote包括如下部分:endPoint(coyote的通信端点,实现TCP协议/IP),Proc
    <!--定义服务器的全局JNDI资源 -->
    <GlobalNamingResources/>
  <!--定义⼀个Service服务，⼀个Server标签可以有多个Service服务实例-->
-    <Service/>
+     <Service name="Catalina">
+    <!--The connectors can use a shared executor, you can define one or more named thread pools-->
+    <!-- 可以配置一个线程池来处理下面的connector连接，但是默认是关闭的。
+    <Executor name="tomcatThreadPool" namePrefix="catalina-exec-"
+        maxThreads="150" minSpareThreads="4"/>
+    -->
 </Server>
 ```
 

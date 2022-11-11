@@ -33,7 +33,7 @@
 ## 服务器/协议 <a href="#server-protocol" id="server-protocol"></a>
 
 * [Tomcat](server-protocol/tomcat/README.md)
-  * [Tomcat基本组件](server-protocol/tomcat/tomcat-ji-ben-zu-jian.md)
+  * [Tomcat安装与简单入门](server-protocol/tomcat/tomcat-ji-ben-zu-jian.md)
   * [手写minicat](server-protocol/tomcat/shou-xie-minicat.md)
   * [tomcat源码调试](server-protocol/tomcat/tomcat-yuan-ma-tiao-shi.md)
 * [Nginx](server-protocol/nginx/README.md)
