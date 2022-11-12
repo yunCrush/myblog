@@ -74,7 +74,7 @@ canal.instance.dbPassword=canal
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>canal-conf</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>instance.properties</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>instance.properties</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>启动成功</p></figcaption></figure>
 
