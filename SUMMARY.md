@@ -35,7 +35,7 @@
 * [Tomcat](server-protocol/tomcat/README.md)
   * [Tomcat安装与简单入门](server-protocol/tomcat/tomcat-ji-ben-zu-jian.md)
   * [手写minicat](server-protocol/tomcat/shou-xie-minicat.md)
-  * [tomcat源码调试](server-protocol/tomcat/tomcat-yuan-ma-tiao-shi.md)
+  * [tomcat源码构建](server-protocol/tomcat/tomcat-yuan-ma-tiao-shi.md)
 * [Nginx](server-protocol/nginx/README.md)
   * [Nginx安装及基本配置](server-protocol/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
 * [Http/Https](server-protocol/http-https/README.md)

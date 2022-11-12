@@ -162,9 +162,9 @@ org.apache.catalina.Executor接⼝
 ## 5. 配置两个虚拟主机host
 
 ```
-# 复制一份webapps,存放不同资源文件，没有配置context，默认显示的是webapp下的ROOT文件夹下的资源
+# 复制一份webapps,存放不同资源文件
 [root@VM-0-15-centos apache-tomcat-8.5.50]# cp -r webapps webapps2
-#修改server.xml与 webapps2/ROOT/index.jsp 
+#修改server.xml与 webapps2/ROOT/index.jsp
 ```
 
 ![webapps2/ROOT/index.jsp](<../../.gitbook/assets/image (43).png>)
@@ -189,7 +189,7 @@ url2: http://www.def.com:8080/
  path：Web应⽤的Context 路径。如果我们Host名为localhost， 则该web应⽤访问的根路径为：
  http://localhost:8080/web3。
 -->
- <Context docBase="web_demo" path="/web3"></Context>
+ <Context docBase="/Users/yingdian/web_demo" path="/web3"></Context>
 
 # 日志相关
  <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
