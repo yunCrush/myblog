@@ -1,3 +1,7 @@
+---
+description: 源码构建篇
+---
+
 # tomcat源码构建
 
 1. 解压压缩包，进入文件夹内创建source文件夹，conf, webapps 移动到source目录下
@@ -76,3 +80,27 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 {% endcode %}
 
 3\. 使用idea打开文件，找到Bootstrap.java main方法，run, 按照提示，进行修复。
+
+4\. 配置配置文件：edit configuration -> VM options
+
+{% code overflow="wrap" %}
+```editorconfig
+-Dcatalina.home=D:\github\apache-tomcat-8.5.50-src\source
+-Dcatalina.base=D:\github\apache-tomcat-8.5.50-src\source
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+-Djava.util.logging.config.file=D:\github\apache-tomcat-8.5.50-src\source\conf\logging.properties
+```
+{% endcode %}
+
+5.启动项目......页面访问: [http://localhost:8080/](http://localhost:8080/)
+
+6\. 报错解决方案： 原因是Jsp引擎Jasper没有被初始化，从而无法编译JSP，我们需要在tomcat的源码ContextConfig类 的configureStart方法中增加一行代码将 Jsp 引擎初始化,webConfig()方法下面(777)。
+
+{% code overflow="wrap" %}
+```
+// 初始话JSP解析引擎
+jaspercontext.addServletContainerInitializer(new JasperInitializer(),null);
+```
+{% endcode %}
+
+\`
