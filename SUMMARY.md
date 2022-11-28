@@ -67,12 +67,7 @@
 
 ## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
 
-* [常用工具](Develop\&Summary/kai-fa-ji-qiao.md)
-* [开发问题](Develop\&Summary/kai-fa-wen-ti.md)
-* [常用命令](Develop\&Summary/chang-yong-ming-ling/README.md)
-  * [文本编辑指令](Develop\&Summary/chang-yong-ming-ling/vim-basic.md)
-  * [Centos防火墙](Develop\&Summary/chang-yong-ming-ling/centos-fang-huo-qiang.md)
-  * [Linux常用命令](Develop\&Summary/chang-yong-ming-ling/linux-basic-command.md)
+* [常用工具类](Develop\&Summary/kai-fa-ji-qiao.md)
 
 ## 环境部署 <a href="#env-deploy" id="env-deploy"></a>
 
@@ -89,6 +84,9 @@
   * [linux配置](env-deploy/huan-jing-da-jian/linux-pei-zhi.md)
   * [Kafka安装](env-deploy/huan-jing-da-jian/kafka-an-zhuang.md)
   * [RBD-tools安装](env-deploy/huan-jing-da-jian/rbdtools-an-zhuang.md)
+* [Linux常用命令](env-deploy/linux-basic-command.md)
+* [Centos防火墙](env-deploy/centos-fang-huo-qiang.md)
+* [文本编辑指令](env-deploy/vim-basic.md)
 
 ## 基础知识 <a href="#basic-core" id="basic-core"></a>
 
