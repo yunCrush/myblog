@@ -67,9 +67,10 @@
 
 ## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
 
-* [常用工具类](Develop\&Summary/kai-fa-ji-qiao.md)
+* [实战系列](develop-and-summary/shi-zhan-xi-lie/README.md)
+  * [记录一次CPU100%与OOM](develop-and-summary/shi-zhan-xi-lie/ji-lu-yi-ci-cpu100-yu-oom.md)
 
-## 环境部署 <a href="#env-deploy" id="env-deploy"></a>
+## 开发部署 <a href="#env-deploy" id="env-deploy"></a>
 
 * [环境搭建](env-deploy/huan-jing-da-jian/README.md)
   * [Jmeter使用](env-deploy/huan-jing-da-jian/jmeter-shi-yong.md)
@@ -84,9 +85,10 @@
   * [linux配置](env-deploy/huan-jing-da-jian/linux-pei-zhi.md)
   * [Kafka安装](env-deploy/huan-jing-da-jian/kafka-an-zhuang.md)
   * [RBD-tools安装](env-deploy/huan-jing-da-jian/rbdtools-an-zhuang.md)
-* [Linux常用命令](env-deploy/linux-basic-command.md)
-* [Centos防火墙](env-deploy/centos-fang-huo-qiang.md)
-* [文本编辑指令](env-deploy/vim-basic.md)
+  * [Linux常用命令](env-deploy/huan-jing-da-jian/linux-basic-command.md)
+  * [Centos防火墙](env-deploy/huan-jing-da-jian/centos-fang-huo-qiang.md)
+  * [文本编辑指令](env-deploy/huan-jing-da-jian/vim-basic.md)
+  * [常用工具类](env-deploy/huan-jing-da-jian/kai-fa-ji-qiao.md)
 
 ## 基础知识 <a href="#basic-core" id="basic-core"></a>
 

@@ -4,8 +4,6 @@ description: 常用命令，后序有待补充。
 
 # Linux常用命令
 
-
-
 ### 1.linux常识性指令
 
 ```
@@ -104,7 +102,7 @@ host -t AAAA www.yuncrush.com
 dig www.yuncrush.com
 ```
 
-## &#x20; 4.git代理
+## 4.git代理
 
 ```
 # 解除ssl验证
@@ -129,7 +127,6 @@ zip -P password -r -s 1024m myfile.zip tempdir/
 zip -F myfiles.zip --out single-archive.zip
 #得到single-archive.zip包，对其进行解压即可。
 unzip -P password singl-archive.zip -d ./
-
 ```
 
 ### 6.启动java项目
