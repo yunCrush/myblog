@@ -25,6 +25,8 @@
 
 ## 中间件 <a href="#middle-ware" id="middle-ware"></a>
 
+* [RocketMQ](middle-ware/rocketmq/README.md)
+  * [RocketMQ环境搭建](middle-ware/rocketmq/rocketmq-huan-jing-da-jian.md)
 * [Redis](middle-ware/redis/README.md)
   * [Redis双写一致性](middle-ware/redis/redis-shuang-xie-yi-zhi-xing.md)
   * [Redis常见问题](middle-ware/redis/redis-chang-jian-wen-ti.md)

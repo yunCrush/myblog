@@ -8,7 +8,7 @@ description: 介绍关于多线程的核心知识，以及解决一些具有争�
 
 　　官方文档说明只有两种方法：1.通过继承Thread，重写run方法，2.实现Runnable接口，重写run方法。对于线程池等，都逃不过本质区别，也是实现Runnable接口。
 
-![](<../../.gitbook/assets/image (24).png>)
+![](<../../.gitbook/assets/image (24) (1).png>)
 
 ![](<../../.gitbook/assets/image (23).png>)
 
