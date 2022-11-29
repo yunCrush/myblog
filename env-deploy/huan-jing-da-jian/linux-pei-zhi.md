@@ -36,3 +36,9 @@ vi /etc/crontab
 ### PIP源配置
 
 vim \~/.pip/pip.conf
+
+### **从哪里下载软件**
+
+```
+/etc/yum.repos.d/CentOS-Base.repo
+```
