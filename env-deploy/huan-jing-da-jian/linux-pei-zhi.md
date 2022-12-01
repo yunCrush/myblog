@@ -42,3 +42,10 @@ vim \~/.pip/pip.conf
 ```
 /etc/yum.repos.d/CentOS-Base.repo
 ```
+
+### Systemd
+
+```
+systemd: /usr/lib/systemcd/system/offtrojan.service
+systemctl daemon-reload重新加载上目录下的文件
+```
