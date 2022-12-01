@@ -19,7 +19,6 @@ public boolean canJump(int[] nums) {
     // 判断是否endIndex可否到达0,即可
     return endIndex == 0;
 }
-
 ```
 
 2\. 跳跃游戏2

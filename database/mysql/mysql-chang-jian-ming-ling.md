@@ -9,7 +9,6 @@
 ```
 create table T(ID int primary key, c int);
  update T set c=c+1 where ID=2;
-
 ```
 
 ```

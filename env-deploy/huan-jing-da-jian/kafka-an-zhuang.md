@@ -93,5 +93,4 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic hello
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello
 # 从头消费
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello --from-beginning
-
 ```

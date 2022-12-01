@@ -1,7 +1,5 @@
 # Redis安装
 
-
-
 ```
 // yum install -y gcc-c++
 mkdir -p /data/soft/
@@ -18,5 +16,4 @@ make install PREFIX=/usr/local/redis
 ./redis-server redis.conf    ./redis-cli shutdown 
 //连接客户端的启动
 ./redis-cli 
-
 ```

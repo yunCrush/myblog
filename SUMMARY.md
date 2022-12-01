@@ -42,9 +42,6 @@
 * [Nginx](server-protocol/nginx/README.md)
   * [Nginx安装及基本配置](server-protocol/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
 * [Http/Https](server-protocol/http-https/README.md)
-  * [Page 1](server-protocol/http-https/page-1/README.md)
-    * [TCP连接配置相关](server-protocol/http-https/page-1/tcp-lian-jie-pei-zhi-xiang-guan.md)
-  * [TCP/IP连接](server-protocol/http-https/tcpip-lian-jie.md)
   * [概念](server-protocol/http-https/gai-nian.md)
 
 ## 框架 <a href="#framework" id="framework"></a>
