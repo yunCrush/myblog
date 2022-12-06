@@ -50,6 +50,7 @@
   * [SpringBoot制作一个Starter](framework/spring-xi-lie/springboot-zhi-zuo-yi-ge-starter.md)
   * [Spring常见问题](framework/spring-xi-lie/spring-chang-jian-wen-ti.md)
   * [SpringMVC核心组件](framework/spring-xi-lie/springmvc-core.md)
+  * [SpringBoot自动装配](framework/spring-xi-lie/springboot-zi-dong-zhuang-pei.md)
 
 ## JAVA
 
