@@ -1,6 +1,6 @@
 # RocketMQ环境搭建
 
-### **安装部署RocketMQ**
+### Linux**安装部署RocketMQ**
 
 {% code overflow="wrap" %}
 ```powershell
@@ -69,13 +69,16 @@ nohup ./mqbroker -c ../conf/broker.conf &
 sh ./mqadmin clusterList -n 127.0.0.1:9876
 ```
 
-### **安装 RocketMQ-Console**
+### **Linux/win安装 RocketMQ-Console**
 
 {% code overflow="wrap" %}
 ```
+# linux
 wget https://github.com/apache/rocketmq-externals/archive/rocketmq-console-1.0.0.tar.gz
 tar -xf rocketmq-console-1.0.0.tar.gz
 # 重命名，为了方便后续操作
+# win 使用rocketmq-externals-rocketmq-console-1.0.0.zip， 解压
+
 mv rocketmq-externals-rocketmq-console-1.0.0/rocketmq-console  rocketmq-console
 ```
 {% endcode %}
@@ -101,12 +104,14 @@ vi src/main/resources/application.properties
 
 在浏览器中输入 http://localhost:8080 查看是否安装成功
 
-#### IDEA 中安装 RocketMQ
+### Win-IDEA 中安装 RocketMQ
+
+#### 1. NameSrv配置
 
 1. **从 GitHub 上下载 RocketMQ 源码，并将其导入到 IEDA 中**
 2.  ****
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 **Step2  namesrv/src/main/java/org/apache/rocketmq/namesrv/NamesrvStartup 设置环境变量 ROCKETMQ\_HOME**
 
@@ -119,3 +124,56 @@ vi src/main/resources/application.properties
 **以 Debug 方法运行 NamesrvStartup,执行效果如下图所示,表示启动成功**
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+
+#### 2.Broker配置
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+对broker的环境变量进行配置
+
+```
+-c C:\Users\zhangyunfei\Desktop\RocketMQ\tmp\rocketmq\conf\broker.conf
+ROCKETMQ_HOME=C:\Users\zhangyunfei\Desktop\RocketMQ\tmp\rocketmq
+```
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+**temp/rocketmq** 是rokcetmq的一个配置文件的位置。
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+{% code title="broker.conf" overflow="wrap" %}
+```editorconfig
+brokerClusterName = DefaultCluster
+brokerName = broker-a
+brokerId = 0
+deleteWhen = 04
+fileReservedTime = 48
+brokerRole = ASYNC_MASTER
+flushDiskType = ASYNC_FLUSH
+
+storePathRootDir=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store
+storePathCommitLog=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\commitlog
+namesrvAddr=127.0.0.1:9876
+brokerIP1=20.20.32.253
+brokerIP2=20.20.32.253
+
+autoCreateTopicEnable=true
+# consume queue文件的存储路径
+storePathConsumeQueue=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\consumequeue
+# 消息索引文件的存储路径
+storePathIndex=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\index
+# checkpoint文件的存储路径
+storeCheckpoint=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\checkpoint
+# abort文件的存储路径
+abortFile=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\abort
+```
+{% endcode %}
+
+**全局替换配置文件中的变量**&#x20;
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

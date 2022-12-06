@@ -81,7 +81,7 @@ com.yun.config.MyAutoConfiguration
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>项目结构图</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>项目结构图</p></figcaption></figure>
 
 ### 5.如何食用这个Starter呢？
 

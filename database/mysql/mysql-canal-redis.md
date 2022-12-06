@@ -21,7 +21,7 @@ server_id = 1
 binlog-format = ROW
 ```
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>my.cnf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>my.cnf</p></figcaption></figure>
 
 * ROW模式 除了记录sql语句之外，还会记录每个字段的变化情况，能够清楚的记录每行数据的变化历史，但会占用较多的空间。
 * STATEMENT模式只记录了sql语句，但是没有记录上下文信息，在进行数据恢复的时候可能会导致数据的丢失情况；
@@ -70,11 +70,11 @@ canal.instance.dbPassword=canal
 
 验证启动成功：生成canal.pid或者/data/soft/mycanal/logs/canal/canal.log&#x20;
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>canal-position</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>canal-position</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>canal-conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption><p>canal-conf</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>instance.properties</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption><p>instance.properties</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>启动成功</p></figcaption></figure>
 
@@ -102,7 +102,8 @@ unblock with 'mysqladmin flush-hosts'
 
 <pre><code><strong>// 解决方法:
 </strong>whereis mysqladmin
-/usr/bin/mysqladmin flush-hosts -h192.168.202.128 -P3306 -uroot -p123456</code></pre>
+/usr/bin/mysqladmin flush-hosts -h192.168.202.128 -P3306 -uroot -p123456
+</code></pre>
 
 **项目启动报错2：MySQL 8.0 Public Key Retrieval is not allowed 错误的解决方法**
 
