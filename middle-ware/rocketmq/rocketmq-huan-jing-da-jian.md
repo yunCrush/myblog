@@ -142,7 +142,7 @@ ROCKETMQ_HOME=C:\Users\zhangyunfei\Desktop\RocketMQ\tmp\rocketmq
 
 **temp/rocketmq** 是rokcetmq的一个配置文件的位置。
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 {% code title="broker.conf" overflow="wrap" %}
 ```editorconfig
@@ -176,4 +176,4 @@ abortFile=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\abort
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>

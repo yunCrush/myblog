@@ -11,9 +11,9 @@ description: 制作一个简单的starter，这里只是记录一个流程
 {% code overflow="wrap" %}
 ```yaml
 @Bean：声明这是一个对象，可以指定名称，默认是方法名
-@Configuration：表明当前类是一个配置类，配合@Bean注解将对象注入Spring容器类
+@Configuration：表明当前类是一个Java配置的Bean类，配合@Bean注解将对象注入Spring容器类
 @ConditionalOnClass(XX.class)：在类路径下存在XX类时，才会构建这个Bean
-@EnableConfigurationProperties(SimpleBean.class)：使@ConfigurationProperties(prefix = "simplebean")
+@EnableConfigurationProperties(SimpleBean.class)：使@ConfigurationProperties(prefix = "simplebean")生效
 @ConfigurationProperties(prefix = "simplebean")：配置文件中simplebean开头的属性注入到以下属性
 ```
 {% endcode %}

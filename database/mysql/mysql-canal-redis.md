@@ -82,7 +82,7 @@ canal.instance.dbPassword=canal
 
 启动报错，自MySQL 8.0.3开始，身份验证插件默认使用caching\_sha2\_password
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>canal启动报错</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>canal启动报错</p></figcaption></figure>
 
 解决方案：
 
