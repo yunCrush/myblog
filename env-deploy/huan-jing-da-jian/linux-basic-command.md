@@ -102,7 +102,7 @@ host -t AAAA www.yuncrush.com
 dig www.yuncrush.com
 ```
 
-## 4.git代理
+## &#x20; 4.git代理
 
 ```
 # 解除ssl验证
@@ -118,7 +118,7 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-## 5.zip分割与合并
+## &#x20; 5.zip分割与合并
 
 ```
 # 将tempdir目录下的文件打包成多个小包 -P password带密码,小包的前缀名字myfile.xx
@@ -141,3 +141,16 @@ nohup 后台运行， & 不锁定窗口，但是关闭窗口，程序结束
 1表示标准输出，2标准错误输出。&1表示引用标准输出的那个文件。
 command > /dev/null  等价于command 1 > /dev/null 
 ```
+
+## &#x20; 7.磁盘挂载
+
+```
+# 查看当前磁盘设备
+fdisk -l
+# 挂载 dev/sdb 到/mnt下
+mount /dev/sdb /mnt/
+# 取消挂载
+ umount /dev/sdb
+
+```
+
