@@ -99,11 +99,7 @@
 ## 基础知识 <a href="#basic-core" id="basic-core"></a>
 
 * [算法](basic-core/suan-fa/README.md)
-  * [常见排序](basic-core/suan-fa/chang-jian-pai-xu.md)
-  * [回溯](basic-core/suan-fa/hui-su.md)
-  * [递归](basic-core/suan-fa/di-gui.md)
-  * [深度优先DFS](basic-core/suan-fa/shen-du-you-xian-dfs.md)
-  * [贪心](basic-core/suan-fa/tan-xin.md)
+  * [算法模板](basic-core/suan-fa/tan-xin.md)
 * [计算机网络](basic-core/ji-suan-ji-wang-luo/README.md)
   * [计算机网络读书感悟](basic-core/ji-suan-ji-wang-luo/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
 * [操作系统](basic-core/cao-zuo-xi-tong/README.md)
