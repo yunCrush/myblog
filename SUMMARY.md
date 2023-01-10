@@ -25,7 +25,9 @@
 
 ## 中间件 <a href="#middle-ware" id="middle-ware"></a>
 
-* [Nacos](middle-ware/nacos.md)
+* [Nacos](middle-ware/nacos/README.md)
+  * [Nacos源码环境搭建](middle-ware/nacos/nacos-yuan-ma-huan-jing-da-jian.md)
+  * [Nacos配置动态更新](middle-ware/nacos/nacos-pei-zhi-dong-tai-geng-xin.md)
 * [RocketMQ](middle-ware/rocketmq/README.md)
   * [RocketMQ环境搭建](middle-ware/rocketmq/rocketmq-huan-jing-da-jian.md)
 * [Redis](middle-ware/redis/README.md)
