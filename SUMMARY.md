@@ -13,6 +13,7 @@
   * [MySQL事务](database/mysql/mysql-shi-wu.md)
   * [MySQL常见命令](database/mysql/mysql-chang-jian-ming-ling.md)
   * [MySQL-Canal-Redis](database/mysql/mysql-canal-redis.md)
+  * [MySQL安装](database/mysql/mysql-an-zhuang.md)
 * [ElasticSearch](database/elasticsearch/README.md)
   * [ElasticSearch概念](database/elasticsearch/elasticsearch-gai-nian.md)
   * [ElasticSearch写入原理](database/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
@@ -25,18 +26,27 @@
 
 ## 中间件 <a href="#middle-ware" id="middle-ware"></a>
 
+* [ZooKeeper](middle-ware/zookeeper/README.md)
+  * [ZooKeeper安装](middle-ware/zookeeper/zookeeper-an-zhuang.md)
 * [Nacos](middle-ware/nacos/README.md)
   * [Nacos源码环境搭建](middle-ware/nacos/nacos-yuan-ma-huan-jing-da-jian.md)
   * [Nacos配置动态更新](middle-ware/nacos/nacos-pei-zhi-dong-tai-geng-xin.md)
 * [RocketMQ](middle-ware/rocketmq/README.md)
   * [RocketMQ环境搭建](middle-ware/rocketmq/rocketmq-huan-jing-da-jian.md)
 * [Redis](middle-ware/redis/README.md)
+  * [Redis安装](middle-ware/redis/redis-an-zhuang.md)
   * [Redis双写一致性](middle-ware/redis/redis-shuang-xie-yi-zhi-xing.md)
   * [Redis常见问题](middle-ware/redis/redis-chang-jian-wen-ti.md)
     * [yunCrush/Redis](middle-ware/redis/redis-chang-jian-wen-ti/yuncrush-redis.md)
+  * [布隆过滤器](middle-ware/redis/bu-long-guo-lv-qi.md)
+  * [RBD-tools安装](middle-ware/redis/rbdtools-an-zhuang.md)
+* [Kafka](middle-ware/kafka/README.md)
+  * [Kafka安装](middle-ware/kafka/kafka-an-zhuang.md)
 
 ## 服务器/协议 <a href="#server-protocol" id="server-protocol"></a>
 
+* [Docker](server-protocol/docker/README.md)
+  * [Docker安装使用](server-protocol/docker/docker-basic.md)
 * [Tomcat](server-protocol/tomcat/README.md)
   * [Tomcat安装与简单入门](server-protocol/tomcat/tomcat-ji-ben-zu-jian.md)
   * [手写minicat](server-protocol/tomcat/shou-xie-minicat.md)
@@ -54,6 +64,11 @@
   * [Spring常见问题](framework/spring-xi-lie/spring-chang-jian-wen-ti.md)
   * [SpringMVC核心组件](framework/spring-xi-lie/springmvc-core.md)
   * [SpringBoot自动装配](framework/spring-xi-lie/springboot-zi-dong-zhuang-pei.md)
+
+## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
+
+* [实战系列](develop-and-summary/shi-zhan-xi-lie/README.md)
+  * [记录一次CPU100%与OOM](develop-and-summary/shi-zhan-xi-lie/ji-lu-yi-ci-cpu100-yu-oom.md)
 
 ## JAVA
 
@@ -73,26 +88,14 @@
   * [HashMap](java/javase/hashmap-yi.md)
   * [抽象类与接口](java/javase/chou-xiang-lei-yu-jie-kou.md)
 
-## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
-
-* [实战系列](develop-and-summary/shi-zhan-xi-lie/README.md)
-  * [记录一次CPU100%与OOM](develop-and-summary/shi-zhan-xi-lie/ji-lu-yi-ci-cpu100-yu-oom.md)
-
 ## 开发部署 <a href="#env-deploy" id="env-deploy"></a>
 
 * [环境搭建](env-deploy/huan-jing-da-jian/README.md)
   * [Jmeter使用](env-deploy/huan-jing-da-jian/jmeter-shi-yong.md)
-  * [布隆过滤器](env-deploy/huan-jing-da-jian/bu-long-guo-lv-qi.md)
   * [JDK安装](env-deploy/huan-jing-da-jian/jdk-an-zhuang.md)
-  * [Docker安装使用](env-deploy/huan-jing-da-jian/docker-basic.md)
   * [NFS文件挂载](env-deploy/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
-  * [Redis安装](env-deploy/huan-jing-da-jian/redis-an-zhuang.md)
-  * [MySQL安装](env-deploy/huan-jing-da-jian/mysql-an-zhuang.md)
   * [配置163yum源](env-deploy/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
-  * [ZooKeeper安装](env-deploy/huan-jing-da-jian/zookeeper-an-zhuang.md)
   * [linux配置](env-deploy/huan-jing-da-jian/linux-pei-zhi.md)
-  * [Kafka安装](env-deploy/huan-jing-da-jian/kafka-an-zhuang.md)
-  * [RBD-tools安装](env-deploy/huan-jing-da-jian/rbdtools-an-zhuang.md)
   * [Linux常用命令](env-deploy/huan-jing-da-jian/linux-basic-command.md)
   * [Centos防火墙](env-deploy/huan-jing-da-jian/centos-fang-huo-qiang.md)
   * [文本编辑指令](env-deploy/huan-jing-da-jian/vim-basic.md)
