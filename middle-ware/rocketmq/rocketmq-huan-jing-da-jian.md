@@ -111,7 +111,7 @@ vi src/main/resources/application.properties
 1. **从 GitHub 上下载 RocketMQ 源码，并将其导入到 IEDA 中**
 2.  ****
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 **Step2  namesrv/src/main/java/org/apache/rocketmq/namesrv/NamesrvStartup 设置环境变量 ROCKETMQ\_HOME**
 
@@ -177,3 +177,11 @@ abortFile=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\abort
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
+
+**启动Broker,需要注意broker.conf配置的ip**
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+启动生产者与消费者
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
