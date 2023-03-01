@@ -180,7 +180,7 @@ abortFile=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\abort
 
 **启动Broker,需要注意broker.conf配置的ip**
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 启动生产者与消费者
 

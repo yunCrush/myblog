@@ -88,6 +88,8 @@ select ID from T where k between 3 and 5
 
 　　可以在索引遍历过程中，对索引中包含的字段先做判断，直接过滤掉不满足条件的记录，减少回表次数。
 
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>索引下推</p></figcaption></figure>
+
 ## 5.提问
 
 索引建立的越多越好吗？
