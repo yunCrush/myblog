@@ -109,7 +109,7 @@ vi src/main/resources/application.properties
 #### 1. NameSrv配置
 
 1. **从 GitHub 上下载 RocketMQ 源码，并将其导入到 IEDA 中**
-2.  ****
+2.
 
     <figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -185,3 +185,11 @@ abortFile=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\abort
 启动生产者与消费者
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+RocketMQ-Console安装启动
+
+```
+java -jar rocketmq-console-ng-1.0.0.jar &
+```
+
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>

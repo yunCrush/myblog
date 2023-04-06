@@ -366,6 +366,32 @@ public boolean canJump(int[] nums) {
                 nums[i] = temp[j];
             }
         }
+
     ```
 
-    \
+输入输出:
+
+```
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args)  throws IOException {
+         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str;
+        while ((str = br.readLine()) != null) {
+            // 处理
+            String[] arr = str.split("\\s+");
+            int row = Integer.parseInt(arr[0]);
+            int col = Integer.parseInt(arr[1]);
+            int[][] nums = new int[row][col];
+            for ( int i = 0; i < row; i++) {
+                String[] temp = br.readLine().split("\\s+");
+                for (int j = 0; j < col; j++) {
+                    nums[row][j] = Integer.parseInt(temp[j]);
+                }
+                
+            }
+        }
+    }
+}
+```
