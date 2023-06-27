@@ -1,4 +1,18 @@
-# MySQL安装
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
+
+# MySQL环境篇
 
 ```
 //关闭selinux: vi /etc/selinux/config
