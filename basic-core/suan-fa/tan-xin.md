@@ -1,6 +1,18 @@
-# 一道题系列
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-###
+# 基础算法
 
 ### 二分搜索
 
@@ -38,7 +50,7 @@ int bsearch_2(int l, int r){
 
 ```
 
-### # 前缀和
+### 前缀和
 
 ```
 // 下标从1开始 s[0] = 0 为了处理边界问题
@@ -116,7 +128,7 @@ public void monotonicStack(int[] nums) {
     }
 ```
 
-## BFS&#x20;
+## BFS
 
 ```
 public void bfs() {

@@ -99,7 +99,7 @@
 ## 基础知识 <a href="#basic-core" id="basic-core"></a>
 
 * [算法](basic-core/suan-fa/README.md)
-  * [一道题系列](basic-core/suan-fa/tan-xin.md)
+  * [基础算法](basic-core/suan-fa/tan-xin.md)
 * [计算机网络](basic-core/ji-suan-ji-wang-luo.md)
 * [操作系统](basic-core/cao-zuo-xi-tong/README.md)
   * [OS概述（一）](basic-core/cao-zuo-xi-tong/os-gai-shu-yi.md)
