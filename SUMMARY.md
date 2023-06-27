@@ -63,24 +63,20 @@
 * [ZooKeeper](middle-ware/zookeeper/README.md)
   * [ZooKeeper安装](middle-ware/zookeeper/zookeeper-an-zhuang.md)
 
-## 📦 容器 <a href="#container" id="container"></a>
+## ⚙ 性能优化 <a href="#performance" id="performance"></a>
 
-## 框架 <a href="#framework" id="framework"></a>
-
-## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
-
-* [实战系列](develop-and-summary/shi-zhan-xi-lie/README.md)
-  * [记录一次CPU100%与OOM](develop-and-summary/shi-zhan-xi-lie/ji-lu-yi-ci-cpu100-yu-oom.md)
-* [环境搭建](develop-and-summary/huan-jing-da-jian/README.md)
-  * [Jmeter使用](develop-and-summary/huan-jing-da-jian/jmeter-shi-yong.md)
-  * [JDK安装](develop-and-summary/huan-jing-da-jian/jdk-an-zhuang.md)
-  * [NFS文件挂载](develop-and-summary/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
-  * [配置163yum源](develop-and-summary/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
-  * [linux配置](develop-and-summary/huan-jing-da-jian/linux-pei-zhi.md)
-  * [Linux常用命令](develop-and-summary/huan-jing-da-jian/linux-basic-command.md)
-  * [Centos防火墙](develop-and-summary/huan-jing-da-jian/centos-fang-huo-qiang.md)
-  * [文本编辑指令](develop-and-summary/huan-jing-da-jian/vim-basic.md)
-  * [常用工具类](develop-and-summary/huan-jing-da-jian/kai-fa-ji-qiao.md)
+* [实战系列](performance/shi-zhan-xi-lie/README.md)
+  * [记录一次CPU100%与OOM](performance/shi-zhan-xi-lie/ji-lu-yi-ci-cpu100-yu-oom.md)
+* [环境搭建](performance/huan-jing-da-jian/README.md)
+  * [Jmeter使用](performance/huan-jing-da-jian/jmeter-shi-yong.md)
+  * [JDK安装](performance/huan-jing-da-jian/jdk-an-zhuang.md)
+  * [NFS文件挂载](performance/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
+  * [配置163yum源](performance/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
+  * [linux配置](performance/huan-jing-da-jian/linux-pei-zhi.md)
+  * [Linux常用命令](performance/huan-jing-da-jian/linux-basic-command.md)
+  * [Centos防火墙](performance/huan-jing-da-jian/centos-fang-huo-qiang.md)
+  * [文本编辑指令](performance/huan-jing-da-jian/vim-basic.md)
+  * [常用工具类](performance/huan-jing-da-jian/kai-fa-ji-qiao.md)
 
 ## ☕ Java
 
