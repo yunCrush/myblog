@@ -17,8 +17,6 @@
 
 可以看到是**1318**行与**1265**行出现的问题
 
-<figure><img src="../../.gitbook/assets/cpu100%.png" alt=""><figcaption></figcaption></figure>
-
 <figure><img src="../../.gitbook/assets/problem_code1.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/problem_code2.jpg" alt=""><figcaption></figcaption></figure>
@@ -35,12 +33,8 @@
     这里是java\_pid6174.hprof
 2.  使用Eclipse Memory Analyzer内存分析工具打开java\_pid6174.hprof文件，如图：
 
-
-
     <figure><img src="../../.gitbook/assets/leak_summary.png" alt=""><figcaption></figcaption></figure>
 3.  **点击上图中的leak Suspects**
-
-
 
     <figure><img src="../../.gitbook/assets/leak_suspect.png" alt=""><figcaption></figcaption></figure>
 4.  这里分别对4个可疑点进行分析
@@ -50,8 +44,6 @@
     ![](../../.gitbook/assets/suspects1.png)
 
     这里我们可以看到是和UpdateRequest有关，点击上图中的**See stacktrace with involved local variables** 可查看到相关的本地变量，如下图：
-
-
 
     其实看到这里，我已经可以猜到是哪一部分代码导致的OOM了，因为图中圈出来的部分是记录的报错日志，因为业务需要记录报错日志写入到ES中，由于业务需要，一个数据包中目前有的包含几千万条数据，小一点的也有几百万到千万条，**这里出现OOM的原因是 一条脏数据的记录日志\*巨大数据量 这样就会出现一个很大的值**，根据实际观测，当时发生OOM时错误日志描述信息的长度达到接近4kw。关于计算每个字符串的长度计算：(40+2\*n)，这样估算下来大概在50M左右。
 
