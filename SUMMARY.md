@@ -4,7 +4,6 @@
 
 ## 🔐 系统/安全 <a href="#security" id="security"></a>
 
-* [计算机网络读书感悟](security/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
 * [网络协议](security/wang-luo-xie-yi.md)
 * [Http/Https](security/http-https/README.md)
   * [概念](security/http-https/gai-nian.md)
