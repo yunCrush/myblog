@@ -1,4 +1,18 @@
-# Redis安装
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
+
+# Redis环境篇
 
 ```
 // yum install -y gcc-c++

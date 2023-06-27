@@ -1,5 +1,16 @@
 ---
 description: 介绍关于HashMap的常见问题。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
 
 # HashMap

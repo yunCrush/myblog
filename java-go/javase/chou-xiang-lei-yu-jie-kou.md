@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
+
 # 抽象类与接口
 
 　　抽象类的目的主要是代码的重用，可以有一个或者多个抽象方法，抽象类大多用于抽取相关类的共同方法或者共同成员变量，然后通过继承的方式达到代码重用。

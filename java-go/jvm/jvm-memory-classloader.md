@@ -1,8 +1,19 @@
 ---
 description: 这里介绍JVM内存区域的知识点与类加载机制。
+layout:
+  title:
+    visible: false
+  description:
+    visible: true
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
 
-# JVM内存结构与类加载
+# 内存结构与类加载机制
 
 　　JVM(Java Virtual Model)Java虚拟机模型与JMM(Java Memory Model)不同。
 
