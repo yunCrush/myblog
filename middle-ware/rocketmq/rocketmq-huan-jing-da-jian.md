@@ -184,7 +184,11 @@ abortFile=C:\\Users\\zhangyunfei\\Desktop\\RocketMQ\\tmp\\rocketmq\\store\\abort
 
 启动生产者与消费者
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 RocketMQ-Console安装启动
 

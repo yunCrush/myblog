@@ -2,42 +2,46 @@
 
 * [🌤 江畔何人初见月](README.md)
 
-## 数据库 <a href="#database" id="database"></a>
+## 🔐 系统/安全 <a href="#security" id="security"></a>
 
-* [MySQL](database/mysql/README.md)
-  * [MySQL索引（一）](database/mysql/shu-ju-ku-suo-yin-yi.md)
-  * [MySQL日志模块(一）](database/mysql/shu-ju-ku-ri-zhi-mo-kuai.md)
-  * [MySQL三大范式](database/mysql/shu-ju-ku-san-da-fan-shi.md)
-  * [MySQL存储引擎](database/mysql/innodb-cun-chu-yin-qing.md)
-  * [MySQL查询优化](database/mysql/mysql-cha-xun-you-hua.md)
-  * [MySQL事务](database/mysql/mysql-shi-wu.md)
-  * [MySQL常见命令](database/mysql/mysql-chang-jian-ming-ling.md)
-  * [MySQL-Canal-Redis](database/mysql/mysql-canal-redis.md)
-  * [MySQL安装](database/mysql/mysql-an-zhuang.md)
-* [ElasticSearch](database/elasticsearch/README.md)
-  * [ElasticSearch概念](database/elasticsearch/elasticsearch-gai-nian.md)
-  * [ElasticSearch写入原理](database/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
-  * [ES搜索开发日记](database/elasticsearch/es-sou-suo-cai-keng-ri-ji.md)
-  * [ES集群部署](database/elasticsearch/es-ji-qun-bu-shu.md)
-  * [ES数据处理之集群备份](database/elasticsearch/es-cluster-backup.md)
-  * [ES数据处理之跨版本迁移](database/elasticsearch/es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)
-  * [ES属性处理之字段重命名](database/elasticsearch/esindex-field-rename.md)
-  * [ES属性处理之时间转换](database/elasticsearch/es-shu-xing-chu-li-zhi-shi-jian-zhuan-huan.md)
+* [计算机网络读书感悟](security/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
+* [网络协议](security/wang-luo-xie-yi.md)
+* [Http/Https](security/http-https/README.md)
+  * [概念](security/http-https/gai-nian.md)
 
-***
+## 🕋 存储/搜索 <a href="#storage" id="storage"></a>
 
-* [安全](an-quan/README.md)
-  * [Page 1](an-quan/page-1.md)
+* [MySQL](storage/mysql/README.md)
+  * [MySQL索引（一）](storage/mysql/shu-ju-ku-suo-yin-yi.md)
+  * [MySQL日志模块(一）](storage/mysql/shu-ju-ku-ri-zhi-mo-kuai.md)
+  * [MySQL三大范式](storage/mysql/shu-ju-ku-san-da-fan-shi.md)
+  * [MySQL存储引擎](storage/mysql/innodb-cun-chu-yin-qing.md)
+  * [MySQL查询优化](storage/mysql/mysql-cha-xun-you-hua.md)
+  * [MySQL事务](storage/mysql/mysql-shi-wu.md)
+  * [MySQL常见命令](storage/mysql/mysql-chang-jian-ming-ling.md)
+  * [MySQL-Canal-Redis](storage/mysql/mysql-canal-redis.md)
+  * [MySQL安装](storage/mysql/mysql-an-zhuang.md)
+* [ElasticSearch](storage/elasticsearch/README.md)
+  * [ElasticSearch概念](storage/elasticsearch/elasticsearch-gai-nian.md)
+  * [ElasticSearch写入原理](storage/elasticsearch/elasticsearch-xie-ru-yuan-li.md)
+  * [ES搜索开发日记](storage/elasticsearch/es-sou-suo-cai-keng-ri-ji.md)
+  * [ES集群部署](storage/elasticsearch/es-ji-qun-bu-shu.md)
+  * [ES数据处理之集群备份](storage/elasticsearch/es-cluster-backup.md)
+  * [ES数据处理之跨版本迁移](storage/elasticsearch/es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)
+  * [ES属性处理之字段重命名](storage/elasticsearch/esindex-field-rename.md)
+  * [ES属性处理之时间转换](storage/elasticsearch/es-shu-xing-chu-li-zhi-shi-jian-zhuan-huan.md)
 
-## 中间件 <a href="#middle-ware" id="middle-ware"></a>
+## 🪐 中间件/框架 <a href="#middle-ware" id="middle-ware"></a>
 
-* [ZooKeeper](middle-ware/zookeeper/README.md)
-  * [ZooKeeper安装](middle-ware/zookeeper/zookeeper-an-zhuang.md)
+* [Docker](middle-ware/docker/README.md)
+  * [Docker安装使用](middle-ware/docker/docker-basic.md)
+* [Kafka](middle-ware/kafka/README.md)
+  * [Kafka安装](middle-ware/kafka/kafka-an-zhuang.md)
 * [Nacos](middle-ware/nacos/README.md)
   * [Nacos源码环境搭建](middle-ware/nacos/nacos-yuan-ma-huan-jing-da-jian.md)
   * [Nacos配置动态更新](middle-ware/nacos/nacos-pei-zhi-dong-tai-geng-xin.md)
-* [RocketMQ](middle-ware/rocketmq/README.md)
-  * [RocketMQ环境搭建](middle-ware/rocketmq/rocketmq-huan-jing-da-jian.md)
+* [Nginx](middle-ware/nginx/README.md)
+  * [Nginx安装及基本配置](middle-ware/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
 * [Redis](middle-ware/redis/README.md)
   * [Redis安装](middle-ware/redis/redis-an-zhuang.md)
   * [Redis双写一致性](middle-ware/redis/redis-shuang-xie-yi-zhi-xing.md)
@@ -45,37 +49,41 @@
     * [yunCrush/Redis](middle-ware/redis/redis-chang-jian-wen-ti/yuncrush-redis.md)
   * [布隆过滤器](middle-ware/redis/bu-long-guo-lv-qi.md)
   * [RBD-tools安装](middle-ware/redis/rbdtools-an-zhuang.md)
-* [Kafka](middle-ware/kafka/README.md)
-  * [Kafka安装](middle-ware/kafka/kafka-an-zhuang.md)
+* [RocketMQ](middle-ware/rocketmq/README.md)
+  * [RocketMQ环境搭建](middle-ware/rocketmq/rocketmq-huan-jing-da-jian.md)
+* [Spring](middle-ware/spring-xi-lie/README.md)
+  * [SpringBoot制作一个Starter](middle-ware/spring-xi-lie/springboot-zhi-zuo-yi-ge-starter.md)
+  * [Spring常见问题](middle-ware/spring-xi-lie/spring-chang-jian-wen-ti.md)
+  * [SpringMVC核心组件](middle-ware/spring-xi-lie/springmvc-core.md)
+  * [SpringBoot自动装配](middle-ware/spring-xi-lie/springboot-zi-dong-zhuang-pei.md)
+* [Tomcat](middle-ware/tomcat/README.md)
+  * [Tomcat安装与简单入门](middle-ware/tomcat/tomcat-ji-ben-zu-jian.md)
+  * [手写minicat](middle-ware/tomcat/shou-xie-minicat.md)
+  * [tomcat源码构建](middle-ware/tomcat/tomcat-yuan-ma-tiao-shi.md)
+  * [Tomcat启动流程源码追踪](middle-ware/tomcat/tomcat-qi-dong-liu-cheng-yuan-ma-zhui-zong.md)
+* [ZooKeeper](middle-ware/zookeeper/README.md)
+  * [ZooKeeper安装](middle-ware/zookeeper/zookeeper-an-zhuang.md)
 
-## 服务器/协议 <a href="#server-protocol" id="server-protocol"></a>
-
-* [Docker](server-protocol/docker/README.md)
-  * [Docker安装使用](server-protocol/docker/docker-basic.md)
-* [Tomcat](server-protocol/tomcat/README.md)
-  * [Tomcat安装与简单入门](server-protocol/tomcat/tomcat-ji-ben-zu-jian.md)
-  * [手写minicat](server-protocol/tomcat/shou-xie-minicat.md)
-  * [tomcat源码构建](server-protocol/tomcat/tomcat-yuan-ma-tiao-shi.md)
-  * [Tomcat启动流程源码追踪](server-protocol/tomcat/tomcat-qi-dong-liu-cheng-yuan-ma-zhui-zong.md)
-* [Nginx](server-protocol/nginx/README.md)
-  * [Nginx安装及基本配置](server-protocol/nginx/nginx-an-zhuang-ji-ji-ben-pei-zhi.md)
-* [Http/Https](server-protocol/http-https/README.md)
-  * [概念](server-protocol/http-https/gai-nian.md)
+## 📦 容器 <a href="#container" id="container"></a>
 
 ## 框架 <a href="#framework" id="framework"></a>
-
-* [Spring系列](framework/spring-xi-lie/README.md)
-  * [SpringBoot制作一个Starter](framework/spring-xi-lie/springboot-zhi-zuo-yi-ge-starter.md)
-  * [Spring常见问题](framework/spring-xi-lie/spring-chang-jian-wen-ti.md)
-  * [SpringMVC核心组件](framework/spring-xi-lie/springmvc-core.md)
-  * [SpringBoot自动装配](framework/spring-xi-lie/springboot-zi-dong-zhuang-pei.md)
 
 ## 开发与实践 <a href="#develop-and-summary" id="develop-and-summary"></a>
 
 * [实战系列](develop-and-summary/shi-zhan-xi-lie/README.md)
   * [记录一次CPU100%与OOM](develop-and-summary/shi-zhan-xi-lie/ji-lu-yi-ci-cpu100-yu-oom.md)
+* [环境搭建](develop-and-summary/huan-jing-da-jian/README.md)
+  * [Jmeter使用](develop-and-summary/huan-jing-da-jian/jmeter-shi-yong.md)
+  * [JDK安装](develop-and-summary/huan-jing-da-jian/jdk-an-zhuang.md)
+  * [NFS文件挂载](develop-and-summary/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
+  * [配置163yum源](develop-and-summary/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
+  * [linux配置](develop-and-summary/huan-jing-da-jian/linux-pei-zhi.md)
+  * [Linux常用命令](develop-and-summary/huan-jing-da-jian/linux-basic-command.md)
+  * [Centos防火墙](develop-and-summary/huan-jing-da-jian/centos-fang-huo-qiang.md)
+  * [文本编辑指令](develop-and-summary/huan-jing-da-jian/vim-basic.md)
+  * [常用工具类](develop-and-summary/huan-jing-da-jian/kai-fa-ji-qiao.md)
 
-## JAVA
+## ☕ Java
 
 * [JVM](java/jvm/README.md)
   * [JVM内存结构与类加载](java/jvm/jvm-memory-classloader.md)
@@ -93,25 +101,11 @@
   * [HashMap](java/javase/hashmap-yi.md)
   * [抽象类与接口](java/javase/chou-xiang-lei-yu-jie-kou.md)
 
-## 开发部署 <a href="#env-deploy" id="env-deploy"></a>
-
-* [环境搭建](env-deploy/huan-jing-da-jian/README.md)
-  * [Jmeter使用](env-deploy/huan-jing-da-jian/jmeter-shi-yong.md)
-  * [JDK安装](env-deploy/huan-jing-da-jian/jdk-an-zhuang.md)
-  * [NFS文件挂载](env-deploy/huan-jing-da-jian/nfs-wen-jian-gua-zai.md)
-  * [配置163yum源](env-deploy/huan-jing-da-jian/pei-zhi-163yum-yuan.md)
-  * [linux配置](env-deploy/huan-jing-da-jian/linux-pei-zhi.md)
-  * [Linux常用命令](env-deploy/huan-jing-da-jian/linux-basic-command.md)
-  * [Centos防火墙](env-deploy/huan-jing-da-jian/centos-fang-huo-qiang.md)
-  * [文本编辑指令](env-deploy/huan-jing-da-jian/vim-basic.md)
-  * [常用工具类](env-deploy/huan-jing-da-jian/kai-fa-ji-qiao.md)
-
 ## 基础知识 <a href="#basic-core" id="basic-core"></a>
 
 * [算法](basic-core/suan-fa/README.md)
   * [一道题系列](basic-core/suan-fa/tan-xin.md)
-* [计算机网络](basic-core/ji-suan-ji-wang-luo/README.md)
-  * [计算机网络读书感悟](basic-core/ji-suan-ji-wang-luo/ji-suan-ji-wang-luo-du-shu-gan-wu.md)
+* [计算机网络](basic-core/ji-suan-ji-wang-luo.md)
 * [操作系统](basic-core/cao-zuo-xi-tong/README.md)
   * [OS概述（一）](basic-core/cao-zuo-xi-tong/os-gai-shu-yi.md)
   * [OS线程与进程（二）](basic-core/cao-zuo-xi-tong/os-xian-cheng-yu-jin-cheng-er.md)

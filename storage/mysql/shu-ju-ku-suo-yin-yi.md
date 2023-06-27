@@ -22,7 +22,11 @@ B+树的节点与B-树，差不多，只是Data数据只存在于叶子节点。
 如在叶子节点增加指针，优化范围查询
 ```
 
+<div align="center">
+
 <figure><img src="../../.gitbook/assets/B+tree.jpg" alt=""><figcaption><p>b+树</p></figcaption></figure>
+
+</div>
 
 
 
