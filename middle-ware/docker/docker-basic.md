@@ -1,8 +1,19 @@
 ---
 description: docker的安装与常用命令介绍
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# Docker安装使用
+# Docker安装部署
 
 ## 1.安装、启动docker
 

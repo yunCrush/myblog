@@ -1,8 +1,19 @@
 ---
 description: 第一部分主要介绍关于索引的概念。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# MySQL索引（一）
+# MySQL索引篇
 
 　　索引时为了提高查询效率，比如书的目录一样，常见的数据结构，哈希表、有序数组和搜索树。
 
@@ -27,8 +38,6 @@ B+树的节点与B-树，差不多，只是Data数据只存在于叶子节点。
 <figure><img src="../../.gitbook/assets/B+tree.jpg" alt=""><figcaption><p>b+树</p></figcaption></figure>
 
 </div>
-
-
 
 ## 1.聚簇索引
 

@@ -1,5 +1,16 @@
 ---
 description: 'mysq-canal同步的环境搭建 mysql:8.0 canal: 1.1.6'
+layout:
+  title:
+    visible: false
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # MySQL-Canal-Redis
@@ -29,7 +40,7 @@ binlog-format = ROW
 
 **重启MySQL: systemctl restart mysqld**
 
-1. 开启binlog写入功能   &#x20;
+1. 开启binlog写入功能
 
 ```
 // 查看binlog写入功能是否开启
@@ -68,7 +79,7 @@ canal.instance.dbPassword=canal
 
 启动服务：./startup.sh
 
-验证启动成功：生成canal.pid或者/data/soft/mycanal/logs/canal/canal.log&#x20;
+验证启动成功：生成canal.pid或者/data/soft/mycanal/logs/canal/canal.log
 
 <figure><img src="../../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>canal-position</p></figcaption></figure>
 

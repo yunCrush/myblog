@@ -1,8 +1,19 @@
 ---
 description: 这里主要介绍数据库的redo log与binlog日志。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# MySQL日志模块(一）
+# MySQL日志篇
 
 ## Redo log（重做日志）
 

@@ -1,8 +1,19 @@
 ---
 description: ES不同版本之间备份的数据是不能进行使用快照还原的。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# ES数据处理之跨版本迁移
+# ES数据迁移
 
 　本文中由7.4.0迁移到7.4.2。使用到的是 :point\_right: [elasticdump](https://github.com/elasticsearch-dump/elasticsearch-dump)插件。适用场景：适合数据量不大，迁移索引个数不多的场景，这里测试的数据是在每个索引大约15W的数据量。
 
@@ -42,4 +53,3 @@ elasticdump --input=http://172.16.0.39:9200/companydatabase --output=http://172.
 ```
 elasticdump --input=http://172.16.0.39:9200 --output=http://172.16.0.20:9200
 ```
-

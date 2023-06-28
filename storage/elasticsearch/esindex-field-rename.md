@@ -1,8 +1,19 @@
 ---
 description: 这里介绍关于ES的字段名称的修改。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# ES属性处理之字段重命名
+# ES属性重命名
 
 ## 0.需求介绍
 
@@ -77,4 +88,3 @@ POST _reindex
 # 删除临时索引testindex1
 DELETE testindex1
 ```
-

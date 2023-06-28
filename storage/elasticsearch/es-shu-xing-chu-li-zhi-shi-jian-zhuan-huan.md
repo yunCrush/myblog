@@ -1,8 +1,19 @@
 ---
 description: 这里介绍一种ES的Date时间格式转换的方法。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# ES属性处理之时间转换
+# ES属性时间转换
 
 背景：有这样一个字段“expired\_date”，查看mapping存放的类型是这样的:
 

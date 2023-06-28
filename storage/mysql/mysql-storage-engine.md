@@ -1,5 +1,16 @@
 ---
 description: 这部分记录InnoDB与MyISAM的不同之处，以及Innodb的特点。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # MySQL存储引擎

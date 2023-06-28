@@ -1,8 +1,19 @@
 ---
 description: 这里介绍ES的集群备份。
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# ES数据处理之集群备份
+# ES集群备份
 
 ES集群备份的前提是相同版本的ES，如果不相同，请参照 :point\_right:[here](es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)。
 

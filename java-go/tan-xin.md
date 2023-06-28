@@ -5,9 +5,9 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: false
+    visible: true
   outline:
-    visible: false
+    visible: true
   pagination:
     visible: true
 ---
@@ -52,7 +52,7 @@ int bsearch_2(int l, int r){
 
 ### 前缀和
 
-```
+```java
 // 下标从1开始 s[0] = 0 为了处理边界问题
 S[i] = a[1] + a[2] + ... a[i]
 a[l] + ... + a[r] = S[r] - S[l - 1]
