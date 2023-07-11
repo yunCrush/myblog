@@ -26,7 +26,7 @@ description: 介绍关于网络连接的内容。
 
 处理多路I/O复用的问题，需要操作系统提供内核级别的支持，在进程内部就需要一个数据结构来描述自己会关注哪些 Socket 文件的哪些事件（读、写、异常等）。linux提供3中多路复用，select，poll，epoll。select，poll都是线性结构，epoll是索引结构。
 
-***
+
 
 \*\*提问：\*\*select，poll，epoll区别？
 
