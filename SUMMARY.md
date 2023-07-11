@@ -61,6 +61,7 @@
 
 ## 🎆 系统/设计 <a href="#system-design" id="system-design"></a>
 
+* [高并发系统设计](system-design/gao-bing-fa-xi-tong-she-ji.md)
 * [操作系统](system-design/cao-zuo-xi-tong/README.md)
   * [OS概述（一）](system-design/cao-zuo-xi-tong/os-gai-shu-yi.md)
   * [OS线程与进程（二）](system-design/cao-zuo-xi-tong/os-xian-cheng-yu-jin-cheng-er.md)
