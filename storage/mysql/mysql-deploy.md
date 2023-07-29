@@ -5,14 +5,16 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: false
+    visible: true
   outline:
-    visible: false
+    visible: true
   pagination:
     visible: true
 ---
 
 # MySQL环境篇
+
+
 
 ```
 //关闭selinux: vi /etc/selinux/config
