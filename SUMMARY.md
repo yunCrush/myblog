@@ -91,6 +91,7 @@
 ## ☕ Java/Go
 
 * [JVM](java-go/jvm/README.md)
+  * [JVM核心与实战](java-go/jvm/jvm-he-xin-yu-shi-zhan.md)
   * [内存结构与类加载机制](java-go/jvm/jvm-memory-classloader.md)
 * [并发编程](java-go/bing-fa-bian-cheng/README.md)
   * [线程常见问题](java-go/bing-fa-bian-cheng/xian-cheng-chang-jian-wen-ti.md)
