@@ -30,7 +30,7 @@ layout:
 
     Tomcat自定义了Common、Catalina、Shared等类加载器，其实就是用来加载Tomcat自己的一些核心基础类库的。 然后Tomcat为每个部署在里面的Web应用都有一个对应的WebApp类加载器，负责加载我们部署的这个Web应用的类 至于Jsp类加载器，则是给每个JSP都准备了一个Jsp类加载器。每个WebApp负责加载自己对应的那个Web应用的class文件，也就是我们写好的某个系统打包好的war包中的所有class文 件，不会传导给上层类加载器去加载。
 
-    ![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/tomcat-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8.png)
+
 
     **思考题**：创建的那些对象，到底在Java堆内存里会占用多少内存空间呢？
 
@@ -39,6 +39,8 @@ layout:
     **思考题**：自定义类加载器如何实现？
 
     写一个类，继承ClassLoader类，重写类加载的方法，然后在代码里面可以用自己的类加载器去针对某个路径下的类 加载到内存里来
+
+    <figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/tomcat-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8.png" alt=""><figcaption></figcaption></figure>
 6. 栈帧销毁，堆内存中的对象还存在需要垃圾回收机制，回收对象垃圾。JVM会启动一个后台进程，检查各个内存区域的对象，如果某个实例对象没有任何一个方法的局部变量指向他，也没有任何一个类的静态变量，包括常量等地方在指向他，那么他就会被垃圾回收线程回收。
 7. 分代模型：新生代，老年代，永久代。新生代中分：Eden，SurviorFrom,SurviorTo，比值8:1:1。初次分配的对象实例基本都在新生代，若新生代内存空间不足则触发`minor GC` 或者叫`young GC`。经过15次垃圾回收，对象都没被回收掉，则进入老年代，与对象头的4位对应。对象分配机制：新生代垃圾回收之后，因为存活对象太多，导致大量对象直接进入老年代；特别大的超大对象直接不经过新生代就进入老年代；动态对象年龄判断机制（年龄1+年龄2+年龄n的多个年龄对象总和超过了Survivor区 域的50%，此时就会把年龄n以上的对象都放入老年代 ）；空间担保机制（将要实例的对象占用的内存空间大于一半的新生代）。
 
@@ -61,7 +63,7 @@ jdk8以后被参数替换：
 
 每日百万交易的支付系统，如何设置`JVM`堆内存大小?栈内存与永久代大小如何设置？
 
-![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png)
+<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E6%94%AF%E4%BB%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png" alt=""><figcaption></figcaption></figure>
 
 ```
 
@@ -89,7 +91,9 @@ public class Order {
 4. 老年代空间担保原则：在执行任何一次Minor GC之前，JVM会先检查一下老年代可用的可用内存空间，是否大于新生代所有对象的总大小，避免survior空间不够用，全部移入老年代，若老年代再不够用，判断`-XX:-HandlePromotionFailure` 是否开启，开启则直接触发Full GC,即对老年代进行垃圾回收，如果Full GC 后还是不够内存空间来应对，“可能”的这种情况，最后就会导致OOM了。
 5.  垃圾回收器：Serial单线程，停止我们系统工作进行垃圾回收，现在几乎不用。ParNew与CMS都是多线程并发垃圾回收的机制，性能更好，现在一般是线上生产系统的标配组合
 
-    ![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.png)
+
+
+    <figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.png" alt=""><figcaption></figcaption></figure>
 6. 新生代用复制算法（占用两倍内存空间），老年代用标记整理（包含标记清除与复制算法的优点）算法，标记清楚算法有内存碎片。
 
 #### 案例：多久塞满新生代
@@ -98,7 +102,7 @@ public class Order {
 
 每台机器上部署的实例，每分钟会执行100次数据计算任务，每次是1万条数据需要计算10秒的时间，那么我们来看看每 次1万条数据大概会占用多大的内存空间，假设每条数据1KB，为`JVM`分配4G内存，新生代老年代各1.5G。
 
-![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E6%A1%88%E4%BE%8B2.png)
+<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E6%A1%88%E4%BE%8B2.png" alt=""><figcaption></figcaption></figure>
 
 每次计算1W条数据就是`1W * 1KB = 10MB` ,新生代按照8:1:1的比例，Eden区就是1.2G,S1与S2各100M左右，1分钟执行100计算，差不多1分钟左右时间就会将Eden区塞满。
 
@@ -151,7 +155,7 @@ public class Order {
 
 新生代1.5GB，60MB/s，大概25s就会占满新生代
 
-![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E6%A1%88%E4%BE%8B3.png)
+<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E6%A1%88%E4%BE%8B3.png" alt=""><figcaption></figcaption></figure>
 
 Minor GC直接运行，一下子可以回收掉99%的新生代对象，因为除了最近一秒的订单请求还在处理，大部分订单 早就处理完了，所以此时可能存活对象就100MB左右。根据动态年龄控制，超过了150MB的一半，这100MB是一批请求的对象占用的空间，所以会导致部分对象进入老年代。
 
@@ -182,7 +186,7 @@ Xms3072M -Xmx3072M -Xmn2048M -Xss1M -XX:PermSize=256M -XX:MaxPermSize=256M -XX:S
 
 根据上面的场景，假设大概就是这个订单系统在大促期间，每隔5分钟会在Minor GC之后有一小批对象进入老年代， 大概200MB(上个案例估计的是100MB)左右的大小，如下图所示：
 
-![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E8%80%81%E5%B9%B4%E4%BB%A3%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96.png)
+<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/jvm-%E8%80%81%E5%B9%B4%E4%BB%A3%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96.png" alt=""><figcaption></figcaption></figure>
 
 所以在半个小时后，老年代可能就会空间不够，进行Full GC。
 
