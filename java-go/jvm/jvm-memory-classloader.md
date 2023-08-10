@@ -2,9 +2,9 @@
 description: 这里介绍JVM内存区域的知识点与类加载机制。
 layout:
   title:
-    visible: false
+    visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
