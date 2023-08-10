@@ -10,6 +10,7 @@
 ## 🕋 存储/搜索 <a href="#storage" id="storage"></a>
 
 * [Redis](storage/redis/README.md)
+  * [Redis核心技术](storage/redis/redis-he-xin-ji-shu.md)
   * [Redis环境篇](storage/redis/redis-deploy.md)
   * [布隆过滤器](storage/redis/bloom-fliter.md)
   * [RDB-tools安装](storage/redis/rbdtools.md)
