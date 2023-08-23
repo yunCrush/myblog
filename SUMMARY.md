@@ -20,7 +20,7 @@
   * [MySQL索引篇](storage/mysql/mysql-index.md)
   * [MySQL日志篇](storage/mysql/mysql-log.md)
   * [MySQL事务篇](storage/mysql/mysql-transaction.md)
-  * [MySQL三大范式](storage/mysql/mysql-table-design.md)
+  * [MySQL表设计规范](storage/mysql/mysql-table-design.md)
   * [MySQL存储引擎](storage/mysql/mysql-storage-engine.md)
   * [MySQL查询优化](storage/mysql/mysql-optimize.md)
   * [MySQL常见命令](storage/mysql/mysql-basic-use.md)
