@@ -59,6 +59,7 @@
   * [tomcat源码构建](middle-ware/tomcat/tomcat-yuan-ma-tiao-shi.md)
   * [Tomcat启动流程源码追踪](middle-ware/tomcat/tomcat-qi-dong-liu-cheng-yuan-ma-zhui-zong.md)
 * [ZooKeeper](middle-ware/zookeeper/README.md)
+  * [ZooKeeper核心知识](middle-ware/zookeeper/zookeeper-he-xin-zhi-shi.md)
   * [ZooKeeper安装](middle-ware/zookeeper/zookeeper-an-zhuang.md)
 
 ## 🎆 系统/设计 <a href="#system-design" id="system-design"></a>

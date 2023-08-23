@@ -83,7 +83,7 @@ if ((e.hash & oldCap) == 0) {
 
 ![扩容元素位置分析图](<../../.gitbook/assets/image (28).png>)
 
-\*\*线程安全及解决：\*\*会出现数据覆盖问题，假设存在AB两个线程，如果A线程在判断Index位置是空后，挂起，B线程在index位置插入数据，A线程恢复，同样在index位置插入数据，就会覆盖B线程的节点数据，还有常见的“i++”问题。Java中HashTable,ConcurrentHashMap可以实现线程安全的Map，HashTable 是直接在方法上加synchronized关键字，锁住整个数组，粒度较大，ConcurrentHashMap使用分段锁，降低了锁的粒度，提高并发。
+\*\*线程安全及解决\*\* 会出现数据覆盖问题，假设存在AB两个线程，如果A线程在判断Index位置是空后，挂起，B线程在index位置插入数据，A线程恢复，同样在index位置插入数据，就会覆盖B线程的节点数据，还有常见的“i++”问题。Java中HashTable,ConcurrentHashMap可以实现线程安全的Map，HashTable 是直接在方法上加synchronized关键字，锁住整个数组，粒度较大，ConcurrentHashMap使用分段锁，降低了锁的粒度，提高并发。
 
 　　JDK1.7中ConcurrentHashMap实现：ReentrantLock+Segment+HashEntry实现，减小锁的粒度，提高并发，ConcurrentHashMap将整个HashMap分为若干个Segment段，每个段都是一个子hashmap，在加入元素时，只需要对每个segment加锁即可，在多线程的环境中，加入的元素不在同一个segment中，就可以实现真正的多线程运行，在加入元素时，需要两次定位，先定位segment,再定位子hashmap，所以理论上支持16个线程操作。
 
@@ -97,3 +97,30 @@ import java.util.concurrent.atomic.AtomicStampedReference;
                                  int expectedStamp,
                                  int newStamp)
 ```
+
+**转红黑树条件**
+
+1. 链表中的元素的个数为8个或超过8个
+2. 同时，还要满足当前数组的长度大于或等于64才会把链表转变为红黑树。为 什么？因为链表转变为红黑树的目的是为了解决链表过长，导致查询和插入效 率慢的问题，而如果要解决这个问题，也可以通过数组扩容，把链表缩短也可 以解决这个问题。所以在数组长度还不太长的情况，可以先通过数组扩容来解 决链表过长的问题
+
+**HashMap扩容流程是怎样的**
+
+本质就是扩容数组，然后将数据迁移过去，涉及到重新hash。
+
+1. 新建一个2被数组大小的数组
+2. 如果这个位置上是一个链表，就把这个链表上的元素转移到新数组上去。Jdk7是对每个元素重新hash，这样的好处可以缩短链表，而在Java8中涉及到红黑树，比较复杂。
+3. 元素转移完了之后，在把新数组对象赋值给HashMap的table属性，老数组会被回收到 。
+
+问题：
+
+1.  1.7采用头插法，多线程环境下扩容导致死循环。在进行扩容迁移的时候是将最后一个节点作为头结点进行插入
+
+    ![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/hashmap-%E6%AD%BB%E5%BE%AA%E7%8E%AF1.png)
+
+    此时对t2而言t2指向A，t2.next指向B。t1正常扩容，而t2挂起，t1扩容完如下：
+
+    ![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/hashmap-%E6%AD%BB%E5%BE%AA%E7%8E%AF2.png)
+
+    t2在遍历B节点时，发生死循环
+2. 1.8采用尾插法，在多线程put元素时因为存在i++这种操作，会导致值被覆盖。
+3. concurrentHashMap调用putVal通过synchronized加锁保证安全的
