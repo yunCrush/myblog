@@ -6,15 +6,15 @@ description: 简单实现一个mini tomcat
 
 ## minicat功能
 
-　　Minicat作为⼀个服务器软件提供服务的，也即我们可以通过浏览器客户端发送http请求， Minicat可以接收到请求进⾏处理，处理之后的结果可以返回浏览器客户端。&#x20;
+　　Minicat作为⼀个服务器软件提供服务的，也即我们可以通过浏览器客户端发送http请求， Minicat可以接收到请求进⾏处理，处理之后的结果可以返回浏览器客户端。
 
-1）提供服务，接收请求（Socket通信）&#x20;
+1）提供服务，接收请求（Socket通信）
 
-2）请求信息封装成Request对象（Response对象）&#x20;
+2）请求信息封装成Request对象（Response对象）
 
 3）客户端请求资源，资源分为静态资源（html）和动态资源（Servlet）
 
-&#x20;4）资源返回给客户端浏览器
+4）资源返回给客户端浏览器
 
 ## V1.0
 
@@ -27,3 +27,5 @@ description: 简单实现一个mini tomcat
 ## V3.0
 
 　　需求：可以请求动态资源（Servlet）
+
+{% embed url="https://github.com/yunCrush/minicat" %}
