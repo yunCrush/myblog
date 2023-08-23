@@ -1,5 +1,4 @@
 ---
-description: 第一部分主要介绍关于索引的概念。
 layout:
   title:
     visible: false
