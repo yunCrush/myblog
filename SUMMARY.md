@@ -25,6 +25,7 @@
   * [MySQL常见命令](storage/mysql/mysql-basic-use.md)
   * [MySQL-Canal-Redis](storage/mysql/mysql-canal-redis.md)
 * [ElasticSearch](storage/elasticsearch/README.md)
+  * [索引设计](storage/elasticsearch/suo-yin-she-ji.md)
   * [ES基础理论](storage/elasticsearch/es-concept.md)
   * [ES写入优化](storage/elasticsearch/es-write.md)
   * [ES常用API](storage/elasticsearch/es-api.md)
