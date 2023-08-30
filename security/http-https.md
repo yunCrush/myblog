@@ -6,7 +6,7 @@
 
 　响应报文：状态行（HTTP/1.0 403 ForBidden）--响应首部（"Content-Type":"application/json"）--**换行符**--响应体
 
-<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Lu8htiKy_jajPwKJcN9%2Fuploads%2Fgit-blob-f89ba60f8ba8aea29bf0f1ab066b305604de356a%2Fimage%20(37).png?alt=media" alt=""><figcaption></figcaption></figure>
+![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Lu8htiKy\_jajPwKJcN9%2Fuploads%2Fgit-blob-f89ba60f8ba8aea29bf0f1ab066b305604de356a%2Fimage%20\(37\).png?alt=media)
 
 ### 2.Http2新特性
 
@@ -30,29 +30,24 @@ Frame：最小通信单位，以二进制压缩格式存放内容。来自不同
 
     减少服务连接压力，连接吞吐量就增大了；TCP连接减少网络设备就能及时的处理传入传出的数据包，使得网络拥塞的状况得以改观，TCP少的话，网络设备就不需要花费那么多的处理能力来管理TCP的连接；慢启动时间减少,拥塞和丢包恢复速度更快
 
-
-
-    <figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/http2-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%88%86%E5%B8%A7.png" alt=""><figcaption></figcaption></figure>
+    ![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/http2-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%88%86%E5%B8%A7.png)
 *   2.头部压缩HPACK
 
     正常的http请求体会经过gzip压缩，头部压缩很好理解，在支持http2.0的浏览器和服务端同时维护一张静态表和动态表，静态表是常见的头部名称与值，如果遇到不在静态表中的值，就会用到动态表，每个动态表只针对一个连接（TCP），每个连接的压缩解压缩的上下文有 且仅有一个动态表，动态表中没有的index则添加到动态表中，第二次就可以直接传输index了。
 
     静态表：
 
-    index Header name Header value
-
-    1         :authority
-
-    2         :method          GET
+    | index | Header name | Header value |
+    | :---: | :---------: | :----------: |
+    |   1   |  :authority |              |
+    |   2   |   :method   |      GET     |
 
     这样通过传一个index:2 来表达用的是GET方法
 *   3.多路复用Multiplexing
 
     http2连接可以承载数十或数百个流的复用，多路复用意味着来自很多流的数据包能够混合在一起通过同样连接传输。当到达终点时， 再根据不同帧首部的流标识符重新连接将不同的数据流进行组装
 
-
-
-    <figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/http2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.png" alt=""><figcaption></figcaption></figure>
+    ![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/http2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.png)
 *   4.服务器推送Server Push
 
     服务器可以对一个客户端请求发送多个响应，服务器向客户端推送资源无需客 户端明确地请求，因为没有建立连接，发送请求过程，所以静态资源通过服务端推送的方式 可以极大地提升速度
@@ -67,11 +62,11 @@ HTTPS是身披SSL/TLS外壳的HTTP，HTTPS和HTTP协议相比提供了
 
 数据完整性和隐私性由TLS Record Protocol保证，身份认证由TLS Handshaking Protocols实现。
 
-#### **对称加密**
+#### 3.1 对称加密
 
 AES（Advanced Encryption Standard）：高级加密标准，是现 在公认的最安全的加密方式，是对称密钥加密中最流行的算法。 AES128和AES256主要区别是密钥长度不同（分别是128bits,256bits)、加 密处理轮数不同（分别是10轮，14轮），后者强度高于前者 。堆成加密使用的是同一个秘钥进行加密解密，如果被劫持，就会被破解密文。
 
-#### **非对称加密**
+#### 3.2 非对称加密
 
 保证了数据不会被破解，需要两个秘钥：公钥和私钥。公钥加密--私钥解密、私钥加密--公钥解密。
 
@@ -79,17 +74,17 @@ AES（Advanced Encryption Standard）：高级加密标准，是现 在公认的
 
 因为公钥是暴露的，所以如果是用私钥加密发送的数据，可能被黑客解密。
 
-#### **对称与非对称加密**
+#### 3.3 对称与非对称加密
 
 一开始，公钥与私钥都存储在服务端，关键点在于，公钥加密的数据只能私钥解密，私钥是不可能泄露的，所以客户端通过公钥加密了一个随机数，只有服务端的私钥能解密，这样这个随机数就只有客户端和服务端知道，不会被泄露，后续基于这个随机数采取堆成加密即可，对称加密速度更快。
 
-<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/https-%E5%AF%B9%E7%A7%B0%E4%B8%8E%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.png" alt=""><figcaption></figcaption></figure>
+![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/https-%E5%AF%B9%E7%A7%B0%E4%B8%8E%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86.png)
 
 但是可能存在报文可能被篡改问题和通信方身份被伪造的情况。黑客伪造成服务端，返回给了黑客的公钥，而不是服务端的公钥，而黑客也是有自己的私钥的，所以就冒充服务端与客户端进行通信了。因此推出了数字签名与数字证书解决这两个问题。
 
-<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/https-%E4%BC%AA%E9%80%A0%E6%9C%8D%E5%8A%A1%E7%AB%AF.png" alt=""><figcaption></figcaption></figure>
+![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/https-%E4%BC%AA%E9%80%A0%E6%9C%8D%E5%8A%A1%E7%AB%AF.png)
 
-#### **数字签名**
+#### 3.4 数字签名
 
 有两种功能：能确定消息确实是由发送方签名并发出来的，因为别人假冒不了发送方的签名 ；确定消息的完整性,证明数据是否未被篡改过 。
 
@@ -97,7 +92,7 @@ AES（Advanced Encryption Standard）：高级加密标准，是现 在公认的
 
 上述过程的关键是我们需要知道服务端的公钥，并且保证是服务端的。所以引入了证书，证书是由权威的机构颁发。
 
-#### **证书**
+#### 3.5 证书
 
 证书包含服务器的公钥，以及证书的有效期，相关申请者的一些信息等。证书颁发机构称为CA，CA的数量并不多，因此集成在了浏览器内部与操作系统内，证书一般是很难伪造的。
 
@@ -107,9 +102,9 @@ AES（Advanced Encryption Standard）：高级加密标准，是现 在公认的
 
 上图被黑客伪造成服务器的关键点就是客户端并没有验证返回的公钥是否是合法的，所以只需要对上图的第二步中收到响应进行校验即可，如下：
 
-<figure><img src="https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/https-%E5%8A%A0%E5%AF%86%E9%80%9A%E4%BF%A1.png" alt=""><figcaption></figcaption></figure>
+![](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/https-%E5%8A%A0%E5%AF%86%E9%80%9A%E4%BF%A1.png)
 
-#### **个人疑问**
+#### 个人疑问
 
 会不会存在某种情况黑客伪造的证书，恰好能够被CA的公钥进行解密呢？
 
@@ -117,7 +112,7 @@ AES（Advanced Encryption Standard）：高级加密标准，是现 在公认的
 
 ### TCP三次握手
 
-<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Lu8htiKy_jajPwKJcN9%2Fuploads%2Fgit-blob-72fdfadc44bb3cb7b1c671cecc643c7b439c0b84%2Fimage%20(40).png?alt=media" alt=""><figcaption></figcaption></figure>
+![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Lu8htiKy\_jajPwKJcN9%2Fuploads%2Fgit-blob-72fdfadc44bb3cb7b1c671cecc643c7b439c0b84%2Fimage%20\(40\).png?alt=media)
 
 为什么TCP客户端最后还要发送一次确认呢？
 
@@ -135,7 +130,7 @@ SYN flood攻击：伪造大量的ip,发送请求给服务器，服务器会进�
 
 ### TCP四次挥手
 
-<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Lu8htiKy_jajPwKJcN9%2Fuploads%2Fgit-blob-b9a83d0df33d1930b6dafa2f79f4e9afaec669c2%2Fimage%20(42).png?alt=media" alt=""><figcaption></figcaption></figure>
+![img](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Lu8htiKy\_jajPwKJcN9%2Fuploads%2Fgit-blob-b9a83d0df33d1930b6dafa2f79f4e9afaec669c2%2Fimage%20\(42\).png?alt=media)
 
 为什么客户端最后还要等待2MSL？
 
@@ -150,5 +145,3 @@ SYN flood攻击：伪造大量的ip,发送请求给服务器，服务器会进�
 如果已经建立了连接，但是客户端突然出现故障了怎么办？
 
 　TCP还设有一个保活计时器，显然，客户端如果出现故障，服务器不能一直等下 去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时 器，时间通常是设置为2小时，若两小时还没有收到客户端的任何数据，服务器 就会发送一个探测报文段，以后每隔75秒发送一次。若一连发送10个探测报文 仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。
-
-\
