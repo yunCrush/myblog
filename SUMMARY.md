@@ -6,6 +6,7 @@
 
 * [跨域](security/kua-yu.md)
 * [Http/Https](security/http-https.md)
+* [安全防护](security/an-quan-fang-hu.md)
 
 ## 🕋 存储/搜索 <a href="#storage" id="storage"></a>
 
