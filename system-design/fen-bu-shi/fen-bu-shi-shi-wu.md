@@ -24,7 +24,7 @@
 
 ### 分布式事务解决方案
 
-![image-20230923012409475](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-%E6%A6%82%E8%A7%88.png)
+![分布式事务概览](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-%E6%A6%82%E8%A7%88.png)
 
 #### 2PC
 
@@ -36,7 +36,7 @@
 
 第二阶段： 再次发送commit/rollback请求给参与者，参与者进行本地事务资源的释放。最后事务协调器对全局事务进行提交。
 
-![image-20230923005501733](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-2PC.png)
+![2PC](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-2PC.png)
 
 优点：容易理解，原理简单。 缺点：需要等待ACK返回后才可执行第二阶段，同步阻塞。数据不一致，如果第二阶段发生了网络异常导致部分参与者未收到Commit，部分参与者收到，导致了数据最终的不一致 单点问题和脑裂：过于依赖协调者，若协调者挂了，整个集群将不可用 集群中出现多个协调者时，无法保证二阶段提交协议的正确性。
 
@@ -72,7 +72,7 @@ if (prepare.xid in rollback.log) {
 
 三阶段协议：询问阶段-预提交阶段-提交阶段 将锁定资源滞后，降低事务资源锁定的范围，若在集群中存在某个别不具备处理事务能力的参与者，则可以提前中断事务，而不是像二阶段提交上来锁定资源。 为了解决同步阻塞问题，三阶段协议增加了超时机制，解决了协调者宕机后参与者无法释放资源的问题。
 
-![image-20230923010743478](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-3PC.png)
+![3PC](https://cdn.jsdelivr.net/gh/yunCrush/yc-image/image/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-3PC.png)
 
 阶段一：CanCommit 参与者健康自检，判断与协调者的连接，判断是否能执行本次事务，是否和其他事务存在冲突，返回信息给协调者。 阶段二：PreCommit 若收到来自参与者的No，则会向所有参与者发送Abort请求进行中断，因为参与者没有进行资源的锁定，参与者只需要更新分支事务的状态即可。
 

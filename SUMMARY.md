@@ -77,6 +77,7 @@
 * [计算机理论](system-design/qian-zhi-ji-suan-ji-zu-cheng-zhi-shi.md)
 * [分布式](system-design/fen-bu-shi/README.md)
   * [分布式事务](system-design/fen-bu-shi/fen-bu-shi-shi-wu.md)
+  * [幂等性保证](system-design/fen-bu-shi/mi-deng-xing-bao-zheng.md)
 
 ## ⚙ 实战/调优 <a href="#performance" id="performance"></a>
 
