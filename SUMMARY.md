@@ -54,6 +54,7 @@
   * [Spring常见问题](middle-ware/spring-xi-lie/spring-chang-jian-wen-ti.md)
   * [SpringMVC核心组件](middle-ware/spring-xi-lie/springmvc-core.md)
   * [SpringBoot自动装配](middle-ware/spring-xi-lie/springboot-zi-dong-zhuang-pei.md)
+  * [AOP](middle-ware/spring-xi-lie/aop.md)
 * [Tomcat](middle-ware/tomcat/README.md)
   * [Tomcat安装与简单入门](middle-ware/tomcat/tomcat-ji-ben-zu-jian.md)
   * [手写minicat](middle-ware/tomcat/shou-xie-minicat.md)
