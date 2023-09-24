@@ -35,6 +35,7 @@
   * [ES数据迁移](storage/elasticsearch/es-shu-ju-chu-li-zhi-kua-ban-ben-qian-yi.md)
   * [ES属性重命名](storage/elasticsearch/esindex-field-rename.md)
   * [ES属性时间转换](storage/elasticsearch/es-shu-xing-chu-li-zhi-shi-jian-zhuan-huan.md)
+  * [ES深度分页方案](storage/elasticsearch/es-shen-du-fen-ye-fang-an.md)
 
 ## 🪐 中间件/框架 <a href="#middle-ware" id="middle-ware"></a>
 
